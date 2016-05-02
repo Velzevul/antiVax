@@ -1,0 +1,25 @@
+App
+  Header
+    SiteTitle
+    SiteModerator
+  MainNav
+    MainNavItem
+  -------
+  AskQuestion
+    SearchBar
+
+    SearchResults
+      SearchResultsHeader
+      SearchResultsList
+        SearchResultItem
+      FaqList
+        FaqItem
+
+    SearchSpinner
+      
+    Button
+  -------
+  Footer
+    ContactBlock
+    FooterNav
+    FooterNav
