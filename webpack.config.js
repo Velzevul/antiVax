@@ -38,13 +38,14 @@ const common = {
       {
         test: /\.jsx?/,
         loaders: ['babel?cacheDirectory'],
-        include: PATHS.app
+        include: PATHS.app,
+        exclude: /node_modules/
       }
     ]
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'node_modules/html-webpack-template/index.ejs',
+      template: 'app/index.ejs',
       title: 'AntiVax',
       appMountId: 'app',
       inject: false
@@ -77,7 +78,8 @@ const development = {
       {
         test: /\.css$/,
         loaders: ['style?sourceMap', 'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]', 'postcss'],
-        include: PATHS.app
+        include: PATHS.app,
+        exclude: /node_modules/
       }
     ]
   },
@@ -108,21 +110,22 @@ const production = {
       {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('style?sourceMap', 'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!postcss'),
-        include: PATHS.app
+        include: PATHS.app,
+        exclude: /node_modules/
       }
     ]
   },
 
   plugins: [
     new CleanPlugin([PATHS.build]),
-    // new webpack.DefinePlugin({
-    //   'process.env.NODE_ENV': '"production"'
-    // }),
-    // new webpack.optimize.UglifyJsPlugin({
-    //   compress: {
-    //     warnings: false
-    //   }
-    // }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': '"production"'
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    }),
     new webpack.optimize.CommonsChunkPlugin({
       names: ['vendor', 'manifest']
     }),

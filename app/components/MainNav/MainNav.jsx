@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 import styles from './MainNav.css';
 
@@ -10,16 +11,20 @@ class MainNav extends React.Component {
       navItems: [
         {
           label: "Ask a question",
-          link: "/ask"
+          link: "/questions"
         },
         {
           label: "About Vaccines",
-          link: "/about-vaccines"
+          link: "/vaccines"
+        },
+        {
+          label: "Vaccine Safety",
+          link: "/vaccine-safety"
         }
       ]
     };
   }
-
+  
   render() {
     const navItems = this.state.navItems;
 
@@ -27,7 +32,7 @@ class MainNav extends React.Component {
       <ul className={styles.nav}>
         {navItems.map(item =>
           <li className={styles.nav__item}>
-            <a href={item.link} className={styles.nav__link}>{item.label}</a>
+            <Link to={item.link} className={styles.nav__link} activeClassName={styles.nav__link_active}>{item.label}</Link>
           </li>
         )}
       </ul>

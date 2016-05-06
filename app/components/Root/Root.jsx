@@ -1,17 +1,21 @@
 import React from 'react';
 
-import {app} from './App.css';
+import styles from './Root.css';
 
 import Header from '../Header';
 import MainNav from '../MainNav';
 
-const App = () => {
+const Root = (props) => {
   return (
-    <div className={app}>
+    <div>
       <Header title={'test'}/>
       <MainNav />
+
+      <main>
+        {props.children}
+      </main>
     </div>
   );
 };
 
-export default App;
+export default Root;
