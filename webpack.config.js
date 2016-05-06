@@ -10,6 +10,7 @@ const CleanPlugin       = require('clean-webpack-plugin');
 
 const cssImport  = require("postcss-import");
 const cssNext    = require("postcss-cssnext");
+const cssFont    = require('postcss-font-magician');
 
 const pkg = require('./package.json');
 
@@ -52,7 +53,8 @@ const common = {
   postcss: () => {
     return [
       cssImport({ addDependencyTo: webpack }),
-      cssNext()
+      cssNext(),
+      cssFont()
     ];
   }
 };

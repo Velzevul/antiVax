@@ -1,14 +1,15 @@
 import React from 'react';
 
-import {app, greeting} from './App.css';
-import {lBlock} from '../../layouts.css';
+import {app} from './App.css';
 
 import Header from '../Header';
+import MainNav from '../MainNav';
 
 const App = () => {
   return (
-    <div className={`${app} ${lBlock}`}>
+    <div className={app}>
       <Header title={'test'}/>
+      <MainNav />
     </div>
   );
 };

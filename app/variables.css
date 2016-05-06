@@ -1,3 +1,5 @@
 :root {
-  --mainColor: red;
+  --baseline: 0.75rem;
+
+  --fontColor: red;
 }

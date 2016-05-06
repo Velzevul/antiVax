@@ -1,12 +1,20 @@
 import React from 'react';
 
-import {header} from './Header.css';
-import {lBlock} from '../../layouts.css';
+import styles from './Header.css';
+
+import HeaderContact from '../HeaderContact';
+import HeaderSitename from '../HeaderSitename';
 
 const Header = (props) => {
   return (
-    <div className={lBlock}>
-      <h1 className={header}>{props.title}</h1>
+    <div className={styles.header}>
+      <div className={styles.header__section}>
+        <HeaderSitename />
+      </div>
+
+      <div className={styles.header__section}>
+        <HeaderContact />
+      </div>
     </div>
   );
 };

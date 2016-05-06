@@ -1,7 +1,7 @@
 App
   Header
-    SiteTitle
-    SiteModerator
+    HeaderTitle
+    HeaderModerator
   MainNav
     MainNavItem
   -------
@@ -16,7 +16,7 @@ App
         FaqItem
 
     SearchSpinner
-      
+
     Button
   -------
   Footer
