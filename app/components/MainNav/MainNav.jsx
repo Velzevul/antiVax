@@ -2,42 +2,46 @@ import React from 'react';
 import {Link} from 'react-router';
 
 import styles from './MainNav.css';
+import layouts from '../../styles/layouts.css';
 
-class MainNav extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      navItems: [
-        {
-          label: "Ask a question",
-          link: "/questions"
-        },
-        {
-          label: "About Vaccines",
-          link: "/vaccines"
-        },
-        {
-          label: "Vaccine Safety",
-          link: "/vaccine-safety"
-        }
-      ]
-    };
+const navItems = [
+  {
+    label: 'Ask a Question',
+    path: '/questions'
+  },
+  {
+    label: 'About Vaccines',
+    path: '/vaccines'
+  },
+  {
+    label: 'Vaccine Safety',
+    path: '/safety'
+  },
+  {
+    label: 'Vaccination Schedule',
+    path: '/schedule'
+  },
+  {
+    label: 'Blog',
+    path: '/blog'
   }
-  
-  render() {
-    const navItems = this.state.navItems;
+];
 
-    return (
-      <ul className={styles.nav}>
-        {navItems.map(item =>
-          <li className={styles.nav__item}>
-            <Link to={item.link} className={styles.nav__link} activeClassName={styles.nav__link_active}>{item.label}</Link>
-          </li>
-        )}
-      </ul>
-    );
-  }
-}
+const MainNav = () => {
+  return (
+    <div className={styles.MainNav}>
+      <div className={layouts.wrapM}>
+        <ul className={layouts.listInline}>
+          {navItems.map(item =>
+            <li className={layouts.listInline__item} key={item.path}>
+              <Link to={item.path} className={styles.MainNav__item}
+                    activeClassName={styles.MainNav__item_active}>{item.label}</Link>
+            </li>
+          )}
+        </ul>
+      </div>
+    </div>
+  );
+};
 
 export default MainNav;

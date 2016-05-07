@@ -1,10 +1,2 @@
-@import '../../variables.css';
-
-.app {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  font-size:   1rem;
-  line-height: 1.5rem;
-
-  color: var(--fontColor);
+.Root {
 }

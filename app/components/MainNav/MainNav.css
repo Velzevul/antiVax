@@ -1,29 +1,9 @@
-@import '../../variables.css';
+.MainNav {
 
-.nav {
-  display: flex;
-  margin: 0;
-  padding: 0;
-  margin-bottom: - var(--baseline);
-  margin-left: - var(--baseline);
-  list-style: none;
-
-  justify-content: flex-start;
-  align-items: center;
 }
+  .MainNav__item {
 
-.nav__item {
-  margin-bottom: var(--baseline);
-  margin-left: var(--baseline);
-
-  text-align: center;
-}
-
-.nav__link {
-  font-weight: 600;
-  text-decoration: none;
-
-  &:hover {
-     text-decoration: underline;
   }
-}
+  .MainNav__item_active {
+
+  }

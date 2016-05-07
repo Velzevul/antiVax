@@ -1,19 +1,25 @@
 import React from 'react';
 
 import styles from './Root.css';
+import layouts from '../../styles/layouts.css';
 
 import Header from '../Header';
 import MainNav from '../MainNav';
+import Footer from '../Footer';
 
-const Root = (props) => {
+const Root = ({
+  children
+}) => {
   return (
-    <div>
-      <Header title={'test'}/>
+    <div className={`${layouts.page} ${styles.Root}`}>
+      <Header />
       <MainNav />
 
-      <main>
-        {props.children}
+      <main className={layouts.page__content}>
+        {children}
       </main>
+
+      <Footer />
     </div>
   );
 };

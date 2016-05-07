@@ -1,0 +1,14 @@
+:root {
+  --pageWidthS: 50rem;   /* 800px */
+  --pageWidth:  62.5rem; /* 1000px */
+  --pageWidthM: 75rem;   /* 1200px */
+  --pageWidthL: 87.5rem; /* 1400px */
+
+  --baseline: 0.75rem; /* 12px */
+
+  --fontColor: red;
+
+  --modS: calc(var(--baseline) / 2 );
+  --modM: calc(var(--baseline) * 3/2 );
+  --modL: calc(var(--baseline) * 2 );
+}

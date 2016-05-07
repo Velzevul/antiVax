@@ -1,0 +1,9 @@
+.FooterNav {
+  display: block;
+}
+  .FooterNav__title {
+    font-weight: 600;
+  }
+  .FooterNav__item {
+    text-decoration: none;
+  }
