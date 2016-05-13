@@ -1,22 +1,25 @@
 #!/bin/bash
 
-echo -n "Component name: "
+echo -n "Component's domain: "
+read componentDomain
+
+echo -n "Component's name: "
 read componentName
 
-mkdir -p "./app/components/$componentName"
+mkdir -p "./src/$componentDomain/$componentName"
 
 echo "{
   \"name\": \"$componentName\",
   \"main\": \"$componentName.jsx\"
-}" >> "./app/components/$componentName/package.json"
+}" >> "./src/$componentDomain/$componentName/package.json"
 
 echo ".$componentName {
-}" >> "./app/components/$componentName/$componentName.css"
+}" >> "./src/$componentDomain/$componentName/$componentName.css"
 
 echo "import React from 'react';
 
 import styles from './$componentName.css';
-import layouts from '../../styles/layouts.css';
+import layouts from '../../layouts.css';
 
 const $componentName = () => {
   return (
@@ -27,8 +30,8 @@ const $componentName = () => {
 };
 
 export default $componentName;
-" >> "./app/components/$componentName/$componentName.jsx"
+" >> "./src/$componentDomain/$componentName/$componentName.jsx"
 
-echo "created component $componentName"
+echo "created component $componentName in $componentDomain"
 
 exit 0

@@ -1,25 +1,72 @@
-App
-  Header
-    HeaderTitle
-    HeaderModerator
-  MainNav
-    MainNavItem
-  -------
-  AskQuestion
-    SearchBar
+API
+----
+/pages/       - search in pags
+/faqs/        - get a specific section
+/blogposts/   - get a specific section
 
-    SearchResults
-      SearchResultsHeader
-      SearchResultsList
-        SearchResultItem
-      FaqList
-        FaqItem
 
-    SearchSpinner
+Header
+MainNav
 
-    Button
-  -------
-  Footer
-    ContactBlock
-    FooterNav
-    FooterNav
+  Static {
+    [url]: {
+      url: string,
+      isFetching: bool,
+      pages: [ids]
+    }
+  }
+  Search: {
+    query: string,
+    isFetching: bool,
+    results: [ids]
+  }
+  Faq: {
+    isFetching: bool,
+    pages: [ids]
+  }
+  Collection {
+    [diseases | vaccines | ingredients]: {
+      isFetching: bool,
+      pages: [ids]
+    }
+  }
+Footer
+
+
+combined state
+----
+{
+  pages: {
+    id: obj
+  },
+  sections: {
+    static: {
+      isFetching: bool,
+      items: [ids]
+    },
+    vaccines: {
+      isFetching: bool,
+      items: [ids]
+    },
+    diseases: {
+      isFetching: bool,
+      items: [ids]
+    },
+    ingredients: {
+      isFetching: bool,
+      items: [ids]
+    },
+    faqs: {
+      isFetching: bool,
+      items: [ids]
+    },
+    blogposts: {
+      isFetching: bool,
+      items: [ids]
+    }
+  },
+  search: {
+    query: string,
+    items: [ids]
+  }
+}

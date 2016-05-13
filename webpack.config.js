@@ -16,7 +16,7 @@ const pkg = require('./package.json');
 
 const TARGET = process.env.npm_lifecycle_event;
 const PATHS = {
-  app: path.join(__dirname, 'app'),
+  app: path.join(__dirname, 'src'),
   build: path.join(__dirname, 'build')
 };
 
@@ -45,7 +45,7 @@ const common = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'app/index.ejs',
+      template: path.join(PATHS.app, 'index.ejs'),
       title: 'AntiVax',
       appMountId: 'app',
       inject: false
