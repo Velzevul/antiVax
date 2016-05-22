@@ -11,7 +11,7 @@ const navItems = [
   },
   {
     label: 'About Vaccines',
-    path: '/vaccines'
+    path: '/about-vaccines'
   },
   {
     label: 'Vaccine Safety',

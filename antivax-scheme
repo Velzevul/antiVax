@@ -36,37 +36,79 @@ Footer
 combined state
 ----
 {
-  pages: {
+  entities: {
     id: obj
   },
   sections: {
-    static: {
-      isFetching: bool,
-      items: [ids]
-    },
-    vaccines: {
-      isFetching: bool,
-      items: [ids]
-    },
-    diseases: {
-      isFetching: bool,
-      items: [ids]
-    },
-    ingredients: {
-      isFetching: bool,
-      items: [ids]
-    },
-    faqs: {
-      isFetching: bool,
-      items: [ids]
-    },
-    blogposts: {
+    [section-id]: {
+      id: string,
       isFetching: bool,
       items: [ids]
     }
-  },
-  search: {
-    query: string,
-    items: [ids]
   }
+//  search: {
+//    query: string,
+//    items: [ids]
+//  }
 }
+
+
+Ask a question
+
+About vaccines
+- How vaccines work
+- How vaccines are made
+- Visit: what to expect
+- Vaccine-preventible diseases (list of diseases)
+    - page for each disease
+- Look up a vaccine (list of all vaccines)
+    - page for each vaccine
+
+Vaccine safety
+- vaccine safety
+- vaccine ingredients (generic information on ingredients)
+- look up an ingredient (list of all ingredients)
+    - page for each ingredient
+
+Vaccination schedule (just table with some information)
+
+Blog
+
+
+------------
+
+<IndexRoute component={AskQuestion} />
+
+<Route path="/ask-a-question" component={AskQuestion}>
+  <IndexRoute component={FrequentQuestions} />
+  <Route path="/ask-a-question/frequent/" component={FrequentQuestions}/>
+  <Route path="/ask-a-question/search/" component={Search}/>
+  <Route path="/ask-a-question/all/" component={AllQuestions}/>
+</Route>
+
+<Route path="/about/" component={AboutVaccines}>
+  <IndexRoute component={HowVaccinesWorkPage} />
+
+  <Route path="/about/vaccines/" component={VaccinesList}>
+    <Route path="/about/vaccines/:alias" component={VaccineListItem} />
+  </Route>
+
+  <Route path="/about/diseases/" component={DiseasesList}>
+    <Route path="/about/diseases/:alias" component={DiseaseListItem} />
+  </Route>
+
+  <Route path="/about/how-vaccines-work" component={HowVaccinesWorkPage}/>
+  <Route path="/about/how-vaccines-are-made" component={HowVaccinesAreMadePage}/>
+  <Route path="/about/visit" component={VisitPage}/>
+</Route>
+
+<Route path="/safety/" component={VaccineSafety}>
+  <IndexRoute component={VaccineSafetyPage} />
+
+  <Route path="/safety/ingredients/" component={IngredientsList}>
+    <Route path="/safety/ingredients/:alias" component={IngredientListItem} />
+  </Route>
+
+  <Route path="/safety/vaccine-safety" component={VaccineSafetyPage}/>
+  <Route path="/safety/ingredients" component={VaccineIngredientsPage}/>
+</Route>

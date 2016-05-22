@@ -62,6 +62,7 @@ const common = {
 
 const development = {
   devServer: {
+    contentBase: PATHS.build,
     historyApiFallback: true,
     hot: true,
     inline: true,
