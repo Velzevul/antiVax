@@ -1,4 +1,4 @@
-import {REQUEST_SECTION, RECEIVE_SECTION} from './staticActions';
+import {REQUEST_SECTION, RECEIVE_SECTION} from './sectionsActions';
 
 
 const section = (
@@ -17,8 +17,8 @@ const section = (
     case RECEIVE_SECTION:
       return Object.assign({}, state, {
         isFetching: false,
-        id: action.section,
-        pages: action.pages
+        id: action.sectionId,
+        pages: action.section.pages
       });
     default:
       return state;
@@ -33,7 +33,7 @@ const sections = (
     case REQUEST_SECTION:
     case RECEIVE_SECTION:
       return Object.assign({}, state, {
-        [action.section]: section(state[action.section], action)
+        [action.sectionId]: section(state[action.sectionId], action)
       });
     default:
       return state;

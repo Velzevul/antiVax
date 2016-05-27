@@ -1,59 +1,73 @@
 import React from 'react';
 import {Link} from 'react-router';
-import { connect } from 'react-redux'
+import {connect} from 'react-redux'
+
+import {fetchPage} from '../store/pagesActions';
 
 
-const StaticPage = ({
-  sectionId,
-  pageId,
-  itemId,
-  title,
-  content,
-  items,
-  children
-}) => {
-  let itemsContainer = '';
+class StaticPage extends React.Component {
+  componentWillMount() {
+    const {dispatch} = this.props,
+          {pageId} = this.props.params;
 
-  if (items) {
-    itemsContainer = (
-      <div>
-        <ul>
-          {items.map( i =>
-            <li key={i.id}>
-              <div>
-                { i.id === itemId ?
-                  children :
-                  <Link to={`/${sectionId}/${pageId}/${i.id}`} key={i.id} activeClassName="test">{i.name}</Link>
-                }
-              </div>
-            </li>
-          )}
-        </ul>
-      </div>
-    );
+    dispatch(fetchPage(pageId));
   }
 
-  return (
-    <div>
-      <h1>{title}</h1>
-      <div dangerouslySetInnerHTML={{__html: content}}></div>
-      {itemsContainer}
-    </div>
-  );
-};
+  componentWillReceiveProps(nextProps) {
+    const {dispatch} = nextProps,
+          {pageId} = nextProps.params;
+
+    if (pageId !== this.props.params.pageId) {
+      dispatch(fetchPage(pageId));
+    }
+  }
+
+  render() {
+    const {isFetching, title, content, items, children} = this.props,
+          {sectionId, pageId, itemId} = this.props.params;
+
+    if (isFetching) {
+      return (
+        <div>loading...</div>
+      )
+    } else {
+      return (
+        <div>
+          <h1>{title}</h1>
+          <div dangerouslySetInnerHTML={{__html: content}}></div>
+          {items ?
+            <div>
+              <ul>
+                {items.map( i =>
+                  <li key={i.id}>
+                    <div>
+                      { i.id === itemId ?
+                        children :
+                        <Link to={`/${sectionId}/${pageId}/${i.id}`} key={i.id} activeClassName="test">{i.title}</Link>
+                      }
+                    </div>
+                  </li>
+                )}
+              </ul>
+            </div> :
+            null
+          }
+        </div>
+      );
+    }
+  }
+}
 
 export default connect(
   (state, ownProps) => {
-    const {item: itemId, page: pageId, section: sectionId} = ownProps.params,
-          page = state.entities[pageId];
+    const {pageId} = ownProps.params,
+          page = state.pages[pageId];
 
     return {
-      sectionId,
-      pageId,
-      itemId,
+      isFetching: page ? page.isFetching : true,
       title: page ? page.title : '',
       content: page ? page.content : '',
-      items: page && page.items ? page.items.map(i => state.entities[i]) : null
+      items: page ? page.items : null
     };
   }
 )(StaticPage);

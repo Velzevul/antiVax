@@ -1,41 +1,37 @@
 import React from 'react';
+import {connect} from 'react-redux';
 import {Link} from 'react-router';
-import {connect} from 'react-redux'
 
 import {fetchPage} from '../store/pagesActions';
 
 
-class StaticItem extends React.Component {
-  componentWillMount() {
+class FaqItem extends React.Component {
+  componentDidMount() {
     const {dispatch} = this.props,
           {itemId} = this.props.params;
 
     dispatch(fetchPage(itemId));
   }
 
-  componentWillReceiveProps(nextProps) {
-    const {dispatch} = nextProps,
-          {itemId} = nextProps.params;
-
-    if (itemId !== this.props.params.itemId) {
-      dispatch(fetchPage(itemId));
-    }
-  }
-
   render() {
     const {isFetching, title, content} = this.props,
-          {pageId, sectionId} = this.props.params;
+          {query} = this.props.location;
 
     if (isFetching) {
       return (
         <div>loading...</div>
-      );
+      )
     } else {
       return (
         <div>
-          <div>{title}</div>
-          <Link to={`/${sectionId}/${pageId}`}>&lt;Back</Link>
-          <div>{content}</div>
+          <Link to={{pathname: '/questions', query: {show: query.show}}}>&lt;Back</Link>
+          <div>
+            {title}
+          </div>
+
+          <div>
+            {content}
+          </div>
         </div>
       );
     }
@@ -48,9 +44,9 @@ export default connect(
           item = state.pages[itemId];
 
     return {
-      isFetching: item ? item.isFetching : true,
+      isFetching: item ? item.isFetching : false,
       title: item ? item.title : '',
       content: item ? item.content : ''
     };
   }
-)(StaticItem);
+)(FaqItem);

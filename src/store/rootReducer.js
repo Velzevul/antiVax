@@ -1,10 +1,11 @@
 import { combineReducers } from 'redux';
-import sections from './Static/staticReducer';
-import entities from './App/appReducer';
+import sections from './sectionsReducer';
+import pages from './pagesReducer';
+
 
 const rootReducer = combineReducers({
   sections,
-  entities
+  pages
 });
 
 export default rootReducer;

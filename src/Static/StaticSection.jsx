@@ -1,34 +1,36 @@
 import React from 'react';
 import {Link} from 'react-router';
-import {fetchSection} from './staticActions';
 import { connect } from 'react-redux';
+
+import {fetchSection} from '../store/sectionsActions';
 
 class StaticSection extends React.Component {
   componentWillMount() {
-    const { dispatch, sectionId } = this.props;
+    const {dispatch} = this.props,
+          {sectionId} = this.props.params;
+
     dispatch(fetchSection(sectionId));
   }
 
   componentWillReceiveProps(nextProps) {
-    const {dispatch, sectionId} = nextProps;
+    const {dispatch} = nextProps,
+          {sectionId} = nextProps.params;
 
-    if (sectionId !== this.props.sectionId) {
-      dispatch(fetchSection(sectionId));
+    if (sectionId !== this.props.params.sectionId) {
+      dispatch(fetchPage(sectionId));
     }
   }
 
   render() {
-    const {sectionId, isFetching, pages, children} = this.props;
+    const {isFetching, pages, children} = this.props,
+          {sectionId} = this.props.params;
 
-    let content;
     if (isFetching) {
-      content = (
-        <div>
-          <div>loading...</div>
-        </div>
+      return (
+        <div>loading...</div>
       );
     } else {
-      content = (
+      return (
         <div>
           <div>
             {pages.map( page =>
@@ -42,20 +44,17 @@ class StaticSection extends React.Component {
         </div>
       );
     }
-
-    return content;
   }
 }
 
 export default connect(
   (state, ownProps) => {
-    const {section: sectionId} = ownProps.params,
+    const {sectionId} = ownProps.params,
           section = state.sections[sectionId];
-    
+
     return {
-      sectionId,
-      isFetching: section ? section.isFetching : false,
-      pages: section ? section.pages.map(p => state.entities[p]) : []
+      isFetching: section ? section.isFetching : true,
+      pages: section ? section.pages : []
     };
   }
 )(StaticSection);

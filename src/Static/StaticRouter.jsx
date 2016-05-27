@@ -7,11 +7,11 @@ import StaticItem from './StaticItem';
 
 
 export default (
-  <Route path=":section" component={StaticSection}>
+  <Route path=":sectionId" component={StaticSection}>
     <IndexRedirect to="how-vaccines-work" />
 
-    <Route path=":page" component={StaticPage}>
-      <Route path=":item" component={StaticItem} />
+    <Route path=":pageId" component={StaticPage}>
+      <Route path=":itemId" component={StaticItem} />
     </Route>
   </Route>
 );

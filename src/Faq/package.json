@@ -1,4 +1,4 @@
 {
   "name": "Faq",
-  "main": "Faq.jsx"
+  "main": "faqRouter.jsx"
 }
