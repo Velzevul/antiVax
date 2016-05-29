@@ -7,6 +7,8 @@ const page = (
     isFetching: true,
     title: '',
     content: '',
+    createdAt: '',
+    createdBy: '',
     items: null
   },
   action
@@ -22,6 +24,8 @@ const page = (
         isFetching: false,
         title: action.page.title,
         content: action.page.content,
+        createdAt: action.page.createdAt,
+        createdBy: action.page.createdBy,
         items: action.page.items
       });
     default:

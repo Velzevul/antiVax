@@ -11,6 +11,7 @@ import configureStore from './store';
 import App from './App';
 import staticRouter from './Static';
 import faqRouter from './Faq';
+import blogRouter from './Blog';
 
 
 const store = configureStore();
@@ -22,6 +23,7 @@ ReactDOM.render((
         <IndexRedirect to="/questions" />
 
         {faqRouter}
+        {blogRouter}
         {staticRouter}
       </Route>
     </Router>
