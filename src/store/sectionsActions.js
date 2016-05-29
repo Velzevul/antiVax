@@ -30,8 +30,8 @@ export const fetchSection = (
   return dispatch => {
     dispatch( requestSection(sectionId) );
 
-    firebaseDb.ref(`sections/${sectionId}`)
-      .on('value', snapshot => {
+    return firebaseDb.ref(`sections/${sectionId}`).once('value')
+      .then( snapshot => {
         dispatch(receiveSection(sectionId, snapshot.val()));
       });
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 import { connect } from 'react-redux';
+import { browserHistory } from 'react-router';
 
 import {fetchSection} from '../store/sectionsActions';
 
@@ -9,15 +10,20 @@ class StaticSection extends React.Component {
     const {dispatch} = this.props,
           {sectionId} = this.props.params;
 
-    dispatch(fetchSection(sectionId));
+    dispatch(fetchSection(sectionId))
+      .then( () => { console.log('section loaded!'); });
   }
 
   componentWillReceiveProps(nextProps) {
-    const {dispatch} = nextProps,
-          {sectionId} = nextProps.params;
+    const {dispatch, pages} = nextProps,
+          {sectionId, pageId} = nextProps.params;
 
     if (sectionId !== this.props.params.sectionId) {
       dispatch(fetchPage(sectionId));
+    }
+
+    if ((pageId === undefined) && (pages.length > 0)) {
+      browserHistory.push(`/${sectionId}/${pages[0].id}`);
     }
   }
 

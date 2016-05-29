@@ -30,8 +30,8 @@ export const fetchPage = (
   return dispatch => {
     dispatch( requestPage(pageId) );
 
-    firebaseDb.ref(`pages/${pageId}`)
-      .on('value', snapshot => {
+    return firebaseDb.ref(`pages/${pageId}`).once('value')
+      .then( snapshot => {
         dispatch(receivePage(pageId, snapshot.val()));
       });
   }

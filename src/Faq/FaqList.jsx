@@ -25,16 +25,14 @@ class FaqList extends React.Component {
           {query} = this.props.location,
           {itemId} = this.props.params;
 
-    let faqContent = '';
-
     if (isFetching) {
-      faqContent = (
+      return (
         <div>loading...</div>
       );
     } else {
       const visibleFaqs = getVisibleFaqs(faqs, query.show);
 
-      faqContent = (
+      return (
         <div>
           <ul>
             { visibleFaqs.map( f =>
@@ -54,14 +52,6 @@ class FaqList extends React.Component {
         </div>
       );
     }
-
-    return (
-      <div>
-        <div>search bar goes here</div>
-
-        {faqContent}
-      </div>
-    );
   }
 }
 

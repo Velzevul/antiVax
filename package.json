@@ -33,6 +33,7 @@
     "start": "webpack-dev-server"
   },
   "dependencies": {
+    "algoliasearch": "^3.14.5",
     "babel-polyfill": "^6.8.0",
     "firebase": "^3.0.3",
     "normalizr": "^2.1.0",
