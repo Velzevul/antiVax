@@ -1,9 +1,58 @@
-.MainNav {
+@import '../../variables.css';
 
+
+.MainNavWrapper {
+  background-color: color(var(--colorMain) alpha(-8%));
 }
-  .MainNav__item {
+.MainNav {
+  position: relative;
+  color: white;
+}
+  .MainNav__indicator {
+    width: 20%;
+    height: 3px;
+    position: absolute;
+    top: 0;
 
+    background-color: white;
+
+    transition-property: left;
+    transition-duration: 0.2s;
+  }
+    .MainNav__indicator_0 {
+      left: 0;
+    }
+    .MainNav__indicator_1 {
+      left: 20%;
+    }
+    .MainNav__indicator_2 {
+      left: 40%;
+    }
+    .MainNav__indicator_3 {
+      left: 60%;
+    }
+    .MainNav__indicator_4 {
+      left: 80%;
+    }
+  .MainNav__item {
+    display: block;
+    padding:  calc(var(--baseline) * 1.5)
+              0
+              calc(var(--baseline) * 1.5)
+              0;
+
+    font-weight: 700;
+    line-height: var(--modL);
+
+    color: inherit;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    opacity: 0.75;
+    transition-property: opacity;
+    transition-duration: 0.2s;
   }
   .MainNav__item_active {
-
+    opacity: 1;
   }

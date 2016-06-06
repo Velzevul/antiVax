@@ -1,24 +1,20 @@
 import React from 'react';
 
 import styles from './Header.css';
-import layouts from '../../layouts.css';
 
-import HeaderContact from '../HeaderContact';
 import Sitename from '../Sitename';
+import MainNav from '../MainNav';
 
-const Header = () => {
+
+const Header = ({
+  location
+}) => {
   return (
     <header className={styles.Header}>
-      <div className={layouts.wrapM}>
-        <div className={layouts.justified}>
-          <div className={layouts.justified__item}>
-            <Sitename />
-          </div>
-
-          <div className={layouts.justified__item}>
-            <HeaderContact />
-          </div>
-        </div>
+      <div className={styles.Header__body}>
+        <Sitename />
+        
+        <MainNav location={location} />
       </div>
     </header>
   );

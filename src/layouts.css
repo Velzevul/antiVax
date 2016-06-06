@@ -1,4 +1,53 @@
-@import 'variables.css';
+/**
+ *  lAYOUTS
+ *
+ *
+ *  .wrap                 determines the overall width of the webpage
+ *    .wrapS
+ *    .wrapM
+ *    .wrapL
+ *
+ *
+ *  .block                dictates consistent margin-bottom throughout the application
+ *    .blockS
+ *    .blockM
+ *    .blockL
+ *
+ *
+ *  .media                "media element" layout
+ *    .media_middle
+ *
+ *    .media__figure
+ *      .media__figureS
+ *      .media__figureM
+ *      .media__figureL
+ *
+ *    .media__body
+ *
+ *
+ *  .listInline           inline list of items
+ *    .listInline_s
+ *    .listInline_m
+ *    .listInline_l
+ *
+ *    .lintInline__item
+ *
+ *
+ *  .list                 list of items
+ *    .list_s
+ *    .list_m
+ *    .list_l
+ *
+ *    .list__item
+ *
+ *
+ *  .justified            spreads out and evenly distributes elements inside the container
+ *
+ *    .justified__item
+ *
+ */
+
+@import './variables.css';
 
 
 .wrap {
@@ -41,6 +90,9 @@
   display: flex;
   align-items: flex-start;
 }
+  .media_middle {
+    align-items: center;
+  }
   .media__figure {
     margin-right: var(--baseline);
   }
@@ -53,7 +105,7 @@
     .media__figureL {
       margin-right: var(--modL);
     }
-  .media__Body {
+  .media__body {
     flex: 1;
   }
 
@@ -154,6 +206,8 @@
 
 .grid {
   display: flex;
+
+  list-style: none;
 }
   .grid__item {
     flex: 1;
@@ -216,6 +270,10 @@
   .grid__item_11_12 {
     flex: 0 0 auto;
     width: 91.666%;
+  }
+  .grid__item_1_5 {
+    flex: 0 0 auto;
+    width: 20%;
   }
 
   .grid_gutter {

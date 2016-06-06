@@ -4,16 +4,15 @@ import styles from './App.css';
 import layouts from '../layouts.css';
 
 import Header from './Header';
-import MainNav from './MainNav';
 import Footer from './Footer';
 
 const App = ({
-  children
+  children,
+  location
 }) => {
   return (
     <div className={`${layouts.page} ${styles.Root}`}>
-      <Header />
-      <MainNav />
+      <Header location={location} />
 
       <main className={layouts.page__content}>
         {children}
