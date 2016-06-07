@@ -40,7 +40,7 @@ const MainNav = ({
         currentSection = location.pathname.split('/')[1];
   
   return (
-    <div className={styles.MainNavWrapper}>
+    <div className={styles.MainNavBg}>
       <div className={layouts.wrapM}>
         <div className={styles.MainNav}>
           <div className={`${styles.MainNav__indicator} ${routeStateMap[currentSection]}`}></div>

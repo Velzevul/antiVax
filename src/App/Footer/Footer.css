@@ -1,3 +1,33 @@
+@import '../../variables.css';
+
+
 .Footer {
-  border-top: 1px solid #ccc;
+  padding:  calc(var(--baseline) * 6)
+            0;
+
+  background: var(--colorMain);
 }
+
+
+.FooterBlock {
+  font-weight:300;
+  color: var(--colorMainLLL);
+}
+
+  .FooterBlock__title {
+    font-weight:400;
+    color: var(--colorMainLLL);
+    text-transform: uppercase;
+  }
+
+  .FooterBlock__emph {
+    font-weight: 600;
+  }
+
+  .FooterBlock__link {
+    color: white;
+    text-decoration: none;
+  }
+    .FooterBlock__link:hover {
+      text-decoration: underline;
+    }
