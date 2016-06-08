@@ -3,15 +3,11 @@ import index from '../store/algoliaSearch';
 
 export const REQUEST_SEARCH_RESULTS = 'REQUEST_SEARCH_RESULTS';
 export const RECEIVE_SEARCH_RESULTS = 'RECEIVE_SEARCH_RESULTS';
-export const RESET_SEARCH = 'RESET_SEARCH';
 
-const requestSearchResults = (
-  query
-) => {
+const requestSearchResults = () => {
   return {
-    type: REQUEST_SEARCH_RESULTS,
-    query
-  }
+    type: REQUEST_SEARCH_RESULTS
+  };
 };
 
 const receiveSearchResults = (
@@ -20,23 +16,17 @@ const receiveSearchResults = (
   return {
     type: RECEIVE_SEARCH_RESULTS,
     pages
-  }
-};
-
-export const resetSearch = () => {
-  return {
-    type: RESET_SEARCH
-  }
+  };
 };
 
 export const fetchSearchResults = (
   query
 ) => {
   return dispatch => {
-    dispatch(requestSearchResults(query));
+    dispatch(requestSearchResults());
 
     return index.search(query, (err, content) => {
       dispatch(receiveSearchResults(content.hits));
     });
-  }
+  };
 };

@@ -1,12 +1,11 @@
 import React from 'react';
-import {connect} from 'react-redux';
+import {browserHistory} from 'react-router';
 
-import {fetchSearchResults, resetSearch} from '../store/searchActions'; 
+import styles from './QuestionsSearch.css';
 
+const typeDelay = 500;
 
-const typeDelay = 300;
-
-class SearchBox extends React.Component {
+class QuestionsSearch extends React.Component {
   constructor(props) {
     super(props);
 
@@ -15,16 +14,17 @@ class SearchBox extends React.Component {
   }
 
   handleType() {
-    const {dispatch} = this.props;
-
     clearTimeout(this.state.timeoutId);
     const timeoutId = setTimeout(() => {
       const query = this._input.value;
 
       if (query) {
-        dispatch(fetchSearchResults(this._input.value));
+        browserHistory.push({
+          pathname: '/questions',
+          query: {q: query}
+        });
       } else {
-        dispatch(resetSearch());
+        browserHistory.push('/questions');
       }
     }, typeDelay);
 
@@ -32,8 +32,12 @@ class SearchBox extends React.Component {
   }
 
   render() {
+    const {query} = this.props.location;
+
     return (
       <input type="text"
+             className={styles.QuestionsSearch}
+             defaultValue={query.q ? query.q : ''}
              ref={ el => this._input = el }
              onChange={this.handleType}
              placeholder="Type keywords to search..."/>
@@ -41,4 +45,4 @@ class SearchBox extends React.Component {
   }
 }
 
-export default connect()(SearchBox);
+export default QuestionsSearch;

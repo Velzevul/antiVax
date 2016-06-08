@@ -1,0 +1,13 @@
+@import '../../variables.css';
+
+
+.Questions {
+  padding: calc(var(--baseline) * 6);
+}
+  .Questions__title {
+    font-family: 'Nunito', sans-serif;
+    font-size: calc(var(--baseline) * 3);
+    font-weight: 300;
+
+    text-align: center;
+  }

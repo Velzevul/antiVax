@@ -2,26 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a7a8dad-447f-4ddd-83e8-b25a81bad1cf" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/App/FooterContact/FooterContact.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/App/FooterContact/FooterContact.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/App/FooterContact/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/App/FooterNav/FooterNav.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/App/FooterNav/FooterNav.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/App/FooterNav/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/App/Sitename/Sitename.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/App/Sitename/Sitename.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/App/Sitename/package.json" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Questions/Questions/Questions.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Questions/Questions/Questions.jsx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Questions/Questions/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Questions/QuestionsSearch/QuestionsSearch.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Questions/QuestionsSearch/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Questions/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Questions/questionsRouter.jsx" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Faq/FaqRoot.jsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Faq/Search.jsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Faq/faqRouter.jsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Faq/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Search/SearchRoot.jsx" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Search/package.json" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Faq/FaqItem.jsx" afterPath="$PROJECT_DIR$/src/Questions/FaqItem.jsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Faq/FaqList.jsx" afterPath="$PROJECT_DIR$/src/Questions/FaqList.jsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Search/SearchBox.jsx" afterPath="$PROJECT_DIR$/src/Questions/QuestionsSearch/QuestionsSearch.jsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Search/SearchResultsItem.jsx" afterPath="$PROJECT_DIR$/src/Questions/SearchResultsItem.jsx" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Search/SearchResultsList.jsx" afterPath="$PROJECT_DIR$/src/Questions/SearchResultsList.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App/App.jsx" afterPath="$PROJECT_DIR$/src/App/App.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App/Footer/Footer.css" afterPath="$PROJECT_DIR$/src/App/Footer/Footer.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App/Footer/Footer.jsx" afterPath="$PROJECT_DIR$/src/App/Footer/Footer.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App/Footer/package.json" afterPath="$PROJECT_DIR$/src/App/Footer/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App/Header/Header.css" afterPath="$PROJECT_DIR$/src/App/Header/Header.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App/Header/Header.jsx" afterPath="$PROJECT_DIR$/src/App/Header/Header.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App/Header/package.json" afterPath="$PROJECT_DIR$/src/App/Header/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App/MainNav/MainNav.css" afterPath="$PROJECT_DIR$/src/App/MainNav/MainNav.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App/MainNav/MainNav.jsx" afterPath="$PROJECT_DIR$/src/App/MainNav/MainNav.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App/MainNav/package.json" afterPath="$PROJECT_DIR$/src/App/MainNav/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.jsx" afterPath="$PROJECT_DIR$/src/index.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store/searchActions.js" afterPath="$PROJECT_DIR$/src/store/searchActions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/store/searchReducer.js" afterPath="$PROJECT_DIR$/src/store/searchReducer.js" />
     </list>
     <ignored path="antiVax.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,20 +45,94 @@
     <favorites_list name="antiVax" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="App.jsx" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/App/App.jsx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-              <folding>
-                <element signature="e#0#26#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.59151417">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="questionsRouter.jsx" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Questions/questionsRouter.jsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="60">
+                  <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Questions.jsx" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Questions/Questions/Questions.jsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="332">
+                  <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="QuestionsSearch.jsx" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Questions/QuestionsSearch/QuestionsSearch.jsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="180">
+                  <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SearchResultsList.jsx" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Questions/SearchResultsList.jsx">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-45">
+                  <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="layouts.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/layouts.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="247">
+                  <caret line="302" column="0" selection-start-line="302" selection-start-column="0" selection-end-line="302" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Questions.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Questions/Questions/Questions.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="195">
+                  <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="QuestionsSearch.css" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Questions/QuestionsSearch/QuestionsSearch.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="75">
+                  <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -62,26 +140,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/store/pagesActions.js" />
-        <option value="$PROJECT_DIR$/src/Static/StaticSection.jsx" />
-        <option value="$PROJECT_DIR$/src/store/sectionsActions.js" />
-        <option value="$PROJECT_DIR$/src/Search/searchRouter.js" />
-        <option value="$PROJECT_DIR$/src/Search/searchRouter.jsx" />
-        <option value="$PROJECT_DIR$/src/Faq/faqRouter.jsx" />
-        <option value="$PROJECT_DIR$/src/Faq/Search.jsx" />
-        <option value="$PROJECT_DIR$/src/Search/package.json" />
-        <option value="$PROJECT_DIR$/src/Static/staticRouter.jsx" />
-        <option value="$PROJECT_DIR$/src/Search/SearchBox.jsx" />
-        <option value="$PROJECT_DIR$/src/store/searchReducer.js" />
-        <option value="$PROJECT_DIR$/src/store/rootReducer.js" />
-        <option value="$PROJECT_DIR$/src/Search/SearchRoot.jsx" />
-        <option value="$PROJECT_DIR$/src/store/algoliaSearch.js" />
-        <option value="$PROJECT_DIR$/src/Faq/FaqList.jsx" />
-        <option value="$PROJECT_DIR$/src/store/searchActions.js" />
-        <option value="$PROJECT_DIR$/src/Search/SearchResultsItem.jsx" />
-        <option value="$PROJECT_DIR$/src/Search/SearchResultsList.jsx" />
         <option value="$PROJECT_DIR$/src/Faq/FaqItem.jsx" />
-        <option value="$PROJECT_DIR$/src/Faq/FaqRoot.jsx" />
         <option value="$PROJECT_DIR$/src/Blog/blogRouter.js" />
         <option value="$PROJECT_DIR$/src/Blog/package.json" />
         <option value="$PROJECT_DIR$/src/firebase-import.json" />
@@ -100,10 +159,8 @@
         <option value="$PROJECT_DIR$/src/App/App.css" />
         <option value="$PROJECT_DIR$/src/App/FooterContact/FooterContact.css" />
         <option value="$PROJECT_DIR$/src/App/FooterContact/FooterContact.jsx" />
-        <option value="$PROJECT_DIR$/src/App/Footer/Footer.jsx" />
         <option value="$PROJECT_DIR$/src/App/Sitename/Sitename.css" />
         <option value="$PROJECT_DIR$/src/App/Sitename/Sitename.jsx" />
-        <option value="$PROJECT_DIR$/src/index.jsx" />
         <option value="$PROJECT_DIR$/src/App/Footer/package.json" />
         <option value="$PROJECT_DIR$/src/App/Header/package.json" />
         <option value="$PROJECT_DIR$/src/App/MainNav/package.json" />
@@ -113,6 +170,27 @@
         <option value="$PROJECT_DIR$/src/App/Footer/Footer.css" />
         <option value="$PROJECT_DIR$/src/App/MainNav/MainNav.jsx" />
         <option value="$PROJECT_DIR$/src/App/MainNav/MainNav.css" />
+        <option value="$PROJECT_DIR$/src/Search/searchRouter.jsx" />
+        <option value="$PROJECT_DIR$/src/Faq/FaqRoot.jsx" />
+        <option value="$PROJECT_DIR$/src/Search/SearchBox.jsx" />
+        <option value="$PROJECT_DIR$/src/Questions/package.json" />
+        <option value="$PROJECT_DIR$/src/index.jsx" />
+        <option value="$PROJECT_DIR$/src/Questions/QuesionsSearch.jsx" />
+        <option value="$PROJECT_DIR$/src/Questions/Questions.jsx" />
+        <option value="$PROJECT_DIR$/src/Faq/package.json" />
+        <option value="$PROJECT_DIR$/src/Questions/FaqList.jsx" />
+        <option value="$PROJECT_DIR$/src/App/Footer/Footer.jsx" />
+        <option value="$PROJECT_DIR$/src/Questions/QuestionsSearch.jsx" />
+        <option value="$PROJECT_DIR$/src/Questions/Questions/package.json" />
+        <option value="$PROJECT_DIR$/src/Questions/Questions/Questions.css" />
+        <option value="$PROJECT_DIR$/src/Questions/QuestionsSearch/package.json" />
+        <option value="$PROJECT_DIR$/src/Questions/QuestionsSearch/QuestionsSearch.css" />
+        <option value="$PROJECT_DIR$/src/Questions/questionsRouter.jsx" />
+        <option value="$PROJECT_DIR$/src/store/searchActions.js" />
+        <option value="$PROJECT_DIR$/src/store/searchReducer.js" />
+        <option value="$PROJECT_DIR$/src/Questions/Questions/Questions.jsx" />
+        <option value="$PROJECT_DIR$/src/Questions/SearchResultsList.jsx" />
+        <option value="$PROJECT_DIR$/src/Questions/QuestionsSearch/QuestionsSearch.jsx" />
       </list>
     </option>
   </component>
@@ -172,7 +250,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -219,25 +296,48 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="App" />
+              <option name="myItemId" value="Questions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="antiVax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="antiVax" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Questions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Questions" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="editor.config.accepted" value="true" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="javascript.nodejs.core.library.configured.version" value="5.10.0" />
-    <property name="SearchEverywhereHistoryKey" value="mainnav&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/MainNav/MainNav.jsx&#10;header&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Header/Header.css&#10;sitena&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Sitename.css&#10;index&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/index.jsx&#10;app&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/App.jsx&#10;siten&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Sitename/Sitename.css&#10;footercon&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/FooterContact/FooterContact.css&#10;FooterConta&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/FooterContact/FooterContact.jsx&#10;footer&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Footer/Footer.jsx&#10;sitename&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Sitename/Sitename.css&#10;site&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Sitename/Sitename.css&#10;read&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/README.md&#10;varia&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/variables.css&#10;layouts&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/layouts.css&#10;layout&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/layouts.css&#10;css&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/global.css&#10;staticPa&#9;null&#9;null&#10;lay&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/layouts.css&#10;faqLis&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Faq/FaqList.jsx&#10;faqlist&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Faq/FaqList.jsx&#10;staticro&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/staticRouter.jsx&#10;rootred&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/rootReducer.js&#10;ndex&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/index.jsx&#10;faqact&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Faq/faqActions.js&#10;actions&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/staticActions.js&#10;action&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Faq/searchActions.js&#10;sear&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Faq/searchActions.js&#10;staticrou&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/staticRouter.jsx&#10;staticsec&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticSection.jsx&#10;staticPage&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticPage.jsx&#10;rootre&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/rootReducer.js&#10;faqRed&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Faq/faqReducer.js&#10;searchRedu&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Faq/searchReducer.js&#10;staticred&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/staticReducer.js&#10;staticSec&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticSection.jsx&#10;staticitem&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticItem.jsx&#10;staticrouter&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/staticRouter.jsx&#10;json&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/build/mocks/section-about-vaccines.json&#10;appre&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/appReducer.js&#10;appac&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/appActions.js&#10;appred&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/appReducer.js&#10;mainn&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/MainNav/MainNav.jsx&#10;staticA&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/staticActions.js&#10;staticRou&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/staticRouter.jsx&#10;soft wra&#9;ACTION&#9;EditorToggleUseSoftWraps&#10;mainna&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/MainNav/MainNav.jsx&#10;e&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Header/Header.jsx&#10;grid&#9;null&#9;null&#10;list&#9;null&#9;null&#10;FooterNav&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/app/components/FooterNav/FooterNav.css" />
+    <property name="SearchEverywhereHistoryKey" value="sear&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/SearchResultsList.jsx&#10;faqlist&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/FaqList.jsx&#10;searchactio&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/store/searchActions.js&#10;searchred&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/store/searchReducer.js&#10;questions&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/Questions/Questions.jsx&#10;layouts&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/layouts.css&#10;searchredu&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/store/searchReducer.js&#10;searchactions&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/store/searchActions.js&#10;searchact&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/store/searchActions.js&#10;footer&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Footer/Footer.jsx&#10;searchRed&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/store/searchReducer.js&#10;searchAc&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/store/searchActions.js&#10;router&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Faq/faqRouter.jsx&#10;mainnav&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/MainNav/MainNav.jsx&#10;header&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Header/Header.css&#10;sitena&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Sitename.css&#10;index&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/index.jsx&#10;app&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/App.jsx&#10;siten&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Sitename/Sitename.css&#10;footercon&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/FooterContact/FooterContact.css&#10;FooterConta&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/FooterContact/FooterContact.jsx&#10;sitename&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Sitename/Sitename.css&#10;site&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Sitename/Sitename.css&#10;read&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/README.md&#10;varia&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/variables.css&#10;layout&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/layouts.css&#10;css&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/global.css&#10;staticPa&#9;null&#9;null&#10;lay&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/layouts.css&#10;faqLis&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Faq/FaqList.jsx&#10;staticro&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/staticRouter.jsx&#10;rootred&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/rootReducer.js&#10;ndex&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/index.jsx&#10;faqact&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Faq/faqActions.js&#10;actions&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/staticActions.js&#10;action&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Faq/searchActions.js&#10;staticrou&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/staticRouter.jsx&#10;staticsec&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticSection.jsx&#10;staticPage&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticPage.jsx&#10;rootre&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/rootReducer.js&#10;faqRed&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Faq/faqReducer.js&#10;searchRedu&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Faq/searchReducer.js&#10;staticred&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/staticReducer.js&#10;staticSec&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticSection.jsx&#10;staticitem&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticItem.jsx&#10;staticrouter&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/staticRouter.jsx&#10;json&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/build/mocks/section-about-vaccines.json&#10;appre&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/appReducer.js&#10;appac&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/appActions.js&#10;appred&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/appReducer.js" />
     <property name="FullScreen" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
   </component>
@@ -250,11 +350,11 @@
       <recent name="$PROJECT_DIR$/build/mocks" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Questions/QuestionsSearch" />
+      <recent name="$PROJECT_DIR$/src/Questions/Questions" />
+      <recent name="$PROJECT_DIR$/src/Questions" />
       <recent name="$PROJECT_DIR$/src/App/MainNav" />
       <recent name="$PROJECT_DIR$/src/App/Header" />
-      <recent name="$PROJECT_DIR$/src/App/Footer" />
-      <recent name="$PROJECT_DIR$/src/App/styles" />
-      <recent name="$PROJECT_DIR$/src/App" />
     </key>
   </component>
   <component name="RunManager">
@@ -368,26 +468,33 @@
       <workItem from="1464813929510" duration="17000" />
       <workItem from="1465153466695" duration="4520000" />
       <workItem from="1465167650893" duration="13051000" />
-      <workItem from="1465253433176" duration="6294000" />
+      <workItem from="1465253433176" duration="6571000" />
+      <workItem from="1465270187087" duration="3817000" />
+      <workItem from="1465339316141" duration="98000" />
+      <workItem from="1465339581600" duration="40000" />
+      <workItem from="1465339637537" duration="12000" />
+      <workItem from="1465339670352" duration="284000" />
+      <workItem from="1465340046709" duration="17000" />
+      <workItem from="1465340076089" duration="6512000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="161949000" />
+    <option name="totallyTimeSpent" value="173006000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15486111" sideWeight="0.49447078" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16527778" sideWeight="0.49447078" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24425635" sideWeight="0.5638889" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17291415" sideWeight="0.57430553" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988167" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24425635" sideWeight="0.43611112" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25634825" sideWeight="0.42569444" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19304734" sideWeight="0.5055292" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -439,142 +546,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Search/SearchResultsItem.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Faq/FaqList.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Faq/FaqItem.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Search/SearchResultsList.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="12" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Blog/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/blogpostsActions.js" />
-    <entry file="file://$PROJECT_DIR$/src/store/blogpostsReducer.js" />
-    <entry file="file://$PROJECT_DIR$/src/pages.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="91" column="4" selection-start-line="91" selection-start-column="4" selection-end-line="91" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.ejs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Blog/blogRouter.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="23" selection-end-line="10" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Blog/Blog.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/firebase-import.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="315" column="4" selection-start-line="315" selection-start-column="4" selection-end-line="334" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="36" selection-start-line="27" selection-start-column="36" selection-end-line="27" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Blog/Blogpost.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/pagesReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/store/pagesActions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="34" column="54" selection-start-line="34" selection-start-column="54" selection-end-line="34" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/FooterNav/FooterNav.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/header-bg.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/images/logo.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/build/images/logo.svg">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/FooterNav/FooterNav.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -582,19 +553,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Sitename/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Sitename/package.json" />
     <entry file="file://$PROJECT_DIR$/src/global.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
           <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -602,7 +565,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="96" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="96" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -610,7 +572,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -618,28 +579,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="135">
-            <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/build/images/header-mask.svg">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -657,65 +603,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Static/staticRouter.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="7" selection-start-line="0" selection-start-column="7" selection-end-line="0" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Static/StaticSection.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="20" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/FooterContact/FooterContact.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/FooterContact/FooterContact.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="30" selection-start-line="7" selection-start-column="4" selection-end-line="8" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Sitename/Sitename.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/FooterContact/FooterContact.jsx" />
+    <entry file="file://$PROJECT_DIR$/src/App/FooterContact/FooterContact.css" />
+    <entry file="file://$PROJECT_DIR$/src/App/Sitename/Sitename.jsx" />
     <entry file="file://$PROJECT_DIR$/src/App/App.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/styles.css" />
     <entry file="file://$PROJECT_DIR$/src/App/Footer/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -723,7 +625,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -731,73 +632,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Sitename.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Sitename.css" />
     <entry file="file://$PROJECT_DIR$/src/App/Header/Header.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding>
-            <element signature="e#37#63#0" expanded="false" />
-            <element signature="e#77#185#0" expanded="false" />
-            <element signature="e#199#566#0" expanded="false" />
-            <element signature="e#577#740#0" expanded="false" />
-            <element signature="e#758#846#0" expanded="false" />
-            <element signature="e#865#1021#0" expanded="false" />
-            <element signature="e#1043#1124#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/layouts.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="79" column="3" selection-start-line="79" selection-start-column="3" selection-end-line="79" selection-end-column="3" />
-          <folding>
-            <element signature="e#874#951#0" expanded="false" />
-            <element signature="e#961#1047#0" expanded="false" />
-            <element signature="e#1153#1239#0" expanded="false" />
-            <element signature="e#1249#1286#0" expanded="false" />
-            <element signature="e#1297#1334#0" expanded="false" />
-            <element signature="e#1345#1382#0" expanded="false" />
-            <element signature="e#1393#1430#0" expanded="false" />
-            <element signature="e#1613#1653#0" expanded="false" />
-            <element signature="e#1674#1714#0" expanded="false" />
-            <element signature="e#2161#2230#0" expanded="false" />
-            <element signature="e#2269#2342#0" expanded="false" />
-            <element signature="e#2360#2429#0" expanded="false" />
-            <element signature="e#2468#2541#0" expanded="false" />
-            <element signature="e#2559#2628#0" expanded="false" />
-            <element signature="e#2667#2740#0" expanded="false" />
-            <element signature="e#2749#2906#0" expanded="false" />
-            <element signature="e#2929#3015#0" expanded="false" />
-            <element signature="e#3027#3065#0" expanded="false" />
-            <element signature="e#3092#3133#0" expanded="false" />
-            <element signature="e#3145#3183#0" expanded="false" />
-            <element signature="e#3210#3251#0" expanded="false" />
-            <element signature="e#3263#3301#0" expanded="false" />
-            <element signature="e#3328#3369#0" expanded="false" />
-            <element signature="e#3383#3460#0" expanded="false" />
-            <element signature="e#3480#3529#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -805,14 +647,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding>
-            <element signature="e#41#130#0" expanded="false" />
-            <element signature="e#146#198#0" expanded="false" />
-            <element signature="e#222#311#0" expanded="false" />
-            <element signature="e#334#361#0" expanded="false" />
-            <element signature="e#384#434#0" expanded="false" />
-            <element signature="e#464#505#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -820,9 +654,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
           <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -830,20 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="34" column="19" selection-start-line="34" selection-start-column="19" selection-end-line="34" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#272#1036#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/App/Footer/Footer.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="52" column="41" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -851,18 +668,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#44#103#0" expanded="false" />
-            <element signature="e#115#156#0" expanded="false" />
-            <element signature="e#180#347#0" expanded="false" />
-            <element signature="e#374#396#0" expanded="false" />
-            <element signature="e#423#447#0" expanded="false" />
-            <element signature="e#474#498#0" expanded="false" />
-            <element signature="e#525#549#0" expanded="false" />
-            <element signature="e#576#600#0" expanded="false" />
-            <element signature="e#619#1002#0" expanded="false" />
-            <element signature="e#1029#1054#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -870,6 +675,169 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Search/package.json" />
+    <entry file="file://$PROJECT_DIR$/README.md" />
+    <entry file="file://$PROJECT_DIR$/src/Faq/Search.jsx" />
+    <entry file="file://$PROJECT_DIR$/src/Static/staticRouter.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Questions/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Search/searchRouter.jsx" />
+    <entry file="file://$PROJECT_DIR$/src/index.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Questions/SearchResultsItem.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Faq/package.json" />
+    <entry file="file://$PROJECT_DIR$/src/Search/SearchRoot.jsx" />
+    <entry file="file://$PROJECT_DIR$/src/Faq/FaqRoot.jsx" />
+    <entry file="file://$PROJECT_DIR$/src/Faq/faqRouter.jsx" />
+    <entry file="file://$PROJECT_DIR$/npm-debug.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App/Footer/Footer.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1245">
+          <caret line="87" column="60" selection-start-line="87" selection-start-column="60" selection-end-line="87" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Static/StaticSection.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Questions/Questions/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/layouts.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="302" column="0" selection-start-line="302" selection-start-column="0" selection-end-line="302" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Questions/QuestionsSearch/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Questions/Questions/Questions.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Questions/QuestionsSearch/QuestionsSearch.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/searchReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/store/searchActions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Questions/FaqList.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="25" column="16" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Questions/questionsRouter.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="32" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Questions/Questions/Questions.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="33" column="52" selection-start-line="33" selection-start-column="52" selection-end-line="33" selection-end-column="52" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Questions/SearchResultsList.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-45">
+          <caret line="10" column="40" selection-start-line="10" selection-start-column="40" selection-end-line="10" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Questions/QuestionsSearch/QuestionsSearch.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="13" column="3" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
           </folding>

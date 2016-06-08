@@ -71,7 +71,7 @@ const Footer = () => {
               </div>
 
               { aboutNav.map( i =>
-                <div className={layouts.blockS}>
+                <div className={layouts.blockS} key={i.path}>
                   <Link className={styles.FooterBlock__link} to={i.path}>{i.label}</Link>
                 </div>
               )}
@@ -85,7 +85,7 @@ const Footer = () => {
               </div>
 
               { infoNav.map( i =>
-                <div className={layouts.blockS}>
+                <div className={layouts.blockS} key={i.path}>
                   <Link className={styles.FooterBlock__link} to={i.path}>{i.label}</Link>
                 </div>
               )}

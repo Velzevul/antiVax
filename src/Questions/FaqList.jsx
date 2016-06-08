@@ -17,6 +17,7 @@ const getVisibleFaqs = (faqs, show) => {
 class FaqList extends React.Component {
   componentWillMount() {
     const {dispatch} = this.props;
+
     dispatch(fetchSection('faqs'));
   }
 

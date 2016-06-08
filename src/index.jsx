@@ -9,8 +9,8 @@ import {Router, Route, IndexRedirect, browserHistory} from 'react-router';
 
 import configureStore from './store';
 import App from './App';
+import questionsRouter from './Questions';
 import staticRouter from './Static';
-import faqRouter from './Faq';
 import blogRouter from './Blog';
 
 
@@ -22,7 +22,7 @@ ReactDOM.render((
       <Route path="/" component={App}>
         <IndexRedirect to="/questions" />
 
-        {faqRouter}
+        {questionsRouter}
         {blogRouter}
         {staticRouter}
       </Route>
