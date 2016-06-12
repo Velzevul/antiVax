@@ -1,0 +1,21 @@
+:root {
+  --pageWidthXS: 40rem; /* 640px */
+  --pageWidthS:  50rem; /* 800px */
+  --pageWidth:   64rem; /* 1024px */
+  --pageWidthM:  80rem; /* 1280px */
+  --pageWidthL:  90rem; /* 1440px */
+
+  --baseline: 0.75rem; /* 12px */
+
+  --colorMain:    #2C3643;
+  --colorMainL:   #5B636D;
+  --colorMainLL:  #7C8795;
+  --colorMainLLL: #ADB1B6;
+  --colorAccent:  #68A1E4;
+  --colorGrid: red;
+
+  --modS:  calc(var(--baseline) / 2 );
+  --modM:  calc(var(--baseline) * 3/2 );
+  --modL:  calc(var(--baseline) * 2 );
+  --modXL: calc(var(--baseline) * 4 );
+}

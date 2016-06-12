@@ -2,7 +2,8 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router';
 
-import {fetchPage} from '../store/pagesActions';
+import {fetchPage} from '../../store/pagesActions';
+import styles from './FaqItem.css';
 
 
 class FaqItem extends React.Component {
@@ -29,9 +30,7 @@ class FaqItem extends React.Component {
             {title}
           </div>
 
-          <div>
-            {content}
-          </div>
+          <div dangerouslySetInnerHTML={{__html: content}}></div>
         </div>
       );
     }

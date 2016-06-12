@@ -1,20 +1,20 @@
 import React from 'react';
 
-import styles from './App.css';
-import layouts from '../layouts.css';
+import Header from './Header';
+import Footer from './Footer';
 
-import Header from './Header/Header';
-import Footer from './Footer/Footer';
+import styles from './App.css';
+
 
 const App = ({
   children,
   location
 }) => {
   return (
-    <div className={layouts.page}>
+    <div className={styles.App}>
       <Header location={location} />
 
-      <main className={layouts.page__content}>
+      <main className={styles.App__content}>
         {children}
       </main>
 

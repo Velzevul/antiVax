@@ -1,11 +1,11 @@
 import React from 'react';
 import {browserHistory} from 'react-router';
 
-import styles from './QuestionsSearch.css';
+import styles from './SearchBar.css';
 
 const typeDelay = 500;
 
-class QuestionsSearch extends React.Component {
+class SearchBar extends React.Component {
   constructor(props) {
     super(props);
 
@@ -35,14 +35,16 @@ class QuestionsSearch extends React.Component {
     const {query} = this.props.location;
 
     return (
-      <input type="text"
-             className={styles.QuestionsSearch}
-             defaultValue={query.q ? query.q : ''}
-             ref={ el => this._input = el }
-             onChange={this.handleType}
-             placeholder="Type keywords to search..."/>
+      <div className={styles.SearchBar}>
+        <input type="text"
+               className={styles.SearchBar__input}
+               defaultValue={query.q ? query.q : ''}
+               ref={ el => this._input = el }
+               onChange={this.handleType}
+               placeholder="e.g. Polio Vaccine"/>
+      </div>
     );
   }
 }
 
-export default QuestionsSearch;
+export default SearchBar;

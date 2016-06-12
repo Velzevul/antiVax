@@ -1,0 +1,17 @@
+@import './variables.css';
+
+
+.aligned_start {
+  display: flex;
+  justify-content: center;
+}
+
+.aligned_mid {
+  display: flex;
+  justify-content: center;
+}
+
+.aligned_end {
+  display: flex;
+  justify-content: center;
+}

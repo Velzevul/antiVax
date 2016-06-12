@@ -1,8 +1,9 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-import {fetchSearchResults} from '../store/searchActions';
-import SearchResultsItem from './SearchResultsItem';
+import {fetchSearchResults} from '../../store/searchActions';
+import SearchResultsItem from '../SearchResultsItem';
+import styles from './SearchResultsList.css';
 
 
 class SearchResultsList extends React.Component {
@@ -25,27 +26,35 @@ class SearchResultsList extends React.Component {
   render() {
     const {pages, isFetching} = this.props;
 
+    let content;
+
     if (isFetching) {
-      return (
+      content = (
         <div>loading...</div>
-      )
+      );
     } else {
       if (pages.length) {
-        return (
-          <ul>
-            { pages.map(p =>
-              <li key={p.id}>
-                <SearchResultsItem item={p}/>
-              </li>
-            )}
-          </ul>
+        content = pages.map(p =>
+          <div key={p.id} className={styles.SearchResultsList__item}>
+            <SearchResultsItem item={p}/>
+          </div>
         );
       } else {
-        return (
+        content = (
           <div>no pages match your query :(</div>
         )
       }
     }
+
+    return (
+      <div className={styles.SearchResultsList}>
+        <div className={styles.SearchResultsList__title}>
+          <h2 className={typography.hSecondary}>Pages Relevant to Your Question</h2>
+        </div>
+
+        {content}
+      </div>
+    )
   }
 }
 

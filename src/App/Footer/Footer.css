@@ -1,33 +1,44 @@
-@import '../../variables.css';
+@import '../../styles/variables.css';
 
 
-.Footer {
-  padding:  calc(var(--baseline) * 6)
-            0;
-
+.Bg {
   background: var(--colorMain);
 }
 
 
-.FooterBlock {
-  font-weight:300;
-  color: var(--colorMainLLL);
+.Wrap {
+  max-width: var(--pageWidthXS);
+  padding: calc( var(--baseline) * 7) 0;
 }
 
-  .FooterBlock__title {
+
+.Block {
+  color: var(--colorMainLLL);
+
+  &__title {
+    margin-bottom: var(--baseline);
+
     font-weight:400;
     color: var(--colorMainLLL);
     text-transform: uppercase;
   }
 
-  .FooterBlock__emph {
-    font-weight: 600;
-  }
 
-  .FooterBlock__link {
+  &__item {
+    display: block;
+    font-weight:300;
+  }
+    .&__item_emph {
+      font-weight: 600;
+    }
+
+
+  &__link {
     color: white;
     text-decoration: none;
   }
-    .FooterBlock__link:hover {
+    &__link:hover {
       text-decoration: underline;
     }
+}
+

@@ -1,0 +1,142 @@
+@import './variables.css';
+
+
+.wrap {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.block {
+  margin-bottom: calc(var(--baseline) / 2);
+}
+
+@for $i from 1 to 8 {
+  .block$(i) { margin-bottom: calc( var(--baseline) * $i ); }
+}
+
+
+.media {
+  display: flex;
+  align-items: flex-start;
+
+  &__figure {
+    margin-right: calc(var(--baseline) / 2);
+  }
+
+  @for $i from 1 to 8 {
+    &__figure$(i) { margin-right: calc(var(--baseline) * $i); }
+  }
+
+  &__body {
+    flex: 1;
+  }
+}
+  .media_m {
+    align-items: center;
+  }
+
+
+.listInline {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  margin-bottom: -calc(var(--baseline) / 2);
+  margin-left: -calc(var(--baseline) / 2);
+  list-style: none;
+
+  & > .listInline__item {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: calc(var(--baseline) / 2);
+    margin-left: calc(var(--baseline) / 2);
+  }
+}
+
+  @for $i from 1 to 8 {
+    .listInline_$(i) {
+      margin-bottom: -calc(var(--baseline) * $i);
+      margin-left: -calc(var(--baseline) * $i);
+
+      & > .listInline__item {
+        margin-bottom: calc(var(--baseline) * $i);
+        margin-left: calc(var(--baseline) * $i);
+      }
+    }
+  }
+
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+
+  margin-bottom: calc(var(--baseline) / 2);
+  list-style: none;
+
+  & > .list__item {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: calc(var(--baseline) / 2);
+  }
+}
+
+  @for $i from 1 to 8 {
+    .list_$(i) {
+      margin-bottom: -calc(var(--baseline) * $i);
+
+      & > .list_item {
+        margin-bottom: calc(var(--baseline) * $i);
+      }
+    }
+  }
+
+
+.grid {
+  display: flex;
+  justify-items: flex-start;
+  list-style: none;
+
+
+  &_center {
+    justify-items: center;
+  }
+
+  &_rev {
+    justify-items: flex-end;
+  }
+
+  &__item {
+    flex: 1;
+  }
+
+  @for $i from 1 to 12 {
+    &__cell_$(i)_12 {
+      flex: 0 0 auto;
+
+      width: calc(100% * $i/12);
+    }
+  }
+
+  @for $i from 1 to 10 {
+    &__cell_$(i)_10 {
+      flex: 0 0 auto;
+
+      width: calc(100% * $i/10);
+    }
+  }
+}
+  @for $i from 1 to 8 {
+    .grid_gutter_$(i) {
+      margin: -calc(var(--baseline) * $i) 0 0 -calc(var(--baseline) * $i);
+
+      & > .grid__item {
+        padding: calc(var(--baseline) * $i) 0 0 calc(var(--baseline) * $i);
+      }
+    }
+  }

@@ -7,3 +7,11 @@
 html, body {
   font-family: 'Open Sans', sans-serif;
 }
+
+button {
+  border: none;
+  background: none;
+  font: inherit;
+
+  cursor: pointer;
+}

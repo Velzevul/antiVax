@@ -1,0 +1,7 @@
+@import '../../styles/variables.css';
+
+
+.Wrap {
+  max-width: var(--pageWidthM);
+  padding:  calc(var(--baseline) * 8) 0;
+}

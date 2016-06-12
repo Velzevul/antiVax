@@ -10,6 +10,7 @@ const CleanPlugin       = require('clean-webpack-plugin');
 
 const cssImport  = require("postcss-import");
 const cssNext    = require("postcss-cssnext");
+const cssFor     = require("postcss-for");
 const cssFont    = require('postcss-font-magician');
 
 const pkg = require('./package.json');
@@ -54,6 +55,7 @@ const common = {
   postcss: () => {
     return [
       cssImport({ addDependencyTo: webpack }),
+      cssFor(),
       cssNext(),
       cssFont()
     ];
@@ -120,7 +122,7 @@ const production = {
   plugins: [
     new CleanPlugin([PATHS.build]),
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': '"production"'
+      // 'process.env.NODE_ENV': '"production"'
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {

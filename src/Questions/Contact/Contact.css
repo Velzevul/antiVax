@@ -1,0 +1,27 @@
+@import '../../styles/variables.css';
+
+
+.Wrap {
+  max-width: calc(var(--baseline) * 45);
+}
+
+
+.Image {
+  display: block;
+  width: calc(var(--baseline) * 15);
+
+  border-radius: 50%;
+  box-shadow: 0 0 1px var(--colorMain);
+}
+
+.Name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+
+
+.Affiliation {
+  font-size: 1.125rem;
+  color: var(--colorMainL);
+}

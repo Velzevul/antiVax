@@ -1,0 +1,29 @@
+@import '../../styles/variables.css';
+
+
+.Wrap {
+  position: relative;
+
+  padding-left: calc(var(--baseline) * 3);
+
+  &:before {
+    content: '';
+    display: block;
+    width: calc(var(--baseline) * 2);
+    height: calc(var(--baseline) * 2);
+    position: absolute;
+    top: 0; left: 0;
+
+    background: url('/images/arrow.svg') center center no-repeat;
+  }
+}
+
+.Link {
+  font-size: 1.125rem;
+  color: var(--colorAccent);
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,15 @@
+@import '../../styles/variables.css';
+
+
+.Preview {
+  max-width: calc(var(--baseline) * 60);
+  padding: calc(var(--baseline) * 1.5) var(--baseline);
+}
+  .Preview + .Preview {
+    border-top: 1px solid color(var(--colorMainLLL) alpha(-50%));
+  }
+
+
+.Item {
+  margin-top: calc(var(--baseline) * 2);
+}

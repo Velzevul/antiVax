@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router';
 
 import styles from './Footer.css';
-import layouts from '../../layouts.css';
+import layouts from '../../styles/layouts.css';
 
 
 const aboutNav = [
@@ -41,54 +41,66 @@ const aboutNav = [
 
 const Footer = () => {
   return (
-    <div className={styles.Footer}>
-      <div className={layouts.wrapS}>
-        <div className={`${layouts.grid} ${layouts.grid_center}`}>
-          <div className={`${layouts.grid__item} ${layouts.grid__item}`}>
-            <div className={styles.FooterBlock}>
-              <div className={layouts.block}>
-                <div className={styles.FooterBlock__title}>Contact</div>
+    <div className={styles.Bg}>
+      <div className={`${layouts.wrap} ${styles.Wrap}`}>
+        <div className={layouts.grid}>
+          <div className={layouts.grid__item}>
+            <div className={styles.Block}>
+              <div className={layouts.block1}>
+                <div className={styles.Block__title}>Contact</div>
               </div>
 
-              <div className={layouts.blockS}>
-                <div className={styles.FooterBlock__emph}>
+              <div className={layouts.block}>
+                <div className={`${styles.Block__item} ${styles.Block__item_emph}`}>
                   {contact.name}
                 </div>
               </div>
 
-              <div className={layouts.blockS}>
-                {contact.phone}
+              <div className={layouts.block}>
+                <div className={styles.Block__item}>
+                  {contact.phone}
+                </div>
               </div>
 
-              <a className={styles.FooterBlock__link} href={`mailto:${contact.email}`}>{contact.email}</a>
+              <div className={styles.Block__item}>
+                <a className={styles.Block__link} href={`mailto:${contact.email}`}>{contact.email}</a>
+              </div>
             </div>
           </div>
 
-          <div className={`${layouts.grid__item} ${layouts.grid__item}`}>
-            <div className={styles.FooterBlock}>
-              <div className={layouts.block}>
-                <div className={styles.FooterBlock__title}>About us</div>
+          <div className={layouts.grid__item}>
+            <div className={styles.Block}>
+              <div className={layouts.block1}>
+                <div className={styles.Block__title}>About us</div>
               </div>
 
-              { aboutNav.map( i =>
-                <div className={layouts.blockS} key={i.path}>
-                  <Link className={styles.FooterBlock__link} to={i.path}>{i.label}</Link>
-                </div>
-              )}
+              <div className={layouts.list}>
+                { aboutNav.map( i =>
+                  <div className={layouts.list__item} key={i.path}>
+                    <div className={styles.Block__item}>
+                      <Link className={styles.Block__link} to={i.path}>{i.label}</Link>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 
-          <div className={`${layouts.grid__item} ${layouts.grid__item}`}>
-            <div className={styles.FooterBlock}>
-              <div className={layouts.block}>
-                <div className={styles.FooterBlock__title}>About us</div>
+          <div className={layouts.grid__item}>
+            <div className={styles.Block}>
+              <div className={layouts.block1}>
+                <div className={styles.Block__title}>About us</div>
               </div>
 
-              { infoNav.map( i =>
-                <div className={layouts.blockS} key={i.path}>
-                  <Link className={styles.FooterBlock__link} to={i.path}>{i.label}</Link>
-                </div>
-              )}
+              <div className={layouts.list}>
+                { infoNav.map( i =>
+                  <div className={layouts.list__item} key={i.path}>
+                    <div className={styles.Block__item}>
+                      <Link className={styles.Block__link} to={i.path}>{i.label}</Link>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>

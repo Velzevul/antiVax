@@ -1,62 +1,64 @@
-@import '../../variables.css';
+@import '../../styles/variables.css';
 
 
-.MainNavBg {
+.Bg {
   background-color: color(var(--colorMain) alpha(-8%));
 }
 
 
-.MainNav {
+.Wrap {
+  max-width: var(--pageWidthM);
   position: relative;
-  color: white;
 }
 
-  .MainNav__indicator {
-    width: 20%;
-    height: 3px;
-    position: absolute;
-    top: 0;
 
-    background-color: white;
+.Indicator {
+  width: 20%;
+  height: 3px;
+  position: absolute;
+  top: 0;
 
-    transition-property: left;
-    transition-duration: 0.2s;
+  background-color: white;
+
+  transition-property: left;
+  transition-duration: 0.2s;
+}
+  .Indicator_0 {
+    left: 0;
   }
-    .MainNav__indicator_0 {
-      left: 0;
-    }
-    .MainNav__indicator_1 {
-      left: 20%;
-    }
-    .MainNav__indicator_2 {
-      left: 40%;
-    }
-    .MainNav__indicator_3 {
-      left: 60%;
-    }
-    .MainNav__indicator_4 {
-      left: 80%;
-    }
-
-  .MainNav__item {
-    display: block;
-    padding:  calc(var(--baseline) * 1.5)
-              0
-              calc(var(--baseline) * 1.5)
-              0;
-
-    font-weight: 600;
-    line-height: var(--modL);
-
-    color: inherit;
-    text-align: center;
-    text-decoration: none;
-    text-transform: uppercase;
-
-    opacity: 0.75;
-    transition-property: opacity;
-    transition-duration: 0.2s;
+  .Indicator_1 {
+    left: 20%;
   }
-    .MainNav__item_active {
-      opacity: 1;
-    }
+  .Indicator_2 {
+    left: 40%;
+  }
+  .Indicator_3 {
+    left: 60%;
+  }
+  .Indicator_4 {
+    left: 80%;
+  }
+
+
+.Item {
+  display: block;
+  padding:  calc(var(--baseline) * 1.5)
+            0
+            calc(var(--baseline) * 1.5)
+            0;
+
+  font-weight: 600;
+  line-height: var(--modL);
+
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  opacity: 0.75;
+  transition-property: opacity;
+  transition-duration: 0.2s;
+}
+  .Item_active {
+    opacity: 1;
+  }

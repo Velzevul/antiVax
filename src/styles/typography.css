@@ -1,0 +1,30 @@
+@import './variables.css';
+
+
+.hPrimary {
+  font-family: 'Nunito', sans-serif;
+  font-size: calc(var(--baseline) * 3);
+  font-weight: 300;
+  line-height: calc(var(--baseline) * 4);
+}
+
+.hSecondary {
+  font-size: 1.25rem;
+  font-weight: 300;
+  line-height: calc(var(--baseline) * 3);
+
+  text-transform: uppercase;
+  color: var(--colorMainLL);
+}
+
+.hTertiary {
+
+}
+
+.link {
+
+}
+
+.text {
+
+}
