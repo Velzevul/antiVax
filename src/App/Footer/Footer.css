@@ -6,7 +6,11 @@
 }
 
 
-.Wrap {
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+
   max-width: var(--pageWidthXS);
   padding: calc( var(--baseline) * 7) 0;
 }

@@ -3,6 +3,7 @@ import {firebaseDb} from './firebaseRef';
 
 export const REQUEST_SECTION = 'REQUEST_SECTION';
 export const RECEIVE_SECTION = 'RECEIVE_SECTION';
+export const SELECT_PAGE = 'SELECT_PAGE';
 
 const requestSection = (
   sectionId
@@ -34,5 +35,14 @@ export const fetchSection = (
       .then( snapshot => {
         dispatch(receiveSection(sectionId, snapshot.val()));
       });
+  }
+};
+
+export const selectPage = (
+  title
+) => {
+  return {
+    type: SELECT_PAGE,
+    title: title
   }
 };

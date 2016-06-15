@@ -1,0 +1,51 @@
+@import '../../styles/variables.css';
+
+
+.StaticSection {
+  display: flex;
+  align-items: stretch;
+
+  max-width: var(--pageWidthM);
+
+  &__sidebar {
+    flex: 0 0 auto;
+    width: 25%;
+    padding:  calc(var(--baseline) * 6) 0;
+
+    border-right: 1px solid var(--colorMainLLL);
+  }
+
+  &__body {
+    flex: 1;
+    padding: calc(var(--baseline) * 6);
+  }
+}
+
+
+.SidebarMenu {
+  padding-left: calc(var(--baseline) * 3);
+
+  &__title {
+
+  }
+
+  &__item {
+    display: block;
+    width: 100%;
+    padding: calc(var(--baseline) / 2) 0;
+
+    color: var(--colorMainL);
+    text-decoration: none;
+
+    border-right: 4px solid white;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+    &__item_active {
+      color: var(--colorAccent);
+
+      border-color: var(--colorAccent);
+    }
+}

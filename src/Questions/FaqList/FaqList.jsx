@@ -1,9 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {Link} from 'react-router';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import {fetchSection} from '../../store/sectionsActions';
-import FaqPreview from '../FaqPreview';
+import Spinner from '../../Spinner';
+import Faq from '../Faq';
 import styles from './FaqList.css';
 import layouts from '../../styles/layouts.css';
 import states from '../../styles/states.css';
@@ -19,60 +20,27 @@ class FaqList extends React.Component {
   }
 
   render() {
-    const {isFetching, faqs, children} = this.props,
-          {query} = this.props.location,
-          {itemId} = this.props.params,
-          showAll = query.show === 'all';
+    const {isFetching, faqs, children} = this.props;
 
-    let content = [];
+    console.log(faqs);
 
     if (isFetching) {
-      content = (
-        <div>loading...</div>
+      return (
+        <Spinner />
       );
     } else {
-      const visibleFaqs = faqs.filter( f => f.isFrequent || showAll );
-
-      content = visibleFaqs.map(f => {
-        return (
-          <div className={`${layouts.wrap} ${styles.Preview}`} key={f.id}>
-            <FaqPreview query={query} faq={f}/>
-            { f.id === itemId ?
-              <div className={`${layouts.wrap} ${styles.Item}`} key={f.id}>
-                {children}
-              </div> :
-              null
-            }
-          </div>
-        );
-      });
-
-      if (!showAll) {
-        content = (
-          <div className={layouts.block2}>
-            {content}
-          </div>
-        );
-      }
-    }
-
-    return (
-      <div>
-        <div className={layouts.block1}>
-          <div className={states.aligned_mid}>
-            <h2 className={typography.hSecondary}>Frequently Asked</h2>
-          </div>
+      return (
+        <div>
+          {faqs.map( (f,i) =>
+            <Faq key={f.id}
+                 faq={f}
+                 index={i}
+                 name={`Faq${f.id}`}
+                 params={this.props.params}>{children}</Faq>
+          )}
         </div>
-
-        {content}
-
-        { showAll ? null :
-          <div className={states.aligned_mid}>
-            <Link className={ui.button} to={{ pathname: '/questions', query: { show: 'all'} }}>Show More</Link>
-          </div>
-        }
-      </div>
-    );
+      );
+    }
   }
 }
 

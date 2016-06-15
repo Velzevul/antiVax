@@ -3,7 +3,9 @@ import {connect} from 'react-redux';
 import {Link} from 'react-router';
 
 import {fetchPage} from '../../store/pagesActions';
+import Spinner from '../../Spinner';
 import styles from './FaqItem.css';
+import typography from '../../styles/typography.css';
 
 
 class FaqItem extends React.Component {
@@ -20,18 +22,11 @@ class FaqItem extends React.Component {
 
     if (isFetching) {
       return (
-        <div>loading...</div>
+        <Spinner />
       )
     } else {
       return (
-        <div>
-          <Link to={{pathname: '/questions', query: {show: query.show}}}>&lt;Back</Link>
-          <div>
-            {title}
-          </div>
-
-          <div dangerouslySetInnerHTML={{__html: content}}></div>
-        </div>
+        <div dangerouslySetInnerHTML={{__html: content}} className={typography.content}></div>
       );
     }
   }

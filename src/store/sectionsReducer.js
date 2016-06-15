@@ -4,6 +4,8 @@ import {REQUEST_SECTION, RECEIVE_SECTION} from './sectionsActions';
 const section = (
   state = {
     id: '',
+    title: '',
+    selectedPage: '',
     isFetching: true,
     pages: []
   },
@@ -17,6 +19,7 @@ const section = (
     case RECEIVE_SECTION:
       return Object.assign({}, state, {
         isFetching: false,
+        title: action.section.title,
         id: action.sectionId,
         pages: action.section.pages
       });

@@ -36,6 +36,9 @@
   .media_m {
     align-items: center;
   }
+  .media_end {
+    align-items: flex-end;
+  }
 
 
 .listInline {
@@ -56,7 +59,7 @@
   }
 }
 
-  @for $i from 1 to 8 {
+  @for $i from 0 to 8 {
     .listInline_$(i) {
       margin-bottom: -calc(var(--baseline) * $i);
       margin-left: -calc(var(--baseline) * $i);
@@ -86,11 +89,11 @@
   }
 }
 
-  @for $i from 1 to 8 {
+  @for $i from 0 to 8 {
     .list_$(i) {
       margin-bottom: -calc(var(--baseline) * $i);
 
-      & > .list_item {
+      & > .list__item {
         margin-bottom: calc(var(--baseline) * $i);
       }
     }
@@ -102,13 +105,24 @@
   justify-items: flex-start;
   list-style: none;
 
-
-  &_center {
+  &_h_start {
+    justify-items: flex-start;
+  }
+  &_h_mid {
     justify-items: center;
   }
-
-  &_rev {
+  &_h_end {
     justify-items: flex-end;
+  }
+
+  &_v_start {
+    align-items: flex-start;
+  }
+  &_v_mid {
+    align-items: center;
+  }
+  &_v_end {
+    align-items: flex-end;
   }
 
   &__item {
@@ -116,27 +130,47 @@
   }
 
   @for $i from 1 to 12 {
-    &__cell_$(i)_12 {
+    & ._$(i)_12 {
       flex: 0 0 auto;
 
       width: calc(100% * $i/12);
     }
+
+    & ._push_$(i)_12 {
+      margin-left: calc(100% * $i/12);
+    }
   }
 
   @for $i from 1 to 10 {
-    &__cell_$(i)_10 {
+    & ._$(i)_10 {
       flex: 0 0 auto;
 
       width: calc(100% * $i/10);
+    }
+
+    & ._push_$(i)_10 {
+      margin-left: calc(100% * $i/10);
+    }
+  }
+
+  @for $i from 1 to 20 {
+    & ._$(i)_20 {
+      flex: 0 0 auto;
+
+      width: calc(100% * $i/20);
+    }
+
+    & ._push_$(i)_20 {
+      margin-left: calc(100% * $i/20);
     }
   }
 }
   @for $i from 1 to 8 {
     .grid_gutter_$(i) {
-      margin: -calc(var(--baseline) * $i) 0 0 -calc(var(--baseline) * $i);
+      margin: 0 -calc(var(--baseline) * $i / 2) 0 -calc(var(--baseline) * $i / 2);
 
       & > .grid__item {
-        padding: calc(var(--baseline) * $i) 0 0 calc(var(--baseline) * $i);
+        padding: 0 calc(var(--baseline) * $i / 2) 0 calc(var(--baseline) * $i / 2);
       }
     }
   }

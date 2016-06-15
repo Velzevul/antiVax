@@ -1,7 +1,14 @@
 @import '../../styles/variables.css';
 
 
-.Wrap {
+.QuestionsPage {
   max-width: var(--pageWidthM);
-  padding:  calc(var(--baseline) * 8) 0;
+
+  &__sidebar {
+    padding:  calc(var(--baseline) * 6) 0;
+  }
+
+  &__body {
+    padding:  calc(var(--baseline) * 6);
+  }
 }

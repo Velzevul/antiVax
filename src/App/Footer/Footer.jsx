@@ -42,66 +42,58 @@ const aboutNav = [
 const Footer = () => {
   return (
     <div className={styles.Bg}>
-      <div className={`${layouts.wrap} ${styles.Wrap}`}>
-        <div className={layouts.grid}>
-          <div className={layouts.grid__item}>
-            <div className={styles.Block}>
-              <div className={layouts.block1}>
-                <div className={styles.Block__title}>Contact</div>
-              </div>
+      <div className={`${layouts.wrap} ${styles.Footer}`}>
+        <div className={styles.Block}>
+          <div className={layouts.block1}>
+            <div className={styles.Block__title}>Contact</div>
+          </div>
 
-              <div className={layouts.block}>
-                <div className={`${styles.Block__item} ${styles.Block__item_emph}`}>
-                  {contact.name}
-                </div>
-              </div>
+          <div className={layouts.block}>
+            <div className={`${styles.Block__item} ${styles.Block__item_emph}`}>
+              {contact.name}
+            </div>
+          </div>
 
-              <div className={layouts.block}>
+          <div className={layouts.block}>
+            <div className={styles.Block__item}>
+              {contact.phone}
+            </div>
+          </div>
+
+          <div className={styles.Block__item}>
+            <a className={styles.Block__link} href={`mailto:${contact.email}`}>{contact.email}</a>
+          </div>
+        </div>
+
+        <div className={styles.Block}>
+          <div className={layouts.block1}>
+            <div className={styles.Block__title}>About us</div>
+          </div>
+
+          <div className={layouts.list}>
+            { aboutNav.map( i =>
+              <div className={layouts.list__item} key={i.path}>
                 <div className={styles.Block__item}>
-                  {contact.phone}
+                  <Link className={styles.Block__link} to={i.path}>{i.label}</Link>
                 </div>
               </div>
+            )}
+          </div>
+        </div>
 
-              <div className={styles.Block__item}>
-                <a className={styles.Block__link} href={`mailto:${contact.email}`}>{contact.email}</a>
-              </div>
-            </div>
+        <div className={styles.Block}>
+          <div className={layouts.block1}>
+            <div className={styles.Block__title}>About us</div>
           </div>
 
-          <div className={layouts.grid__item}>
-            <div className={styles.Block}>
-              <div className={layouts.block1}>
-                <div className={styles.Block__title}>About us</div>
+          <div className={layouts.list}>
+            { infoNav.map( i =>
+              <div className={layouts.list__item} key={i.path}>
+                <div className={styles.Block__item}>
+                  <Link className={styles.Block__link} to={i.path}>{i.label}</Link>
+                </div>
               </div>
-
-              <div className={layouts.list}>
-                { aboutNav.map( i =>
-                  <div className={layouts.list__item} key={i.path}>
-                    <div className={styles.Block__item}>
-                      <Link className={styles.Block__link} to={i.path}>{i.label}</Link>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          </div>
-
-          <div className={layouts.grid__item}>
-            <div className={styles.Block}>
-              <div className={layouts.block1}>
-                <div className={styles.Block__title}>About us</div>
-              </div>
-
-              <div className={layouts.list}>
-                { infoNav.map( i =>
-                  <div className={layouts.list__item} key={i.path}>
-                    <div className={styles.Block__item}>
-                      <Link className={styles.Block__link} to={i.path}>{i.label}</Link>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
+            )}
           </div>
         </div>
       </div>

@@ -1,14 +1,20 @@
 @import '../../styles/variables.css';
 
 
-.Cover {
+.CoverImg {
   position: relative;
+
+  background-color: white;
+  background-image: url('/images/header-bg.jpg');
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
 
   &:before {
     content: '';
     display: block;
     min-height: calc(var(--baseline) * 30);
-    padding-top: 30%;
+    padding-top: 28%;
   }
 
   &__body {
@@ -21,49 +27,36 @@
     justify-content: flex-end;
     align-items: stretch;
 
-    background-color: white;
-    background-image: url('/images/header-bg.jpg');
-    background-position: center top;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: color(var(--colorMain) alpha(-30%));
   }
 }
 
 
-.Bg {
-  background: url('/images/header-mask.svg') no-repeat center top;
-}
-
-
-.Wrap {
+.Header {
   max-width: var(--pageWidthM);
-  padding:  calc(var(--baseline) * 4) 0 calc(var(--baseline) * 2.5) 0;
-}
 
+  padding-bottom: calc(var(--baseline) * 4);
 
-.Title {
-  margin-bottom: calc(var(--baseline) / 2);
+  &__logo {
+    display: block;
+    margin: 0 auto;
+    max-width: calc(var(--baseline) * 12);
+  }
 
-  font-family: 'Nunito', sans-serif;
-  font-size: calc(var(--baseline) * 4.5);
-  font-weight: 400;
-  line-height: calc(var(--baseline) * 4.5);
+  &__title {
+    font-family: 'Nunito', sans-serif;
+    font-size: calc(var(--baseline) * 4.5);
+    font-weight: 400;
+    line-height: calc(var(--baseline) * 4.5);
 
-  color: white;
-}
+    color: white;
+  }
 
+  &__subtitle {
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: var(--modL);
 
-.Subtitle {
-  font-size: 1.25rem;
-  font-weight: 400;
-  line-height: var(--modL);
-
-  color: white;
-}
-
-
-.Logo {
-  display: block;
-  margin: 0 auto;
-  max-width: calc(var(--baseline) * 12);
+    color: white;
+  }
 }

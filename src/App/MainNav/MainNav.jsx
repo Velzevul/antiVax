@@ -7,7 +7,7 @@ import layouts from '../../styles/layouts.css';
 
 const navItems = [
   {
-    label: 'Ask a Question',
+    label: 'Questions & Answers',
     path: '/questions'
   },
   {
@@ -32,24 +32,24 @@ const MainNav = ({
   location
 }) => {
   const routeStateMap = {
-          'questions': styles.Indicator_0,
-          'about-vaccines': styles.Indicator_1,
-          'safety': styles.Indicator_2,
-          'schedule': styles.Indicator_3,
-          'blog': styles.Indicator_4
+          'questions': styles.MainNav__indicator_0,
+          'about-vaccines': styles.MainNav__indicator_1,
+          'safety': styles.MainNav__indicator_2,
+          'schedule': styles.MainNav__indicator_3,
+          'blog': styles.MainNav__indicator_4
         },
         currentSection = location.pathname.split('/')[1];
 
   return (
     <div className={styles.Bg}>
-      <div className={`${layouts.wrap} ${styles.Wrap}`}>
-        <div className={`${styles.Indicator} ${routeStateMap[currentSection]}`}></div>
+      <div className={`${layouts.wrap} ${styles.MainNav}`}>
+        <div className={`${styles.MainNav__indicator} ${routeStateMap[currentSection]}`}></div>
 
         <ul className={layouts.grid}>
           {navItems.map(item =>
             <li className={`${layouts.grid__item}`} key={item.path}>
-              <Link to={item.path} className={styles.Item}
-                    activeClassName={styles.Item_active}>{item.label}</Link>
+              <Link to={item.path} className={styles.MainNav__item}
+                    activeClassName={styles.MainNav__item_active}>{item.label}</Link>
             </li>
           )}
         </ul>

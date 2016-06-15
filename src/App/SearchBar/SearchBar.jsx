@@ -41,7 +41,7 @@ class SearchBar extends React.Component {
                defaultValue={query.q ? query.q : ''}
                ref={ el => this._input = el }
                onChange={this.handleType}
-               placeholder="e.g. Polio Vaccine"/>
+               placeholder="search for keywords, e.g. 'polio vaccine'"/>
       </div>
     );
   }

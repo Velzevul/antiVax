@@ -3,9 +3,9 @@
 
 .button {
   display: inline-block;
-  padding: var(--baseline) calc(var(--baseline) * 4);
+  padding: calc(var(--baseline) * 0.75) calc(var(--baseline) * 2);
 
-  font-size: 1em;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: calc(var(--baseline) * 2);
 
@@ -19,10 +19,12 @@
 
   transition-property: background;
   transition-duration: 0.1s;
-}
-  .button:hover {
+
+  &:hover {
     background: color(var(--colorAccent) lightness(+5%));
   }
-  .button:active {
+
+  &:active {
     background: color(var(--colorAccent) lightness(-10%));
   }
+}

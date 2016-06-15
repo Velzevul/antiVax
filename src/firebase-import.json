@@ -336,26 +336,28 @@
   },
   "sections": {
     "faqs": {
+      "title": "About Vaccines",
       "id": "faqs",
       "pages": [
         {
           "id": "pharmaceutical-make-money-from-vaccines",
           "title": "Do pharmaceutical companies make a lot of money from producing vaccines?",
-          "isFrequent": true
+          "preview": "<p>Vaccine production is a small part of the overall pharmaceutical industry with only 1.5% of global pharmaceutical sales. There are only a small number of pharmaceutical companies producing vaccines in Canada...</p>"
         },
         {
           "id": "i-dont-like-needles",
           "title": "I don't like needles. What are some ways I can prepare myself for getting vaccinated?",
-          "isFrequent": true
+          "preview": "<p>No matter what age we are, getting a shot can be an uncomfortable and sometimes scary event. Here are a few tips on how to prepare yourself for getting vaccinated...</p>"
         },
         {
           "id": "vaccines-too-much-for-babies",
           "title": "Will this many vaccines be too much for my baby's immune system?",
-          "isFrequent": false
+          "preview": "<p>An increasing number of parents are concerned that children receive “too many” vaccines “too soon”. Specifically, some parents are worried that children are receiving too many vaccines while they are too young to deal with them, thus overloading their immune system...</p>"
         }
       ]
     },
     "about-vaccines": {
+      "title": "About Vaccines",
       "id": "about-vaccines",
       "pages": [
         {

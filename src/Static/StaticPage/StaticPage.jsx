@@ -2,7 +2,10 @@ import React from 'react';
 import {Link} from 'react-router';
 import {connect} from 'react-redux'
 
-import {fetchPage} from '../store/pagesActions';
+import {fetchPage} from '../../store/pagesActions';
+import Spinner from '../../Spinner';
+import styles from './StaticPage.css';
+import typography from '../../styles/typography.css';
 
 
 class StaticPage extends React.Component {
@@ -28,12 +31,13 @@ class StaticPage extends React.Component {
 
     if (isFetching) {
       return (
-        <div>loading...</div>
+        <Spinner />
       )
     } else {
       return (
-        <div>
+        <div className={typography.content}>
           <h1>{title}</h1>
+
           <div dangerouslySetInnerHTML={{__html: content}}></div>
           {items ?
             <div>

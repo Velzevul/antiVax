@@ -3,7 +3,7 @@
 
 .aligned_start {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
 .aligned_mid {
@@ -13,5 +13,5 @@
 
 .aligned_end {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
 }

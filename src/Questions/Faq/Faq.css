@@ -1,0 +1,22 @@
+@import '../../styles/variables.css';
+
+
+.Faq {
+  padding: calc(var(--baseline) * 3);
+
+  border-top: 1px solid var(--colorMainLLL);
+  overflow: hidden;
+
+  &__body {
+    max-height: 100px;
+
+    transition: max-height 0.2s;
+  }
+
+  &__body_open {
+    max-height: 500px;
+  }
+}
+  .Faq_open {
+    border-left: 3px solid var(--colorAccent);
+  }
