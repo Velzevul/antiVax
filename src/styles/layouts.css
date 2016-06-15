@@ -106,13 +106,13 @@
   list-style: none;
 
   &_h_start {
-    justify-items: flex-start;
+    justify-content: flex-start;
   }
   &_h_mid {
-    justify-items: center;
+    justify-content: center;
   }
   &_h_end {
-    justify-items: flex-end;
+    justify-content: flex-end;
   }
 
   &_v_start {

@@ -1,0 +1,10 @@
+@import '../../styles/variables.css';
+
+
+.SearchResultsPage {
+  padding: calc(var(--baseline) * 6) 0;
+}
+
+.EmptySearchResultsPage {
+
+}

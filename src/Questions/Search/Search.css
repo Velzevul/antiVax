@@ -1,6 +1,0 @@
-@import '../../styles/variables.css';
-
-
-.Wrap {
-  max-width: calc(var(--baseline) * 70);
-}

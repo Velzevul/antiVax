@@ -1,0 +1,15 @@
+@import '../../styles/variables.css';
+
+
+.SearchResultsItem {
+  padding: calc(var(--baseline) * 3);
+
+  border-top: 1px solid var(--colorMainLLL);
+
+  &__body {
+    & em {
+      font-style: normal;
+      background: rgba(253, 255, 2, 0.53);
+    }
+  }
+}

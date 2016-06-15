@@ -12,6 +12,7 @@ import App from './App';
 import questionsRouter from './Questions';
 import staticRouter from './Static';
 import blogRouter from './Blog';
+import searchRouter from './Search';
 
 
 const store = configureStore();
@@ -24,6 +25,7 @@ ReactDOM.render((
 
         {questionsRouter}
         {blogRouter}
+        {searchRouter}
         {staticRouter}
       </Route>
     </Router>

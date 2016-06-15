@@ -1,6 +1,5 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 import {fetchSection} from '../../store/sectionsActions';
 import Spinner from '../../Spinner';
@@ -16,37 +15,41 @@ class FaqList extends React.Component {
   componentWillMount() {
     const {dispatch} = this.props;
 
-    dispatch(fetchSection('faqs'));
+    dispatch(fetchSection('questions'));
   }
 
   render() {
-    const {isFetching, faqs, children} = this.props;
+    const {isFetching, faqs} = this.props;
 
-    console.log(faqs);
+    let content = '';
 
     if (isFetching) {
-      return (
+      content = (
         <Spinner />
       );
     } else {
-      return (
+      content = (
         <div>
-          {faqs.map( (f,i) =>
+          {faqs.map( f =>
             <Faq key={f.id}
                  faq={f}
-                 index={i}
-                 name={`Faq${f.id}`}
-                 params={this.props.params}>{children}</Faq>
+                 params={this.props.params} />
           )}
         </div>
       );
     }
+
+    return (
+      <div className={styles.FaqList}>
+        {content}
+      </div>
+    )
   }
 }
 
 export default connect(
   (state) => {
-    const faqSection = state.sections.faqs;
+    const faqSection = state.sections.questions;
 
     return {
       isFetching: faqSection ? faqSection.isFetching : false,

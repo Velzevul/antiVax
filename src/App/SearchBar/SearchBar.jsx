@@ -20,7 +20,7 @@ class SearchBar extends React.Component {
 
       if (query) {
         browserHistory.push({
-          pathname: '/questions',
+          pathname: '/search',
           query: {q: query}
         });
       } else {

@@ -5,18 +5,33 @@
   padding: calc(var(--baseline) * 3);
 
   border-top: 1px solid var(--colorMainLLL);
+  border-left: 3px solid transparent;
   overflow: hidden;
 
   &__body {
-    max-height: 100px;
-
-    transition: max-height 0.2s;
+    transition: max-height 0.5s;
   }
 
-  &__body_open {
-    max-height: 500px;
+  &__title {
+    display: block;
+    position: relative;
+
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
+    &__title_active {
+
+    }
 }
-  .Faq_open {
+  .Faq_active {
     border-left: 3px solid var(--colorAccent);
+  }
+  .Faq_preview > .Faq__body {
+  }
+  .Faq_loading .Faq__body {
+  }
+  .Faq_full > .Faq__body {
   }
