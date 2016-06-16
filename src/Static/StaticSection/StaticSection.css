@@ -2,21 +2,16 @@
 
 
 .StaticSection {
-  display: flex;
-  align-items: stretch;
-
   max-width: var(--pageWidthM);
 
   &__sidebar {
-    flex: 0 0 auto;
-    width: 25%;
+    height: 100%;
     padding:  calc(var(--baseline) * 6) 0;
 
     border-right: 1px solid var(--colorMainLLL);
   }
 
   &__body {
-    flex: 1;
     padding: calc(var(--baseline) * 6);
   }
 }

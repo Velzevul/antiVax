@@ -1,0 +1,8 @@
+.grid {
+  display: flex;
+  align-items: stretch;
+
+  &__item {
+    flex: 1;
+  }
+}

@@ -1,0 +1,29 @@
+@import '../../styles/variables.css';
+
+
+.button {
+  display: inline-block;
+
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: calc(var(--baseline) * 2);
+
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+
+  background: var(--colorAccent);
+  border-radius: 0.188rem;
+  box-shadow: 0 1px color(var(--colorAccent) lightness(-50%));
+
+  transition-property: background;
+  transition-duration: 0.1s;
+
+  &:hover {
+    background: color(var(--colorAccent) lightness(+5%));
+  }
+
+  &:active {
+    background: color(var(--colorAccent) lightness(-10%));
+  }
+}

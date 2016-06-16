@@ -1,9 +1,7 @@
-import {firebaseDb} from './firebaseRef';
+import {firebaseDb} from './firebaseRef'
 
-
-export const REQUEST_SECTION = 'REQUEST_SECTION';
-export const RECEIVE_SECTION = 'RECEIVE_SECTION';
-export const SELECT_PAGE = 'SELECT_PAGE';
+export const REQUEST_SECTION = 'REQUEST_SECTION'
+export const RECEIVE_SECTION = 'RECEIVE_SECTION'
 
 const requestSection = (
   sectionId
@@ -12,7 +10,7 @@ const requestSection = (
     type: REQUEST_SECTION,
     sectionId
   }
-};
+}
 
 const receiveSection = (
   sectionId,
@@ -23,26 +21,17 @@ const receiveSection = (
     sectionId,
     section
   }
-};
+}
 
 export const fetchSection = (
   sectionId
 ) => {
   return dispatch => {
-    dispatch( requestSection(sectionId) );
+    dispatch(requestSection(sectionId))
 
-    return firebaseDb.ref(`sections/${sectionId}`).once('value')
-      .then( snapshot => {
-        dispatch(receiveSection(sectionId, snapshot.val()));
-      });
+    return firebaseDb.ref(`/${sectionId}`).once('value')
+      .then(snapshot => {
+        dispatch(receiveSection(sectionId, snapshot.val()))
+      })
   }
-};
-
-export const selectPage = (
-  title
-) => {
-  return {
-    type: SELECT_PAGE,
-    title: title
-  }
-};
+}

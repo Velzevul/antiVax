@@ -1,0 +1,11 @@
+.media {
+  display: flex;
+
+  &__figure {
+
+  }
+
+  &__body {
+    flex: 1;
+  }
+}

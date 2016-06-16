@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 import {fetchSearchResults} from '../../store/searchActions';
 import SearchResultsItem from '../SearchResultsItem';
-import Spinner from '../../Spinner';
+import {Spinner} from '../../UI';
 import styles from './SearchResultsPage.css';
 import layouts from '../../styles/layouts.css';
 import typography from '../../styles/typography.css';

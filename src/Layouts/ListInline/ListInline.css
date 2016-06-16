@@ -1,0 +1,12 @@
+.listInline {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  list-style: none;
+
+  & > .listInline__item {
+    display: flex;
+    align-items: center;
+  }
+}

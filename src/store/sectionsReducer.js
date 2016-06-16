@@ -1,46 +1,44 @@
-import {REQUEST_SECTION, RECEIVE_SECTION} from './sectionsActions';
-
+import {REQUEST_SECTION, RECEIVE_SECTION} from './sectionsActions'
 
 const section = (
   state = {
     id: '',
     title: '',
-    selectedPage: '',
     isFetching: true,
     pages: []
   },
   action
 ) => {
-  switch(action.type) {
+  switch (action.type) {
     case REQUEST_SECTION:
       return Object.assign({}, state, {
         isFetching: true
-      });
+      })
     case RECEIVE_SECTION:
       return Object.assign({}, state, {
         isFetching: false,
         title: action.section.title,
         id: action.sectionId,
         pages: action.section.pages
-      });
+      })
     default:
-      return state;
+      return state
   }
-};
+}
 
 const sections = (
   state = {},
   action
 ) => {
-  switch(action.type) {
+  switch (action.type) {
     case REQUEST_SECTION:
     case RECEIVE_SECTION:
       return Object.assign({}, state, {
         [action.sectionId]: section(state[action.sectionId], action)
-      });
+      })
     default:
-      return state;
+      return state
   }
-};
+}
 
-export default sections;
+export default sections

@@ -1,58 +1,53 @@
-import React from 'react';
-import {Link} from 'react-router';
-import {connect} from 'react-redux'
+import React from 'react'
+import {Link} from 'react-router'
+import {animateScroll} from 'react-scroll'
 
-import {fetchPage} from '../../store/pagesActions';
-import styles from './StaticItem.css';
-import typography from '../../styles/typography.css';
-
+// import styles from './StaticItem.css'
+import typography from '../../styles/typography.css'
 
 class StaticItem extends React.Component {
-  componentWillMount() {
-    const {dispatch} = this.props,
-          {itemId} = this.props.params;
+  componentDidMount () {
+    const {item, params} = this.props
+    const isActive = params.itemId === item.id
 
-    dispatch(fetchPage(itemId));
-  }
-
-  componentWillReceiveProps(nextProps) {
-    const {dispatch} = nextProps,
-          {itemId} = nextProps.params;
-
-    if (itemId !== this.props.params.itemId) {
-      dispatch(fetchPage(itemId));
+    if (isActive) {
+      animateScroll.scrollTo(this._element.offsetTop, {
+        duration: 500
+      })
     }
   }
 
-  render() {
-    const {isFetching, title, content} = this.props,
-          {pageId, sectionId} = this.props.params;
+  componentWillReceiveProps (nextProps) {
+    const {item, params} = nextProps
+    const isActive = params.itemId === item.id
 
-    if (isFetching) {
+    if (isActive) {
+      animateScroll.scrollTo(this._element.offsetTop, {
+        duration: 500
+      })
+    }
+  }
+
+  render () {
+    const {item, params} = this.props
+    const {sectionId, pageId, itemId} = params
+
+    if (itemId === item.id) {
       return (
-        <div>loading...</div>
-      );
+        <div ref={el => (this._element = el)}>
+          <div>{item.title}</div>
+          <Link to={`/${sectionId}/${pageId}`}>&lt;Back</Link>
+          <div className={typography.content} dangerouslySetInnerHTML={{__html: item.content}}></div>
+        </div>
+      )
     } else {
       return (
-        <div>
-          <div>{title}</div>
-          <Link to={`/${sectionId}/${pageId}`}>&lt;Back</Link>
-          <div className={typography.content} dangerouslySetInnerHTML={{__html: content}}></div>
+        <div ref={el => (this._element = el)}>
+          <Link to={`/${sectionId}/${pageId}/${item.id}`}>{item.title}</Link>
         </div>
-      );
+      )
     }
   }
 }
 
-export default connect(
-  (state, ownProps) => {
-    const {itemId} = ownProps.params,
-          item = state.pages[itemId];
-
-    return {
-      isFetching: item ? item.isFetching : true,
-      title: item ? item.title : '',
-      content: item ? item.content : ''
-    };
-  }
-)(StaticItem);
+export default StaticItem

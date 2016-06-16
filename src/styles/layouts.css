@@ -103,6 +103,7 @@
 .grid {
   display: flex;
   justify-items: flex-start;
+  align-items: stretch;
   list-style: none;
 
   &_h_start {
@@ -113,16 +114,6 @@
   }
   &_h_end {
     justify-content: flex-end;
-  }
-
-  &_v_start {
-    align-items: flex-start;
-  }
-  &_v_mid {
-    align-items: center;
-  }
-  &_v_end {
-    align-items: flex-end;
   }
 
   &__item {
