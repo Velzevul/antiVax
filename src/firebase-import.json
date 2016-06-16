@@ -318,7 +318,6 @@
       "section": "blogposts",
       "parent": null,
       "title": "Sample Blog Entry",
-      "snippet": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at tellus eget risus pellentesque lacinia. Integer vulputate lobortis ante sit amet rutrum. Quisque tristique pretium magna eu convallis. Aenean a suscipit tellus, et tristique risus. Ut condimentum turpis vitae leo congue pharetra. Vestibulum tempor quis ligula vel interdum. Morbi eget dapibus massa. Aliquam scelerisque massa vitae aliquam luctus. Sed pharetra urna quis dolor faucibus auctor ultricies ac leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean vel suscipit ex. Mauris ullamcorper vulputate euismod. Pellentesque rhoncus aliquet ligula a finibus. Fusce ullamcorper ante sit amet tincidunt porttitor. Sed non tellus tellus.</p>",
       "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at tellus eget risus pellentesque lacinia. Integer vulputate lobortis ante sit amet rutrum. Quisque tristique pretium magna eu convallis. Aenean a suscipit tellus, et tristique risus. Ut condimentum turpis vitae leo congue pharetra. Vestibulum tempor quis ligula vel interdum. Morbi eget dapibus massa. Aliquam scelerisque massa vitae aliquam luctus. Sed pharetra urna quis dolor faucibus auctor ultricies ac leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean vel suscipit ex. Mauris ullamcorper vulputate euismod. Pellentesque rhoncus aliquet ligula a finibus. Fusce ullamcorper ante sit amet tincidunt porttitor. Sed non tellus tellus.</p><p>Nam maximus pretium eros eget tempus. Nulla et commodo neque, a blandit dui. Pellentesque luctus eu nisl quis ornare. Aenean ut dolor finibus, consequat mi ultrices, consequat velit. In dapibus diam id urna aliquet, non auctor ligula aliquam. Vestibulum mi nisl, rutrum in nulla at, sollicitudin egestas elit. Suspendisse potenti. Morbi scelerisque convallis felis ac ultrices. Sed id libero sit amet eros elementum tempus quis ac neque. Mauris vestibulum, lacus eu rhoncus tincidunt, nisi nisl suscipit nibh, a porta nisi arcu sit amet dolor.</p><p>Curabitur interdum viverra risus ac ornare. Sed ut ipsum molestie, sagittis erat non, convallis lectus. Nam dapibus sem nec vehicula viverra. Sed a ligula magna. Vestibulum viverra dolor at rhoncus interdum. Etiam libero risus, feugiat in est nec, vestibulum ornare lectus. Sed egestas vestibulum augue quis varius. Vestibulum laoreet massa a felis elementum condimentum. Nullam faucibus sapien at urna ultrices, quis rhoncus risus fringilla. Etiam vestibulum nunc viverra dolor sollicitudin iaculis.</p><p>Nunc efficitur eros posuere risus ultricies lacinia. Curabitur tempus purus et sem bibendum, vitae efficitur ex rutrum. Quisque lacinia ex a ullamcorper suscipit. Duis et nisi ex. Aenean eget egestas ipsum. Phasellus vitae mi dignissim, imperdiet orci et, tincidunt ipsum. Duis tristique justo nec egestas aliquet. Donec sed commodo arcu. Sed in diam sit amet velit volutpat lobortis.</p><p>Integer vitae pulvinar magna. Nullam quis sodales nibh, vulputate convallis sapien. Proin in augue nec augue iaculis pharetra. Donec in ligula eu felis tempus elementum. Suspendisse et tellus quis quam condimentum sagittis. Suspendisse in libero sit amet tortor sollicitudin tristique non quis ligula. Nunc id est ullamcorper, blandit tellus ut, pulvinar orci. Duis enim lacus, convallis a ipsum vel, laoreet tristique purus. Praesent consequat nisl nec nisl consectetur, nec pulvinar augue fringilla. Mauris convallis erat et aliquam ullamcorper. Sed dignissim metus ultrices libero tincidunt semper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam lacus turpis, faucibus id sollicitudin et, varius a mi.</p>",
       "createdAt": "Sun May 29 2016 11:12:04 GMT-0500 (CDT)",
       "createdBy": "Volodymyr Dziubak"
@@ -328,10 +327,201 @@
       "section": "blogposts",
       "parent": null,
       "title": "Second Sample Entry",
-      "snippet": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at tellus eget risus pellentesque lacinia. Integer vulputate lobortis ante sit amet rutrum. Quisque tristique pretium magna eu convallis. Aenean a suscipit tellus, et tristique risus. Ut condimentum turpis vitae leo congue pharetra. Vestibulum tempor quis ligula vel interdum. Morbi eget dapibus massa. Aliquam scelerisque massa vitae aliquam luctus. Sed pharetra urna quis dolor faucibus auctor ultricies ac leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean vel suscipit ex. Mauris ullamcorper vulputate euismod. Pellentesque rhoncus aliquet ligula a finibus. Fusce ullamcorper ante sit amet tincidunt porttitor. Sed non tellus tellus.</p>",
       "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at tellus eget risus pellentesque lacinia. Integer vulputate lobortis ante sit amet rutrum. Quisque tristique pretium magna eu convallis. Aenean a suscipit tellus, et tristique risus. Ut condimentum turpis vitae leo congue pharetra. Vestibulum tempor quis ligula vel interdum. Morbi eget dapibus massa. Aliquam scelerisque massa vitae aliquam luctus. Sed pharetra urna quis dolor faucibus auctor ultricies ac leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aenean vel suscipit ex. Mauris ullamcorper vulputate euismod. Pellentesque rhoncus aliquet ligula a finibus. Fusce ullamcorper ante sit amet tincidunt porttitor. Sed non tellus tellus.</p><p>Nam maximus pretium eros eget tempus. Nulla et commodo neque, a blandit dui. Pellentesque luctus eu nisl quis ornare. Aenean ut dolor finibus, consequat mi ultrices, consequat velit. In dapibus diam id urna aliquet, non auctor ligula aliquam. Vestibulum mi nisl, rutrum in nulla at, sollicitudin egestas elit. Suspendisse potenti. Morbi scelerisque convallis felis ac ultrices. Sed id libero sit amet eros elementum tempus quis ac neque. Mauris vestibulum, lacus eu rhoncus tincidunt, nisi nisl suscipit nibh, a porta nisi arcu sit amet dolor.</p><p>Curabitur interdum viverra risus ac ornare. Sed ut ipsum molestie, sagittis erat non, convallis lectus. Nam dapibus sem nec vehicula viverra. Sed a ligula magna. Vestibulum viverra dolor at rhoncus interdum. Etiam libero risus, feugiat in est nec, vestibulum ornare lectus. Sed egestas vestibulum augue quis varius. Vestibulum laoreet massa a felis elementum condimentum. Nullam faucibus sapien at urna ultrices, quis rhoncus risus fringilla. Etiam vestibulum nunc viverra dolor sollicitudin iaculis.</p><p>Nunc efficitur eros posuere risus ultricies lacinia. Curabitur tempus purus et sem bibendum, vitae efficitur ex rutrum. Quisque lacinia ex a ullamcorper suscipit. Duis et nisi ex. Aenean eget egestas ipsum. Phasellus vitae mi dignissim, imperdiet orci et, tincidunt ipsum. Duis tristique justo nec egestas aliquet. Donec sed commodo arcu. Sed in diam sit amet velit volutpat lobortis.</p><p>Integer vitae pulvinar magna. Nullam quis sodales nibh, vulputate convallis sapien. Proin in augue nec augue iaculis pharetra. Donec in ligula eu felis tempus elementum. Suspendisse et tellus quis quam condimentum sagittis. Suspendisse in libero sit amet tortor sollicitudin tristique non quis ligula. Nunc id est ullamcorper, blandit tellus ut, pulvinar orci. Duis enim lacus, convallis a ipsum vel, laoreet tristique purus. Praesent consequat nisl nec nisl consectetur, nec pulvinar augue fringilla. Mauris convallis erat et aliquam ullamcorper. Sed dignissim metus ultrices libero tincidunt semper. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam lacus turpis, faucibus id sollicitudin et, varius a mi.</p>",
       "createdAt": "Sun May 30 2016 13:05:01 GMT-0500 (CDT)",
       "createdBy": "Volodymyr Dziubak"
+    },
+    "safety-summary": {
+      "id": "safety-summary",
+      "section": "vaccine-safety",
+      "parent": null,
+      "title": "Vaccine Safety",
+      "content": "<p>Vaccines are generally given to healthy children. Because of this, vaccines are the most thoroughly tested and regulated medical products in health care. Before vaccines are approved by Health Canada for wide use, they are evaluated by clinical trials. These clinical trials rigorously evaluate the safety of vaccines. Typically the trials involve thousands of people.</p><p>However, checking a vaccine’s safety does not end after it’s available to the public. There are two main reasons for studying vaccine safety after the vaccine is already in use.</p><h2>Finding rare reactions</h2><p>Even though vaccines are tested in thousands of people before they are licensed for public use, clinical trials are often not big enough. In order to find a rare reaction, we would need to test a vaccine in millions of people.</p><h2>To maintain public confidence in vaccines:</h2><p>It’s important for the public to feel that vaccines are safe. Because vaccines are given to healthy kids, parents want to know and trust that vaccines are safe for their child.</p><p>After a vaccine has been tested by clinical trials and licensed for public use, its safety is regularly checked by Health Canada, using the Canadian Adverse Event Following Immunization Surveillance System (CAEFISS), the Immunization Monitoring Program, Active (IMPACT), and the Canada Vigilance Program.</p><h2>Canadian Adverse Event Following Immunization Surveillance System (CAEFISS)</h2><p>CAEFISS is a passive vaccine surveillance system managed by the Public Health Agency of Canada. By passive, we mean that anyone can submit a report about a possible adverse event including doctors, nurses, parents, guardians, family members, etc. By possible adverse event, we mean any condition that happens to a child after receiving a vaccine.</p><h2>Immunization Monitoring Program, Active (IMPACT)</h2><p>IMPACT monitors pediatric hospitals in Canada for children who come with possible adverse events following immunization, as well as some illnesses that can be prevented by vaccination. It is run by the Public Health Agency of Canada and the Canadian Pediatric Society. By possible adverse event, we mean any condition that happens to a child after receiving a vaccine.</p><h2>Canada Vigilance Program</h2><p>The Canada Vigilance Program collects reports of possible adverse events related to any health product sold in Canada, including vaccines but also medications, natural health products, and blood products used in transfusions, among other things. It is run by Health Canada. Vaccine manufacturers are required by law to report serious adverse reactions, and others (doctors, nurses, parents and caregivers) are also able to report concerns as well. By possible adverse event, we mean any condition that happens to a child after receiving a vaccine.</p><h2>How do these programs work?</h2><p>If a child has a possible adverse event after a vaccination, parents or caregivers can report this to their health care provider. The health care provider can assess these concerns, and if appropriate, submit an AEFI (Adverse Event Following Immunization) report to the local public health office, who then submits the report to CAEFISS and can take action if it seems that there is a problem with the vaccine. The adverse event may or may not have been caused by the vaccine, but the reports are collected by CAEFISS to see if unexpected events are happening more often than would be expected by chance alone.</p><p>IMPACT monitors children’s hospitals across the country for cases of serious events or illnesses following vaccination, and collects the information for CAEFISS as well.</p><h1>Sources</h1><ul><li>Public Health Agency of Canada. Canadian Immunization Guide, Part 2: Vaccine Safety. Accessed at http://www.phac-aspc.gc.ca/publicat/cig-gci/p02-01-eng.php on 16 Sept 2015.</li><li>Public Health Agency of Canada. CAEFISS web page. Accessed at http://www.phac-aspc.gc.ca/im/vs-sv/index-eng.php on 16 Sept 2015.</li><li>Health Canada. Canada Vigilance Program web page. Accessed at http://www.hc-sc.gc.ca/dhp-mps/pubs/medeff/_fs-if/2011-cvp-pcv/index-eng.php on 16 Sept 2015.</li><li>Canadian Pediatric Society. IMPACT web page. Accessed at http://www.cps.ca/en/impact on 16 Sept 2015.</li></ul>"
+    },
+    "vaccine-ingredients": {
+      "id": "vaccine-ingredients",
+      "section": "vaccine-safety",
+      "parent": null,
+      "title": "Vaccine Ingredients",
+      "content": "",
+      "items": [
+        {
+          "id": "thimerosal",
+          "title": "Thimerosal"
+        },
+        {
+          "id": "squalene",
+          "title": "Squalene"
+        },
+        {
+          "id": "gelatin",
+          "title": "Gelatin"
+        },
+        {
+          "id": "formaldehyde",
+          "title": "Formaldehyde"
+        },
+        {
+          "id": "fetal-cells",
+          "title": "Fetal cells"
+        },
+        {
+          "id": "aluminum",
+          "title": "Aluminum"
+        },
+        {
+          "id": "adjuvant",
+          "title": "Adjuvant"
+        },
+        {
+          "id": "yeast-protein",
+          "title": "Yeast Protein"
+        },
+        {
+          "id": "polysorbate-sorbitol",
+          "title": "Polysorbate or Sorbitol"
+        },
+        {
+          "id": "monosodium-glutamate",
+          "title": "Monosodium glutamate"
+        },
+        {
+          "id": "latex",
+          "title": "Latex"
+        },
+        {
+          "id": "lactose",
+          "title": "Lactose"
+        },
+        {
+          "id": "chicken-egg-protein",
+          "title": "Chicken Egg Protein"
+        },
+        {
+          "id": "antibiotics",
+          "title": "Antibiotics"
+        },
+        {
+          "id": "animal-serum",
+          "title": "Animal Serum"
+        },
+        {
+          "id": "albumin",
+          "title": "Albumin"
+        }
+      ]
+    },
+    "albumin": {
+      "id": "albumin",
+      "title": "Albumin",
+      "section": "vaccine-safety",
+      "parent": "vaccine-ingredients",
+      "content": "<p>Albumin is used in small amounts as a stabilizer in some current vaccines. Stabilizers are used in vaccines to keep them from changing when they are exposed to light, heat, acidity, humidity and freeze-drying during production, transportation and storage. Albumin is a protein derived from human blood. The albumin in vaccines comes from what is called human serum albumin (HSA). &nbsp;</p><p>Recombinant HSA does not come from human or animal blood and greatly reduces the risk of using albumin contaminated with infectious diseases. &nbsp;This new recombinant HSA is used in one brand of the MMR vaccine.</p><p>While it is rare to have a serious allergic reaction to a vaccine, if your child has a severe allergy to any ingredient in a vaccine, please speak with your child’s primary care provider about your concerns.</p><h1>References</h1><ul><li>Centers for Disease Control and Prevention (CDC). Ingredients of Vaccines-Fact Sheet. 2011. Available at&nbsp;http://www.cdc.gov/vaccines/vac-gen/additives.htm</li><li>Plotkin et al. (2012).&nbsp;Vaccines: Expert Consult&nbsp;(6th ed.&nbsp;).&nbsp;United Kingdom, UK: Saunders Elsevier.</li><li>PHAC. Canadian Immunization Guide. Part 1: Key immunization information, Contents of immunizing agents available for use in Canada. Accessed at http://www.phac-aspc.gc.ca/publicat/cig-gci/p01-14-eng.php on 1 Oct 2015.</li></ul>"
+    },
+    "animal-serum": {
+      "id": "animal-serum",
+      "title": "Animal Serum",
+      "section": "vaccine-safety",
+      "parent": "vaccine-ingredients",
+      "content": "<p>Animal Serum, such as bovine (cow) serum albumin, is used in the production of viral vaccines as a source of nutrition for the cells that the virus grows in.</p><p>While it is rare to have a serious allergic reaction to a vaccine, if your child has a severe allergy to any ingredient in a vaccine, please speak with your child’s primary care provider about your concerns.</p><p>To see which vaccines contain Animal Serum, visit the&nbsp;Vaccine Ingredient Table.</p><h1>References</h1><ul><li>U.S. Food and Drug Administration. Common Ingredients in U.S. Licensed Vaccines. 2011. Available athttp://www.fda.gov/BiologicsBloodVaccines/SafetyAvailability/VaccineSafety/ucm187810.htm</li><li>PHAC. Canadian Immunization Guide. Part 1: Key immunization information, Contents of immunizing agents available for use in Canada. Accessed at http://www.phac-aspc.gc.ca/publicat/cig-gci/p01-14-eng.php on 1 Oct 2015.</li></ul>"
+    },
+    "antibiotics": {
+      "id": "antibiotics",
+      "title": "Antibiotics",
+      "section": "vaccine-safety",
+      "parent": "vaccine-ingredients",
+      "content": "<p>Antibiotics are used during the vaccine manufacturing process to prevent bacteria from infecting the vaccine while it is being developed. Generally, only trace amounts of an antibiotic is left over in the vaccine. The most commonly used antibiotics are: neomycin, polymycin, streptomycin and gentamicin. Antibiotics like penicillin, which are more commonly associated with allergic reactions than other antibiotics, are not used in vaccine production. The small amount of antibiotic left over in vaccines after they are produced has never been shown to cause an allergic reaction. While it is rare to have a serious allergic reaction to a vaccine, if your child has a severe allergy to any ingredient in a vaccine, please speak with your child’s primary care provider about your concerns. To see which vaccines contain Antibiotics, visit the&nbsp;Vaccine Ingredient Table.</p><h1>References:</h1><ul><li>American Academy of Pediatrics. Questions and Answers about Vaccine Ingredients. 2008. Available at&nbsp;www.vaccinateyourbaby.org/pdfs/Vaccine_ingredients.pdf.</li><li>Goh CL. Anaphylaxis from topical neomycin and bacitracin. Aust J Dermatol. 1986;27:125-126.Kwittken PL, Rosen S, Sweinberg SK. MMR vaccine and neomycin allergy. Am J Dis Child.1993;147:128-129.</li><li>Leyden JJ, Kligman AM. Contact dermatitis to neomycin sulfate. JAMA 1979;242:1276-1278.MacDonald RH, Beck M. Neomycin: a review with particular reference to dermatolgical usage. Clin Exp Dermatol. 1983;8:249-258.</li><li>U.S. Food and Drug Administration. Common Ingredients in U.S. Licensed Vaccines. 2011. Available at&nbsp;http://www.fda.gov/BiologicsBloodVaccines/SafetyAvailability/VaccineSafety/ucm187810.htm</li><li>Yunginger JW. Anaphylaxis. Curr Prob Pediatr. 1992;22:130-146.</li><li>PHAC. Canadian Immunization Guide. Part 1: Key immunization information, Contents of immunizing agents available for use in Canada. Accessed at http://www.phac-aspc.gc.ca/publicat/cig-gci/p01-14-eng.php on 1 Oct 2015.</li></ul>"
+    },
+    "chicken-egg-protein": {
+      "id": "chicken-egg-protein",
+      "title": "Chicken Egg Protein",
+      "section": "vaccine-safety",
+      "parent": "vaccine-ingredients",
+      "content": "<p>Some vaccines are made in eggs or by using chick embryo cells (not in eggs). For example, the flu vaccine is made in eggs and the MMR vaccine is made with chick embryo cells. As a result, small amounts of chicken egg protein (not cells) are left over in these vaccines. Vaccines made using chick embryo cells do not contain enough chicken protein to cause an allergic reaction in people sensitive or allergic to eggs. Vaccines made in eggs may contain enough egg protein to cause an allergic reaction in people sensitive or allergic to eggs. However, the use of newer technologies in vaccine production has reduced the amount of egg protein left over in vaccines made in eggs (like flu vaccine) that are given as a shot. It is safe for people with egg allergies to receive MMR, MMRV and QIV (injected flu vaccine),  though all individuals, whether or not there is a history of allergy, should remain in the health care provider’s office for 15 minutes after any vaccination (30 minutes is recommended if there is a concern about allergy).</p><p>While it is rare to have a serious allergic reaction to a vaccine, if your child has a severe allergy to any ingredient in a vaccine, please speak with your child’s primary care provider about your concerns. </p><h1>References</h1><ul><li>American Academy of Pediatrics. Questions and Answers about Vaccine Ingredients. 2008. Available at&nbsp;www.vaccinateyourbaby.org/pdfs/Vaccine_ingredients.pdf.</li><li>The Children’s Hospital of Philadelphia, Vaccine Education Center. 2012. Vaccine Ingredients: What you should know. Available at&nbsp;http://www.chop.edu/export/download/pdfs/articles/vaccine-education-center/vaccine-ingredients.pdf.</li><li>PHAC. Canadian Immunization Guide. Part 1: Key immunization information, Contents of immunizing agents available for use in Canada. Accessed at http://www.phac-aspc.gc.ca/publicat/cig-gci/p01-14-eng.php on 1 Oct 2015.</li><li>PHAC. Canadian Immunization Guide. Part 2: Vaccine safety, Contraindications, precautions and concerns. Accessed at http://www.phac-aspc.gc.ca/publicat/cig-gci/p02-02-eng.php on 1 Oct 2015.</li><li>PHAC. Canadian Immunization Guide. Part 2: Vaccine safety, Early vaccine reactions including anaphylaxis. Accessed at  www.phac-aspc.gc.ca/publicat/cig-gci/p02-03-eng.php on 1 Oct 2015.</li><li>PHAC. Canadian Immunization Guide. Part 2: Vaccine safety, Anaphylactic hypersensitivity to egg and egg-related antigens. Accessed at  www.phac-aspc.gc.ca/publicat/cig-gci/p02-04-eng.php on 1 Oct 2015.</li></ul>"
+    },
+    "lactose": {
+      "id": "lactose",
+      "title": "Lactose",
+      "section": "vaccine-safety",
+      "parent": "vaccine-ingredients",
+      "content": "<p>Lactose is a kind of sugar commonly used in vaccine production as a stabilizer. Stabilizers are used to protect the ingredient in vaccines necessary for producing immunity. Specifically, stabilizers protect the immunity producing ingredients from changing when they are exposed to light, heat, acidity, humidity and freeze-drying during production, transportation and storage.</p><p>While it is rare to have a serious allergic reaction to a vaccine, if your child has a severe allergy to any ingredient in a vaccine, please speak with your child’s primary care provider about your concerns.</p><h1>References</h1><ul><li>American Academy of Pediatrics. Questions and Answers about Vaccine Ingredients. 2008. Available at&nbsp;www.vaccinateyourbaby.org/pdfs/Vaccine_ingredients.pdf.</li><li>U.S. Food and Drug Administration. Common Ingredients in U.S. Licensed Vaccines. 2011. Available athttp://www.fda.gov/BiologicsBloodVaccines/SafetyAvailability/VaccineSafety/ucm187810.htm</li><li>PHAC. Canadian Immunization Guide. Part 1: Key immunization information, Contents of immunizing agents available for use in Canada. Accessed at http://www.phac-aspc.gc.ca/publicat/cig-gci/p01-14-eng.php on 1 Oct 2015.</li></ul>"
+    },
+    "latex": {
+      "id": "latex",
+      "title": "Latex",
+      "section": "vaccine-safety",
+      "parent": "vaccine-ingredients",
+      "content": "<p>Latex comes from the rubber tree and can be present in many products that come in contact with vaccines such as:</p><ul><li>Syringe plungers</li><li>Vial stoppers</li><li>Tip caps of prefilled syringes</li></ul><p>People that have a history of anaphylactic reactions (severe allergic reactions) to latex should not get any vaccination that has come into contact with natural rubber in a vial or in a syringe. People who have experienced contact allergies and have no history of anaphylactic reactions to latex&nbsp;can get vaccinated&nbsp;if the vaccine has come into contact with the natural rubber in a vial or syringe.</p><p>Some manufacturers are switching to synthetic rubber-like materials that do not contain the rubber allergen in the vaccine vial stoppers. However, it is always best to check the vaccine package inserts before getting vaccinated.</p><h1>References</h1><ul><li>Immunization Action Coalition. Ask the Experts:&nbsp;What is a latex allergy and why should we be concerned?. 2013. Available at&nbsp;http://www.immunize.org/askexperts/experts_general.asp</li><li>PHAC. Canadian Immunization Guide. Part 1: Key immunization information, Contents of immunizing agents available for use in Canada. Accessed at http://www.phac-aspc.gc.ca/publicat/cig-gci/p01-14-eng.php on 1 Oct 2015.</li></ul>"
+    },
+    "monosodium-glutamate": {
+      "id": "monosodium-glutamate",
+      "title": "Monosodium glutamate",
+      "section": "vaccine-safety",
+      "parent": "vaccine-ingredients",
+      "content": "<p>Monosodium glutamate is used as a stabilizer in some current vaccines. Stabilizers are used in vaccines to keep them from changing when they are exposed to light, heat, acidity, humidity and freeze-drying during production, transportation and storage. While it is rare to have a serious allergic reaction to a vaccine, if your child has a severe allergy to any ingredient in a vaccine, please speak with your child’s primary care provider about your concerns.</p><h1>References</h1><ul><li>Centers for Disease Control and Prevention (CDC). Ingredients of Vaccines-Fact Sheet. 2011. Available at&nbsp;http://www.cdc.gov/vaccines/vac-gen/additives.htm</li><li>U.S. Food and Drug Administration. Common Ingredients in U.S. Licensed Vaccines. 2011. Available athttp://www.fda.gov/BiologicsBloodVaccines/SafetyAvailability/VaccineSafety/ucm187810.htm</li><li>PHAC. Canadian Immunization Guide. Part 1: Key immunization information, Contents of immunizing agents available for use in Canada. Accessed at http://www.phac-aspc.gc.ca/publicat/cig-gci/p01-14-eng.php on 1 Oct 2015.</li></ul>"
+    },
+    "polysorbate-sorbitol": {
+      "id": "polysorbate-sorbitol",
+      "title": "Polysorbate or Sorbitol",
+      "section": "vaccine-safety",
+      "parent": "vaccine-ingredients",
+      "content": "<p>Polysorbate is used as an emulsifier and surfactant in the production of some vaccines. Emulsifiers are chemical additives used in foods and vaccines that prevent the separation of ingredients. Surfactants are additives that reduce the surface tension of a liquid, helping its spreading and wetting properties.</p><p>While it is rare to have a serious allergic reaction to a vaccine, if your child has a severe allergy to any ingredient in a vaccine, please speak with your child’s primary care provider about your concerns.</p><p>Sorbitol is a sugar alcohol that is used as a stabilizer in some current vaccines. Stabilizers are used in vaccines to keep them from changing when they are exposed to light, heat, acidity, humidity and freeze-drying during production, transportation and storage. While it is rare to have a serious allergic reaction to a vaccine, if your child has a severe allergy to any ingredient in a vaccine, please speak with your child’s primary care provider about your concerns.</p><h1>References</h1><ul><li>Australian Government. The Australian Immunisation Handbook: 10th Ed. 2013. Available at http://www.immunise.health.gov.au/internet/immunise/publishing.nsf/Content/Handbook10-home.</li><li>“carbohydrate”. Encyclopædia Britannica. Encyclopædia Britannica Online. 2013. Available at http://www.britannica.com/EBchecked/topic/94687/carbohydrate/72613/Chemical-reactions.</li><li>“emulsifier”. Encyclopædia Britannica. Encyclopædia Britannica Online. 2013. Available at http://www.britannica.com/EBchecked/topic/186305/emulsifier.</li><li>“surfactant”. Encyclopædia Britannica. Encyclopædia Britannica Online. 2013. Available at  http://www.britannica.com/EBchecked/topic/575010/surfactant.</li><li>PHAC. Canadian Immunization Guide. Part 1: Key immunization information, Contents of immunizing agents available for use in Canada. Accessed at http://www.phac-aspc.gc.ca/publicat/cig-gci/p01-14-eng.php on 1 Oct 2015.</li></ul>"
+    },
+    "yeast-protein": {
+      "id": "yeast-protein",
+      "title": "Yeast Protein",
+      "section": "vaccine-safety",
+      "parent": "vaccine-ingredients",
+      "content": "<p>Some vaccines are grown in a yeast medium (solution) during the vaccine manufacturing process. As a result, some yeast protein is left over in the vaccine after it’s made. Hepatitis B vaccines and Gardasil are created in a yeast medium. While it is rare to have a serious allergic reaction to a vaccine, if your child has a severe allergy to any ingredient in a vaccine, please speak with your child’s primary care provider about your concerns.</p><h1>References:</h1><ul><li>American Academy of Pediatrics. Questions and Answers about Vaccine Ingredients. 2008. Available at& www.vaccinateyourbaby.org/pdfs/Vaccine_ingredients.pdf.</li><li>Plotkin et al. (2012). Vaccines: Expert Consult (6th ed. ). United Kingdom, UK: Saunders Elsevier.</li><li>PHAC. Canadian Immunization Guide. Part 1: Key immunization information, Contents of immunizing agents available for use in Canada. Accessed at http://www.phac-aspc.gc.ca/publicat/cig-gci/p01-14-eng.php on 1 Oct 2015.</li></ul>"
+    },
+    "adjuvant": {
+      "id": "adjuvant",
+      "section": "vaccine-safety",
+      "parent": "vaccine-ingredients",
+      "title": "Adjuvant",
+      "content": "<p>Adjuvants are substances added to vaccines to increase immune response. By using adjuvants, a smaller quantity of vaccines and/or fewer doses are needed. Aluminum salts is an example of an adjuvant. Aluminum salts have been used in vaccines for over 80 years. Examples of current Canadian licensed vaccines containing aluminum salt adjuvants are DTaP, pneumococcal conjugate, and hepatitis B vaccines. Cervarix – a vaccine for the prevention of human papillomavirus types 16 and 18 – also contains AS04 adjuvant. AS04 is a combination of aluminum hydroxide salt and monophosphoryl lipid A (MPL). MPL is a refined fat-like substance that comes from inactivated bacteria.</p><h1>References:</h1><ul><li>Coffman RL, Sher A, Seder RA. Vaccine adjuvants: putting innate immunity to work. Immunity. 2010 Oct 29;33(4):492-503.</li><li>Leroux-Roels G. Unmet needs in modern vaccinology: adjuvants to improve the immune response. Vaccine. 2010 Aug 31;28 Suppl 3:C25-36.</li><li>PHAC. Canadian Immunization Guide. Part 1: Key immunization information, Contents of immunizing agents available for use in Canada. Accessed at http://www.phac-aspc.gc.ca/publicat/cig-gci/p01-14-eng.php on 1 Oct 2015.</li></ul>"
+    },
+    "aluminum": {
+      "id": "aluminum",
+      "section": "vaccine-safety",
+      "parent": "vaccine-ingredients",
+      "title": "Aluminum",
+      "content": "<p>Aluminum is in very small amounts in some vaccines as an aluminum salt adjuvant. Aluminum agents have been used in vaccines since the 1930’s. It enhances the immune response and thus requires fewer antigens, or substances in vaccines that cause the immune system to create antibodies that protect against the disease. Aluminum has been shown to be safe in vaccines for over 80 years, with over a half a billion doses given. However, very high amounts of ingested or injected aluminum can be toxic. Brain and bone disease has been seen in children with kidney disease who receive high doses of therapeutic aluminum.  Canadians normally take in 10 mg of aluminum per day. </p><p>Aluminum is very common and present in food, water and air. Aluminum is also present in very small amounts in human breast milk and infant formula. A recent study (2011) of infant exposures to aluminum through diet and vaccination showed that vaccines with aluminum adjuvant contribute very little aluminum relative to the diet of breast milk and/or infant formula. This study also found that the total amount of aluminum from vaccines and diet in the first year of life is lower than the recommended safe level of aluminum exposure.</p><p>A 2004 review of vaccine safety studies compare vaccines with aluminum to vaccines without aluminum. The report showed that vaccines containing aluminum had more skin redness and hardening at the injection site in young children up to 18 months of age and more local pain from the shot in older children of age 10 to 18 years. No difference was found in more serious or long-term side-effects, which was very rare or not found in any vaccine under study.</p><h1>References:</h1><ul><li>Mitkus RJ, King DB, Hess MA, Forshee RA, Walderhaug MO. Updated aluminum pharmacokinetics following infant exposures through diet and vaccination. Vaccine. 2011 Nov 28;29(51):9538-43.</li><li>Jefferson T, Rudin M, Di Pietrantonj C. Adverse events after immunisation with aluminium-containing DTP vaccines: systematic review of the evidence. Lancet Infect Dis. 2004 Feb;4(2):84-90.</li><li>Toxicology Profile for Aluminum. Atlanta, GA: US Department of Health and Human Services, Public Health Service, Agency for Toxic Substances and Disease Registry; 2008.</li><li>Government of Canada. Healthy Canadians: The safe use of cookware webpage. Accessed at http://healthycanadians.gc.ca/product-safety-securite-produits/consumer-consommation/education/household-menagers/cook-cuisinier-eng.php on 1 Oct 2015.</li></ul>"
+    },
+    "fetal-cells": {
+      "id": "fetal-cells",
+      "section": "vaccine-safety",
+      "parent": "vaccine-ingredients",
+      "title": "Fetal cells",
+      "content": "<p>Vaccines that protect against viruses are more difficult to make than ones that protect against bacteria. Viruses must be grown in living cell cultures, whereas bacteria grow on their own when supplied with the proper nutrients. Some viruses can only be grown in human cell cultures, which are grown in the laboratory. Currently, two human cell line cultures are used in the development of vaccines. These two vaccines protect against the rubella and hepatitis A viruses. The cell lines for these two vaccines (MRC-5 and WI-38) were originally developed from two elective, legal abortions in the 1960s. No additional abortions are needed since the MRC-5 and WI-38 cell lines continue to produce cells rapidly.</p><p>The cells are used to produce the antigens (the weakened viruses) for the vaccines, but they are not part of the vaccines themselves – they are removed as part of the purification process.</p><p>In Canada, these cells are used to make MMR, MMRV, varicella, hepatitis A, DTaP-IPV, and TdP. </p><h1>References:</h1><ul><li>Hayflick L, Plotkin S, Stevenson RE (1987). History of the acceptance of human diploid cell strains as substrates for human virus vaccine manufacture. Developmental Biology Standards 68:9-17.</li><li>Immunize Canada. Fetal cells webpage. Accessed at http://www.immunize.ca/en/publications-resources/questions/fetal.aspx on 1 Oct 2015.</li><li>PHAC. Canadian Immunization Guide. Part 1: Key immunization information, Contents of immunizing agents available for use in Canada. Accessed at http://www.phac-aspc.gc.ca/publicat/cig-gci/p01-14-eng.php on 1 Oct 2015.</li></ul>"
+    },
+    "formaldehyde": {
+      "id": "formaldehyde",
+      "section": "vaccine-safety",
+      "parent": "vaccine-ingredients",
+      "title": "Formaldehyde",
+      "content": "<p>Formaldehyde is used in the manufacturing process of some vaccines. Formaldehyde kills or inactivates viruses or bacteria so that they cannot cause disease, but still produce immunity. Formaldehyde is greatly diluted in vaccine manufacturing, leaving very small (&lt;0.1 mg) amounts in a vaccine dose. Formaldehyde is produced naturally in humans as a key component for proteins and DNA; in fact, there is about 10 times more formaldehyde in a baby’s body at any given time than there is in a vaccine. Formaldehyde is continually processed in the human body and the amount at any one time depends on a person’s body weight. For infants, the maximum amount of formaldehyde received from a set of vaccines at any well child visit would be less than 10 to 20% of the natural amount of formaldehyde in their bodies. The amount of formaldehyde from vaccines does not accumulate (build up) in the body and is rapidly processed within about 90 minutes.</p><p>Formaldehyde may cause cancer at levels exceeding about 10 mg inhaled into the body per day for at least 2 years. These levels were seen at the highest exposures for people working in formaldehyde industries. This is at least 50,000 times more than the amount received by vaccines. There is no evidence linking cancer to infrequent exposure of the very small amounts of formaldehyde that enter the body through the vaccine shots.</p><h1>References:</h1><ul><li>Heck HD, Casanova-Schmitz M, Dodd PB, Schachter EN, Witek TJ, Tosun T. Formaldehyde (CH2O) concentrations in the blood of humans and Fischer-344 rats exposed to CH2O under controlled conditions. Am Ind Hyg Assoc J. 1985; 46(1):1-3.</li><li>Cascieri TC, Clary JJ. Formaldehyde — oral toxicity assessment. Comments Toxicol. 1992; 4 (4): 295-304.</li><li>Hauptmann M, Lubin JH, Stewart PA, Hayes RB, Blair A. Mortality from solid cancers among workers in formaldehyde industries. Am J Epidemiol. 2004;159:1117–1130.</li><li>Immunize Canada. Additives in vaccines webpage. Accessed at http://www.immunize.ca/en/publications-resources/questions/additives.aspx on 1 Oct 2015.</li><li>PHAC. Canadian Immunization Guide. Part 1: Key immunization information, Contents of immunizing agents available for use in Canada. Accessed at http://www.phac-aspc.gc.ca/publicat/cig-gci/p01-14-eng.php on 1 Oct 2015.</li></ul>"
+    },
+    "gelatin": {
+      "id": "gelatin",
+      "section": "vaccine-safety",
+      "parent": "vaccine-ingredients",
+      "title": "Gelatin",
+      "content": "<p>Gelatin is used in small amounts as a stabilizer in some current vaccines (MMR, MMRV, varicella, and some influenza vaccine formulations). The chances of a severe gelatin allergic reaction is very low (about 2 per million doses of shots given). Parents or guardians of children with known gelatin allergies should talk with their health care provider about this allergy before getting vaccines that contain gelatin.</p><h1>References:</h1><ul><li>Kelso JM. Update on vaccination guidelines for allergic children. Expert Rev Vaccines. 2009 Nov;8(11):1541-6.</li><li>PHAC. Canadian Immunization Guide. Part 1: Key immunization information, Contents of immunizing agents available for use in Canada. Accessed at http://www.phac-aspc.gc.ca/publicat/cig-gci/p01-14-eng.php on 1 Oct 2015.</li></ul>"
+    },
+    "squalene": {
+      "id": "squalene",
+      "section": "vaccine-safety",
+      "parent": "vaccine-ingredients",
+      "title": "Squalene",
+      "content": "<p>Squalene is a naturally occurring chemical made in the human liver. Squalene is also present in many foods, health supplements and cosmetics. The only vaccine available in Canada that contains squalene is Fluad, one of the QIV (injected) influenza vaccines.</p><h1>References:</h1><ul><li>Fox CB, Baldwin SL, Duthie MS, Reed SG, Vedvick TS. Immunomodulatory and physical effects of oil composition in vaccine adjuvant emulsions. Vaccine. 2011 Nov 28;29(51):9563-72.</li><li>PHAC. Canadian Immunization Guide. Part 1: Key immunization information, Contents of immunizing agents available for use in Canada. Accessed at http://www.phac-aspc.gc.ca/publicat/cig-gci/p01-14-eng.php on 1 Oct 2015.</li></ul>"
+    },
+    "thimerosal": {
+      "id": "thimerosal",
+      "title": "Thimerosal",
+      "section": "vaccine-safety",
+      "parent": "vaccine-ingredients",
+      "content": "<p>Thimerosal is a mercury based compound that has been used a vaccine preservative. It is used in vials containing several doses of vaccine (multi-dose vials). Prior to its use in the 1930s, contamination of multi-dose vaccine vials was common, and led to, for example, a 1928 outbreak of bacterial infection caused by the contamination of diphtheria vaccine that resulted in the death of 12 children.  It is added to multi-dose vials of vaccine to prevent the growth of bacteria and fungi if the vaccine is accidentally contaminated.</p><p>The form of mercury contained in thimerosal – ethylmercury – is a different chemical than methylmercury, which is found in the environment and shown to damage the nervous system. The main differences between the two forms of mercury are that ethyl mercury is quickly eliminated from the body and does not easily cross the blood brain barrier. The blood brain barrier is a collection of cells that prevent potentially harmful substances in the blood from entering the brain.</p><p>Thimerosal has not been shown to cause harm, except for minor local reactions (sore arm, redness). Despite this, thimerosal was phased out of vaccines to reduce the overall human exposure to mercury. Since 2001, thimerosal has been eliminated in all vaccines routinely recommended for children less than 6 years of age, with the exception of the injected flu vaccine. Today, influenza is the only vaccine that still contains thimerosal as a preservative, and there is a thimerosal-free influenza vaccine (nasal spray vaccine) recommended for most children.</p><p>A few research studies have shown a relationship between thimerosal with neurodevelopmental disorders, including autism. These studies were conducted by the same group of researchers, and their studies were found to have serious scientific flaws. In fact, their findings have been negated (disproven) by multiple studies from several different researchers over the last 10 years. These latter studies all failed to find an association between exposure to thimerosal through vaccines and autism. In addition, studies in California and Canada show that, even after thimerosal was removed from almost all the childhood vaccines, autism rates continue to increase. If thimerosal had been the cause of autism, the number of children with autism should have gone down after thimerosal was removed from vaccines. The scientific community is in general agreement that thimerosal does not cause autism.</p><p>The 2004 Institute of Medicine’s (IOM) report states that “The committee concludes that the body of epidemiological evidence favors rejection of a causal relationship between thimerosal-containing vaccines and autism.”</p><p>To see which vaccines contain Thimerosal and how much Thimerosal the vaccine contains click here Vaccine Ingredients Table.</p><h1>References:</h1><ul><li>Geier DA, Geier MR. A prospective study of thimerosal-containing Rho(D)-immune globulin administration as a risk factor for autistic disorders.J Matern Fetal Neonatal Med. 2007;20: 358–390.</li><li>Geier DA, Geier MR. An evaluation of the effects of thimerosal on neurodevelopmental disorders reported following DTP and Hib vaccines in comparison to DTPH vaccine in the United States. J Toxicol Environ Health. 2006;69: 1481–1495.</li><li>Young HA, Geier DA, Geier MR. Thimerosal exposure in infants and neurodevelopmental disorders: as assessment of computerized medical records in the Vaccine Safety Datalink. J Neurol Sci. 2008;271:110–118.</li><li>Parker SK, Schwartz B, Todd J, Pickering LK. Thimerosal-containing vaccines and autistic spectrum disorder: a critical review of published original data. Pediatrics. 2004; 114: 793–804.</li><li>Hviid A, Stellfeld M, Wohlfahrt J, Melbye M. Association between thimerosal-containing vaccine and autism. JAMA. 2003 Oct 1;290(13):1763-6</li><li>Verstraeten T, Davis RL, DeStefano F, et al. Study of thimerosal-containing vaccines: a two-phased study of computerized health maintenance organization databases. Pediatrics. 2003;112:1039-1048.</li><li>Fombonne E, Zakarian R, Bennett A, Meng L, McLean-Heywood D. Pervasive developmental disorders in Montreal, Quebec, Canada: prevalence and links with immunizations. Pediatrics. 2006 Jul;118(1):e139-50</li><li>Thompson WW, Price C, Goodson B, Shay DK, Benson P et al. Early thimerosal exposure and neuropsychological outcomes at 7 to 10 years. N Engl J Med. 2007 Sep 27;357(13):1281-92.</li><li>Schechter R, Grether JK. Continuing increases in autism reported to California’s developmental services system: mercury in retrograde. Arch Gen Psychiatry. 2008 Jan;65(1):19-24</li><li>Tozzi AE, Bisiacchi P, Tarantino V, De Mei B, D’Elia L, Chiarotti F, Salmaso S. Neuropsychological performance 10 years after immunization in infancy with thimerosal-containing vaccines. Pediatrics. 2009 Feb;123(2):475-82.</li><li>Price CS, Thompson WW, Goodson B, Weintraub ES, Croen LA et al. Prenatal and infant exposure to thimerosal from vaccines and immunoglobulins and risk of autism. Pediatrics. 2010 Oct;126(4):656-64. Epub 2010 Sep 13.</li><li>PHAC. Archived – Thimerosal: updated statement. Accessed at http://www.phac-aspc.gc.ca/publicat/ccdr-rmtc/07vol33/acs-06/index-eng.php on 30 Sept 2015.1</li><li>PHAC. Canadian Immunization Guide. Part 1: Key immunization information, Contents of immunizing agents available for use in Canada. Accessed at http://www.phac-aspc.gc.ca/publicat/cig-gci/p01-14-eng.php on 1 Oct 2015.</li></ul>"
     }
   },
   "sections": {
@@ -378,6 +568,20 @@
         {
           "id": "vaccines",
           "title": "Vaccines"
+        }
+      ]
+    },
+    "vaccine-safety": {
+      "title": "Vaccine Safety",
+      "id": "vaccine-safety",
+      "pages": [
+        {
+          "id": "safety-summary",
+          "title": "Safety Summary"
+        },
+        {
+          "id": "vaccine-ingredients",
+          "title": "vaccine-ingredients"
         }
       ]
     },

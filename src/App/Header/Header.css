@@ -14,7 +14,7 @@
     content: '';
     display: block;
     min-height: calc(var(--baseline) * 30);
-    padding-top: 28%;
+    padding-top: 20%;
   }
 
   &__body {

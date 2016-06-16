@@ -2,14 +2,24 @@
 
 
 .SearchResultsItem {
-  padding: calc(var(--baseline) * 3);
+  display: block;
+  width: 100%;
+  padding-top: calc(var(--baseline) * 2);
 
   border-top: 1px solid var(--colorMainLLL);
 
   &__body {
+    display: inline-block;
+
+    &:before,
+    &:after {
+      content: '\2026';
+      display: inline-block;
+    }
+
     & em {
       font-style: normal;
-      background: rgba(253, 255, 2, 0.53);
+      background: rgba(253, 255, 2, 0.2);
     }
   }
 }

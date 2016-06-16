@@ -28,7 +28,7 @@ class SearchResultsPage extends React.Component {
   }
 
   render() {
-    const {pages, isFetching} = this.props;
+    const {pages, location, isFetching} = this.props;
 
     if (isFetching) {
       return (
@@ -37,17 +37,19 @@ class SearchResultsPage extends React.Component {
     } else {
       if (pages.length) {
         return (
-          <div className={styles.SearchResultsPage}>
+          <div className={`${layouts.wrap} ${styles.SearchResultsPage}`}>
             <div className={layouts.block3}>
               <div className={states.aligned_mid}>
-                <h1 className={typography.hPrimary}>Pages relevant to your search</h1>
+                <h1 className={typography.hPrimary}>{pages.length} pages mention '{location.query.q}'</h1>
               </div>
             </div>
 
-            <div className={`${layouts.grid} ${layouts.grid_h_mid}`}>
-              <div className={`${layouts.grid__item} ${layouts._8_12}`}>
+            <div className={`${layouts.wrap} ${styles.SearchResultsPage__body}`}>
+              <div className={`${layouts.list} ${layouts.list_2}`}>
                 {pages.map(p =>
-                  <SearchResultsItem item={p} key={p.id} />
+                  <div className={layouts.list__item}>
+                    <SearchResultsItem item={p} key={p.id} />
+                  </div>
                 )}
               </div>
             </div>
@@ -56,7 +58,9 @@ class SearchResultsPage extends React.Component {
       } else {
         return (
           <div className={styles.EmptySearchResultsPage}>
-            No pages match your request
+            <div className={styles.EmptySearchResultsPage__text}>
+              We could not find <strong>'{location.query.q}'</strong> on our website
+            </div>
           </div>
         )
       }

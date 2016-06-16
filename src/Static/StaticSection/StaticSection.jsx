@@ -24,7 +24,7 @@ class StaticSection extends React.Component {
           {sectionId, pageId} = nextProps.params;
 
     if (sectionId !== this.props.params.sectionId) {
-      dispatch(fetchPage(sectionId));
+      dispatch(fetchSection(sectionId));
     }
 
     if ((pageId === undefined) && (pages.length > 0)) {

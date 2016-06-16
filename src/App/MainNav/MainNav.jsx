@@ -16,7 +16,7 @@ const navItems = [
   },
   {
     label: 'Vaccine Safety',
-    path: '/safety'
+    path: '/vaccine-safety'
   },
   {
     label: 'Vaccination Schedule',
@@ -34,7 +34,7 @@ const MainNav = ({
   const routeStateMap = {
           'questions': styles.MainNav__indicator_0,
           'about-vaccines': styles.MainNav__indicator_1,
-          'safety': styles.MainNav__indicator_2,
+          'vaccine-safety': styles.MainNav__indicator_2,
           'schedule': styles.MainNav__indicator_3,
           'blog': styles.MainNav__indicator_4
         },

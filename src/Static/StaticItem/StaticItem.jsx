@@ -2,7 +2,9 @@ import React from 'react';
 import {Link} from 'react-router';
 import {connect} from 'react-redux'
 
-import {fetchPage} from '../store/pagesActions';
+import {fetchPage} from '../../store/pagesActions';
+import styles from './StaticItem.css';
+import typography from '../../styles/typography.css';
 
 
 class StaticItem extends React.Component {
@@ -35,7 +37,7 @@ class StaticItem extends React.Component {
         <div>
           <div>{title}</div>
           <Link to={`/${sectionId}/${pageId}`}>&lt;Back</Link>
-          <div>{content}</div>
+          <div className={typography.content} dangerouslySetInnerHTML={{__html: content}}></div>
         </div>
       );
     }

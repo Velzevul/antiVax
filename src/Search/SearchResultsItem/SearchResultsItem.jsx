@@ -9,26 +9,27 @@ import typography from '../../styles/typography.css';
 const SearchResultsItem = ({
   item
 }) => {
-  let itemUrl = `/${item.section}/`;
+  const itemUrl = item.parent ?
+    `/${item.section}/${item.parent}/${item.id}` :
+    `/${item.section}/${item.id}`;
 
-  if (item.parent) {
-    itemUrl += `${item.parent}/`;
-  }
-
-  itemUrl += item.id;
 
   return (
     <div className={styles.SearchResultsItem}>
-      <div className={layouts.block}>
-        <Link to={itemUrl} className={typography.hTertiary}>{item.title}</Link>
+      <div>
+        <Link to={`/${item.section}`} className={typography.breadcrumb}>{item.section}</Link>
+        {item.parent ?
+          <Link to={`/${item.section}/${item.parent}`} className={typography.breadcrumb}>{item.parent}</Link> :
+          null
+        }
       </div>
-      
-      <div className={layouts.block}>
+
+      <div>
         <Link to={itemUrl} className={typography.hTertiary}>{item.title}</Link>
       </div>
 
-      <div className={styles.SearchResultsItem__body}>
-        <div className={typography.text} dangerouslySetInnerHTML={{__html: item._snippetResult.content.value}}></div>
+      <div className={`${typography.text} ${styles.SearchResultsItem__body}`}
+           dangerouslySetInnerHTML={{__html: item._snippetResult.content.value}}>
       </div>
     </div>
   )

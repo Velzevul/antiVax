@@ -2,35 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6a7a8dad-447f-4ddd-83e8-b25a81bad1cf" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Search/SearchResultsItem/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Search/SearchResultsPage/SearchResultsPage.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Search/SearchResultsPage/SearchResultsPage.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Search/SearchResultsPage/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Search/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Search/searchRouter.jsx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/images/arrow.svg" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Questions/FaqItem/FaqItem.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Questions/FaqItem/FaqItem.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Questions/FaqItem/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Questions/Search/Search.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Questions/Search/Search.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Questions/Search/package.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Questions/SearchResultsList/SearchResultsList.jsx" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Questions/SearchResultsList/package.json" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Questions/SearchResultsItem.jsx" afterPath="$PROJECT_DIR$/src/Search/SearchResultsItem/SearchResultsItem.jsx" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Questions/SearchResultsList/SearchResultsList.css" afterPath="$PROJECT_DIR$/src/Search/SearchResultsItem/SearchResultsItem.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/App/SearchBar/SearchBar.jsx" afterPath="$PROJECT_DIR$/src/App/SearchBar/SearchBar.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Questions/Faq/Faq.css" afterPath="$PROJECT_DIR$/src/Questions/Faq/Faq.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Questions/Faq/Faq.jsx" afterPath="$PROJECT_DIR$/src/Questions/Faq/Faq.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Questions/FaqList/FaqList.jsx" afterPath="$PROJECT_DIR$/src/Questions/FaqList/FaqList.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Questions/questionsRouter.jsx" afterPath="$PROJECT_DIR$/src/Questions/questionsRouter.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Spinner/Spinner.css" afterPath="$PROJECT_DIR$/src/Spinner/Spinner.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/firebase-import.json" afterPath="$PROJECT_DIR$/src/firebase-import.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.jsx" afterPath="$PROJECT_DIR$/src/index.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/pages.json" afterPath="$PROJECT_DIR$/src/pages.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/layouts.css" afterPath="$PROJECT_DIR$/src/styles/layouts.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Search/SearchResultsItem/SearchResultsItem.css" afterPath="$PROJECT_DIR$/src/Search/SearchResultsItem/SearchResultsItem.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Search/SearchResultsItem/SearchResultsItem.jsx" afterPath="$PROJECT_DIR$/src/Search/SearchResultsItem/SearchResultsItem.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Search/SearchResultsPage/SearchResultsPage.css" afterPath="$PROJECT_DIR$/src/Search/SearchResultsPage/SearchResultsPage.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Search/SearchResultsPage/SearchResultsPage.jsx" afterPath="$PROJECT_DIR$/src/Search/SearchResultsPage/SearchResultsPage.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/styles/typography.css" afterPath="$PROJECT_DIR$/src/styles/typography.css" />
     </list>
     <ignored path="antiVax.iws" />
@@ -54,21 +30,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5086207">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="SearchResultsPage.jsx" pinned="false" current-in-tab="false">
+          <file leaf-file-name="SearchResultsPage.jsx" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Search/SearchResultsPage/SearchResultsPage.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="53" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SearchResultsItem.jsx" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Search/SearchResultsItem/SearchResultsItem.jsx">
-              <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="330">
-                  <caret line="22" column="25" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="25" />
+                  <caret line="65" column="65" selection-start-line="65" selection-start-column="65" selection-end-line="65" selection-end-column="65" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
                   </folding>
@@ -76,12 +42,17 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Faq.jsx" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/Questions/Faq/Faq.jsx">
+          <file leaf-file-name="SearchResultsItem.jsx" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Search/SearchResultsItem/SearchResultsItem.jsx">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-225">
-                  <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
-                  <folding />
+                <state relative-caret-position="390">
+                  <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
+                  <folding>
+                    <element signature="e#0#26#0" expanded="true" />
+                    <marker date="1466009100000" expanded="true" signature="433:1003" ph="..." />
+                    <marker date="1466009100000" expanded="true" signature="715:820" ph="..." />
+                    <marker date="1466009100000" expanded="true" signature="979:992" ph="..." />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -90,11 +61,11 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="SearchResultsPage.css" pinned="false" current-in-tab="false">
+          <file leaf-file-name="SearchResultsPage.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Search/SearchResultsPage/SearchResultsPage.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+                <state relative-caret-position="315">
+                  <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -103,18 +74,18 @@
           <file leaf-file-name="SearchResultsItem.css" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Search/SearchResultsItem/SearchResultsItem.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+                <state relative-caret-position="90">
+                  <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="typography.css" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/styles/typography.css">
+          <file leaf-file-name="ui.css" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/styles/ui.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="555">
-                  <caret line="37" column="11" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
+                <state relative-caret-position="427">
+                  <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -140,7 +111,6 @@
         <option value="$PROJECT_DIR$/src/store/sectionsReducer.js" />
         <option value="$PROJECT_DIR$/src/Questions/Contact/Contact.jsx" />
         <option value="$PROJECT_DIR$/src/Static/StaticSection/StaticSection.css" />
-        <option value="$PROJECT_DIR$/src/styles/ui.css" />
         <option value="$PROJECT_DIR$/src/Contact/Contact.css" />
         <option value="$PROJECT_DIR$/src/Contact/Contact.jsx" />
         <option value="$PROJECT_DIR$/src/Questions/FaqPreview/FaqPreview.css" />
@@ -176,11 +146,12 @@
         <option value="$PROJECT_DIR$/src/pages.json" />
         <option value="$PROJECT_DIR$/src/Search/SearchResultsList/SearchResultsList.css" />
         <option value="$PROJECT_DIR$/src/Search/SearchResultsList/SearchResultsList.jsx" />
-        <option value="$PROJECT_DIR$/src/Search/SearchResultsPage/SearchResultsPage.jsx" />
-        <option value="$PROJECT_DIR$/src/Search/SearchResultsPage/SearchResultsPage.css" />
-        <option value="$PROJECT_DIR$/src/Search/SearchResultsItem/SearchResultsItem.css" />
-        <option value="$PROJECT_DIR$/src/Search/SearchResultsItem/SearchResultsItem.jsx" />
+        <option value="$PROJECT_DIR$/src/styles/ui.css" />
         <option value="$PROJECT_DIR$/src/styles/typography.css" />
+        <option value="$PROJECT_DIR$/src/Search/SearchResultsItem/SearchResultsItem.jsx" />
+        <option value="$PROJECT_DIR$/src/Search/SearchResultsItem/SearchResultsItem.css" />
+        <option value="$PROJECT_DIR$/src/Search/SearchResultsPage/SearchResultsPage.css" />
+        <option value="$PROJECT_DIR$/src/Search/SearchResultsPage/SearchResultsPage.jsx" />
       </list>
     </option>
   </component>
@@ -324,7 +295,7 @@
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
     <property name="nodejs_interpreter_path" value="/usr/local/bin/node" />
     <property name="javascript.nodejs.core.library.configured.version" value="5.10.0" />
-    <property name="SearchEverywhereHistoryKey" value="typo&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/styles/typography.css&#10;faq&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/Faq/Faq.jsx&#10;fire&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/firebase-import.json&#10;questions&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/QuestionsPage/QuestionsPage.jsx&#10;searchresultslist&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Search/SearchResultsList/SearchResultsList.css&#10;SearchResultsList&#9;null&#9;null&#10;questionsrou&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/questionsRouter.jsx&#10;spinne&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Spinner/Spinner.css&#10;router&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/questionsRouter.jsx&#10;page&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticPage/StaticPage.jsx&#10;spinn&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Spinner/Spinner.css&#10;typoo&#9;null&#9;null&#10;staticsec&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticSection/StaticSection.css&#10;staticp&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticPage/StaticPage.css&#10;Quest&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/QuestionsPage/QuestionsPage.css&#10;mainnav&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/MainNav/MainNav.css&#10;Hea&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Header/Header.css&#10;Main&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/MainNav/MainNav.jsx&#10;states&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/styles/states.css&#10;Header&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Header/Header.css&#10;layo&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/styles/layouts.css&#10;faqlist&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/FaqList/FaqList.css&#10;stati&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticPage/StaticPage.jsx&#10;FaqPrev&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/FaqPreview/FaqPreview.css&#10;FaqL&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/FaqList/FaqList.jsx&#10;staticpa&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticPage/StaticPage.jsx&#10;ui&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/styles/ui.css&#10;layouts&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/styles/layouts.css&#10;contact&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Contact/Contact.css&#10;Conta&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/Contact/Contact.jsx&#10;stat&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticSection/StaticSection.css&#10;Sidebar&#9;null&#9;null&#10;staticPa&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticPage/StaticPage.jsx&#10;quest&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/QuestionsPage/QuestionsPage.css&#10;MainNav&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/MainNav/MainNav.css&#10;MainNa&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/MainNav/MainNav.jsx&#10;Head&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Header/Header.css&#10;act&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/store/sectionsActions.js&#10;reducer&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/store/sectionsReducer.js&#10;header&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Header/Header.css&#10;footer&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Footer/Footer.css&#10;Footer&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Footer/Footer.jsx&#10;staticSec&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticSection/StaticSection.css&#10;prev&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/FaqPreview/FaqPreview.css&#10;sectionsac&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/store/sectionsActions.js&#10;sectionred&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/store/sectionsReducer.js&#10;questionsp&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/QuestionsPage/QuestionsPage.css&#10;app&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/App.jsx&#10;faqitem&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/FaqItem/FaqItem.css&#10;FaqItem&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/FaqItem/FaqItem.jsx" />
+    <property name="SearchEverywhereHistoryKey" value="typog&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/styles/typography.css&#10;ui&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/styles/ui.css&#10;typo&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/styles/typography.css&#10;faq&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/Faq/Faq.jsx&#10;fire&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/firebase-import.json&#10;questions&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/QuestionsPage/QuestionsPage.jsx&#10;searchresultslist&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Search/SearchResultsList/SearchResultsList.css&#10;SearchResultsList&#9;null&#9;null&#10;questionsrou&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/questionsRouter.jsx&#10;spinne&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Spinner/Spinner.css&#10;router&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/questionsRouter.jsx&#10;page&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticPage/StaticPage.jsx&#10;spinn&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Spinner/Spinner.css&#10;typoo&#9;null&#9;null&#10;staticsec&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticSection/StaticSection.css&#10;staticp&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticPage/StaticPage.css&#10;Quest&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/QuestionsPage/QuestionsPage.css&#10;mainnav&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/MainNav/MainNav.css&#10;Hea&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Header/Header.css&#10;Main&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/MainNav/MainNav.jsx&#10;states&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/styles/states.css&#10;Header&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Header/Header.css&#10;layo&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/styles/layouts.css&#10;faqlist&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/FaqList/FaqList.css&#10;stati&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticPage/StaticPage.jsx&#10;FaqPrev&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/FaqPreview/FaqPreview.css&#10;FaqL&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/FaqList/FaqList.jsx&#10;staticpa&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticPage/StaticPage.jsx&#10;layouts&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/styles/layouts.css&#10;contact&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Contact/Contact.css&#10;Conta&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/Contact/Contact.jsx&#10;stat&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticSection/StaticSection.css&#10;Sidebar&#9;null&#9;null&#10;staticPa&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticPage/StaticPage.jsx&#10;quest&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/QuestionsPage/QuestionsPage.css&#10;MainNav&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/MainNav/MainNav.css&#10;MainNa&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/MainNav/MainNav.jsx&#10;Head&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Header/Header.css&#10;act&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/store/sectionsActions.js&#10;reducer&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/store/sectionsReducer.js&#10;header&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Header/Header.css&#10;footer&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Footer/Footer.css&#10;Footer&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/Footer/Footer.jsx&#10;staticSec&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Static/StaticSection/StaticSection.css&#10;prev&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/FaqPreview/FaqPreview.css&#10;sectionsac&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/store/sectionsActions.js&#10;sectionred&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/store/sectionsReducer.js&#10;questionsp&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/QuestionsPage/QuestionsPage.css&#10;app&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/App/App.jsx&#10;faqitem&#9;FILE&#9;file:///Users/velz/Documents/Dev/antiVax/src/Questions/FaqItem/FaqItem.css" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src" />
   </component>
   <component name="RecentsManager">
@@ -469,12 +440,12 @@
       <workItem from="1465446410046" duration="8095000" />
       <workItem from="1465561062441" duration="37249000" />
       <workItem from="1465774703572" duration="26334000" />
-      <workItem from="1465962992772" duration="4716000" />
+      <workItem from="1465962992772" duration="8371000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="270328000" />
+    <option name="totallyTimeSpent" value="273983000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -487,7 +458,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="873" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14722222" sideWeight="0.49447078" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32889965" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -497,7 +468,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32988167" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27249357" sideWeight="0.42569444" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27249357" sideWeight="0.42569444" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19236112" sideWeight="0.5055292" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -528,18 +499,11 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/styles/ui.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="38" selection-start-line="5" selection-start-column="38" selection-end-line="5" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/states.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -811,7 +775,7 @@
         <state relative-caret-position="390">
           <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#26#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -865,14 +829,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/firebase-import.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/layouts.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -905,22 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Search/SearchResultsPage/SearchResultsPage.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Search/SearchResultsPage/SearchResultsPage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Questions/Faq/Faq.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -931,35 +871,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Questions/Faq/Faq.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225">
+        <state relative-caret-position="-450">
           <caret line="25" column="3" selection-start-line="25" selection-start-column="3" selection-end-line="25" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/firebase-import.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-15">
+          <caret line="6" column="22" selection-start-line="6" selection-start-column="22" selection-end-line="6" selection-end-column="22" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Search/SearchResultsItem/SearchResultsItem.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="25" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="25" />
+        <state relative-caret-position="390">
+          <caret line="26" column="11" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
           <folding>
             <element signature="e#0#26#0" expanded="true" />
+            <marker date="1466009100000" expanded="true" signature="433:1003" ph="..." />
+            <marker date="1466009100000" expanded="true" signature="715:820" ph="..." />
+            <marker date="1466009100000" expanded="true" signature="979:992" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Search/SearchResultsItem/SearchResultsItem.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/styles/typography.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="37" column="11" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
+        <state relative-caret-position="825">
+          <caret line="55" column="3" selection-start-line="55" selection-start-column="3" selection-end-line="55" selection-end-column="3" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Search/SearchResultsItem/SearchResultsItem.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="39" selection-start-line="6" selection-start-column="39" selection-end-line="6" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/styles/ui.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="427">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Search/SearchResultsPage/SearchResultsPage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Search/SearchResultsPage/SearchResultsPage.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="65" column="65" selection-start-line="65" selection-start-column="65" selection-end-line="65" selection-end-column="65" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
