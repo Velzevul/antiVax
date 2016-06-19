@@ -9,7 +9,7 @@ const Breadcrumbs = ({
   return (
     <div className={styles.Breadcrumbs}>
       {items.map(i =>
-        <Link to={i} className={styles.Breadcrumbs__item}>{i}</Link>
+        <Link to={i.path} className={styles.Breadcrumbs__item}>{i.label}</Link>
       )}
     </div>
   )
