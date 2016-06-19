@@ -2,18 +2,18 @@ import React from 'react'
 
 import StaticItem from '../StaticItem'
 
-import styles from './StaticPage.css'
-import typography from '../../styles/typography.css'
+import {Article} from '../../Common'
+import {Block} from '../../Layouts'
 
 const StaticPage = ({
   page,
   params
 }) => {
   return (
-    <div className={typography.content}>
-      <h1>{page.title}</h1>
-
-      <div dangerouslySetInnerHTML={{__html: page.content}}></div>
+    <div>
+      <Block n={2}>
+        <Article article={page} />
+      </Block>
 
       {page.items
         ? <ul>

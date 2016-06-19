@@ -1,14 +1,12 @@
 import React from 'react'
-import {Link, browserHistory} from 'react-router'
+import {browserHistory} from 'react-router'
 import { connect } from 'react-redux'
 
 import {Spinner} from '../../UI'
 import StaticPage from '../StaticPage'
 import {fetchSection} from '../../store/sectionsActions'
-
-import styles from './StaticSection.css'
-import layouts from '../../styles/layouts.css'
-import typography from '../../styles/typography.css'
+import {Wrap, Grid, GridItem} from '../../Layouts'
+import {SideBar, SideNav, Body} from '../../Common'
 
 class StaticSection extends React.Component {
   componentWillMount () {
@@ -32,8 +30,14 @@ class StaticSection extends React.Component {
   }
 
   render () {
-    const {isFetching, pages, title, params} = this.props
+    const {isFetching, title, params} = this.props
     const {sectionId, pageId} = params
+    const pages = this.props.pages.map(p => {
+      return Object.assign({}, p, {
+        path: `/${sectionId}/${p.id}`,
+        label: p.title
+      })
+    })
 
     if (isFetching) {
       return (
@@ -43,34 +47,21 @@ class StaticSection extends React.Component {
       const page = pages.filter(p => p.id === pageId)[0] || pages[0]
 
       return (
-        <div className={`${layouts.wrap} ${styles.StaticSection}`}>
-          <div className={layouts.grid}>
-            <div className={`${layouts.grid__item} ${layouts._3_12}`}>
-              <div className={styles.StaticSection__sidebar}>
-                <div className={styles.SidebarMenu}>
-                  <div className={layouts.block2}>
-                    <div className={styles.SidebarMenu__title}>
-                      <h3 className={typography.hSecondary}>{title}</h3>
-                    </div>
-                  </div>
+        <Wrap>
+          <Grid>
+            <GridItem span={1} outOf={4}>
+              <SideBar>
+                <SideNav title={title} items={pages} />
+              </SideBar>
+            </GridItem>
 
-                  {pages.map(page =>
-                    <Link to={`/${sectionId}/${page.id}`}
-                      key={page.id}
-                      activeClassName={styles.SidebarMenu__item_active}
-                      className={styles.SidebarMenu__item}>{page.title}</Link>
-                  )}
-                </div>
-              </div>
-            </div>
-
-            <div className={layouts.grid__item}>
-              <div className={styles.StaticSection__body}>
+            <GridItem>
+              <Body>
                 <StaticPage page={page} params={params} />
-              </div>
-            </div>
-          </div>
-        </div>
+              </Body>
+            </GridItem>
+          </Grid>
+        </Wrap>
       )
     }
   }

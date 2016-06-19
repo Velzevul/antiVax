@@ -18,12 +18,17 @@ const SideNav = ({
         </div>
       </Block>
 
-      {items.map(i =>
-        <Link to={i.path}
-          key={i.path}
-          activeClassName={styles.SideNav__item_active}
-          className={styles.SideNav__item}>{i.label}</Link>
-      )}
+      {items
+        ? items.map(i =>
+          <Link to={i.path}
+            key={i.path}
+            activeClassName={styles.SideNav__item_active}
+            className={styles.SideNav__item}>
+            {i.label}
+          </Link>
+        )
+        : null
+      }
     </aside>
   )
 }
