@@ -2,12 +2,7 @@
 
 
 .SearchResultsPage {
-  max-width: var(--pageWidthM);
   padding: calc(var(--baseline) * 6) 0;
-
-  &__body {
-    max-width: var(--pageWidthS);
-  }
 }
 
 .EmptySearchResultsPage {

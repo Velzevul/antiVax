@@ -4,9 +4,6 @@
 .SearchResultsItem {
   display: block;
   width: 100%;
-  padding-top: calc(var(--baseline) * 2);
-
-  border-top: 1px solid var(--colorMainLLL);
 
   &__body {
     display: inline-block;
@@ -19,6 +16,7 @@
 
     & em {
       font-style: normal;
+      display: inline-block;
       background: rgba(253, 255, 2, 0.2);
     }
   }
