@@ -1,0 +1,32 @@
+@import '../../styles/variables';
+
+
+.FooterNav {
+  color: var(--colorMainLLL);
+
+  &__title {
+    margin-bottom: var(--baseline);
+
+    font-weight:400;
+    color: var(--colorMainLLL);
+    text-transform: uppercase;
+  }
+
+
+  &__item {
+    display: block;
+    font-weight:300;
+  }
+    .&__item_emph {
+      font-weight: 600;
+    }
+
+
+  &__link {
+    color: white;
+    text-decoration: none;
+  }
+    &__link:hover {
+      text-decoration: underline;
+    }
+}

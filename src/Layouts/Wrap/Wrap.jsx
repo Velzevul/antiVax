@@ -1,13 +1,13 @@
 import React from 'react'
 
 const Wrap = ({
-  widht = '90%',
+  width = '90%',
   maxWidth = '80rem', // 1280px provided 1em === 16px
   extraClassNames = '',
   children
 }) => {
   const style = {
-    widht,
+    width,
     maxWidth,
     marginLeft: 'auto',
     marginRight: 'auto'

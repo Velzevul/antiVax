@@ -32,11 +32,13 @@ const MediaBody = ({
 
 const MediaFigure = ({
   n = 1,
+  nl = 0,
   extraClassNames = '',
   children
 }) => {
   const style = {
-    marginRight: baseline * n
+    marginRight: baseline * n,
+    marginLeft: baseline * nl
   }
 
   return (

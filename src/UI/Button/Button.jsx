@@ -6,8 +6,9 @@ import styles from './Button.css'
 
 const Button = ({
   children,
-  pv = 0.5,
-  ph = 1.5,
+  disabled = false,
+  pv = 0.75,
+  ph = 2,
   linkTo = null,
   extraClassNames,
   onClick = null
@@ -22,7 +23,7 @@ const Button = ({
     )
   } else {
     return (
-      <button style={style} className={`${styles.button} ${extraClassNames}`} onClick={onClick}>{children}</button>
+      <button disabled={disabled} style={style} className={`${styles.button} ${extraClassNames}`} onClick={onClick}>{children}</button>
     )
   }
 }

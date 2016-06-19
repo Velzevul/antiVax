@@ -1,0 +1,21 @@
+@import '../../styles/variables.css';
+
+
+.Heading2 {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: calc(var(--baseline) * 2);
+
+  text-transform: uppercase;
+  color: var(--colorMainLL);
+}
+
+.Heading2Link {
+  text-decoration: none;
+  color: var(--colorMainLL);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

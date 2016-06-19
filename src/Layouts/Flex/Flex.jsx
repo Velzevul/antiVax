@@ -4,12 +4,16 @@ const Flex = ({
   justifyContent = 'flex-start',
   alignItems = 'center',
   extraClassNames = '',
+  flexDirection = 'row',
   children
 }) => {
   const style = {
+    flexDirection,
     alignItems,
     justifyContent,
-    display: 'flex'
+    display: 'flex',
+    width: '100%',
+    height: '100%'
   }
 
   return (

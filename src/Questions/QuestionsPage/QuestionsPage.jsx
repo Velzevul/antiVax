@@ -2,14 +2,11 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {fetchSection} from '../../store/sectionsActions'
 
+import {Block, Wrap, Grid, GridItem} from '../../Layouts'
 import {Spinner} from '../../UI'
-import Faq from '../Faq'
-import Contact from '../../Contact'
-
-import styles from './QuestionsPage.css'
-import layouts from '../../styles/layouts.css'
-import typography from '../../styles/typography.css'
-import states from '../../styles/states.css'
+import {SideNav, SideBar, Body, Article} from '../../Common'
+import QuestionsIntro from '../QuestionsIntro'
+import AskQuestionSide from '../AskQuestionSide'
 
 class QuestionsPage extends React.Component {
   componentWillMount () {
@@ -24,36 +21,46 @@ class QuestionsPage extends React.Component {
     if (isFetching) {
       return <Spinner />
     } else {
+      const navItems = pages.map(p => {
+        return {
+          path: `/questions/${p.id}`,
+          label: p.title
+        }
+      })
+
+      let activeFaq = null
+
+      if (params.itemId) {
+        activeFaq = pages.filter(p => p.id === params.itemId)[0]
+      }
+
       return (
-        <div className={`${layouts.wrap} ${styles.QuestionsPage}`}>
-          <div className={layouts.grid}>
-            <div className={`${layouts.grid__item} ${layouts._2_10}`}>
-              <div className={styles.QuestionsPage__sidebar}>
-                <div className={layouts.block2}>
-                  <div className={states.aligned_mid}>
-                    <h3 className={typography.hSecondary}>Our Specialist</h3>
-                  </div>
-                </div>
+        <Wrap>
+          <Grid>
+            <GridItem span={1} outOf={3}>
+              <SideBar>
+                {params.itemId
+                  ? <Block n={6}>
+                    <AskQuestionSide />
+                  </Block>
+                  : null
+                }
 
-                <Contact />
-              </div>
-            </div>
+                <SideNav title="Frequently Asked Questions"
+                  items={navItems} />
+              </SideBar>
+            </GridItem>
 
-            <div className={layouts.grid__item}>
-              <div className={styles.QuestionsPage__body}>
-                <div className={layouts.block2}>
-                  <h1 className={typography.hPrimary}>Frequent Questions</h1>
-                </div>
-
-                {pages.map(p =>
-                  <Faq key={p.id}
-                    faq={p}
-                    params={params} />
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
+            <GridItem>
+              <Body>
+                {params.itemId
+                ? <Article article={activeFaq} />
+                : <QuestionsIntro />
+                }
+              </Body>
+            </GridItem>
+          </Grid>
+        </Wrap>
       )
     }
   }

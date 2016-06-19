@@ -48,7 +48,7 @@ class Blog extends React.Component {
                     <Heading1 linkTo={`/blog/${p.id}`}>{p.title}</Heading1>
                   </Block>
 
-                  <Block n={0.5}>
+                  <Block n={2}>
                     <div className={styles.entry__body}>
                       <Content text={p.snippet} />
                     </div>

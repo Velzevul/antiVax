@@ -1,5 +1,6 @@
 @import '../../styles/variables.css';
 
+
 .blogpost {
   padding: calc(var(--baseline) * 6) 0;
 

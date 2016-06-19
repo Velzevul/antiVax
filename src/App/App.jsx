@@ -1,26 +1,24 @@
-import React from 'react';
+import React from 'react'
 
-import Header from './Header';
-import Footer from './Footer';
-
-import styles from './App.css';
-
+import Header from './Header'
+import Footer from './Footer'
+import {Page, PageContent} from '../Layouts'
 
 const App = ({
   children,
   location
 }) => {
   return (
-    <div className={styles.App}>
+    <Page>
       <Header location={location} />
 
-      <main className={styles.App__content}>
+      <PageContent>
         {children}
-      </main>
+      </PageContent>
 
       <Footer />
-    </div>
-  );
-};
+    </Page>
+  )
+}
 
-export default App;
+export default App

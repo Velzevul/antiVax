@@ -33,8 +33,6 @@
 
 
 .Header {
-  max-width: var(--pageWidthM);
-
   padding-bottom: calc(var(--baseline) * 4);
 
   &__logo {

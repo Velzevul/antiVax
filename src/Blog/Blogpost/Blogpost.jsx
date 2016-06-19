@@ -4,6 +4,7 @@ import {animateScroll} from 'react-scroll'
 
 import {Heading1, Content} from '../../Typography'
 import {Wrap, Block, Flex} from '../../Layouts'
+import {Button} from '../../UI'
 
 import styles from './Blogpost.css'
 
@@ -30,7 +31,13 @@ class Blogpost extends React.Component {
             <Heading1>{post.title}</Heading1>
           </Block>
 
-          <Content text={post.content} />
+          <Block n={6}>
+            <Content text={post.content} />
+          </Block>
+
+          <Flex justifyContent="center">
+            <Button linkTo="/blog">back to all posts</Button>
+          </Flex>
         </div>
       </Wrap>
     )

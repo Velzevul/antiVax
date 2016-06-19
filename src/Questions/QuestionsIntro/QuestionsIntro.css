@@ -1,0 +1,17 @@
+@import '../../styles/variables.css';
+
+.QuestionsIntro {
+
+  &__image {
+    display: block;
+    width: calc(var(--baseline) * 14);
+    height: calc(var(--baseline) * 14);
+
+    border: 1px solid var(--colorMainLL);
+    border-radius: 50%;
+  }
+
+  &__text {
+    color: var(--colorMainL);
+  }
+}

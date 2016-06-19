@@ -1,9 +1,8 @@
-import React from 'react';
-import {Link} from 'react-router';
+import React from 'react'
+import {Link} from 'react-router'
 
-import styles from './MainNav.css';
-import layouts from '../../styles/layouts.css';
-
+import {Wrap, Grid, GridItem} from '../../Layouts'
+import styles from './MainNav.css'
 
 const navItems = [
   {
@@ -37,23 +36,26 @@ const MainNav = ({
           'vaccine-safety': styles.MainNav__indicator_2,
           'schedule': styles.MainNav__indicator_3,
           'blog': styles.MainNav__indicator_4
-        },
-        currentSection = location.pathname.split('/')[1];
+        }
+  const currentSection = location.pathname.split('/')[1]
+  const indicatorStyle = routeStateMap[currentSection]
 
   return (
     <div className={styles.Bg}>
-      <div className={`${layouts.wrap} ${styles.MainNav}`}>
-        <div className={`${styles.MainNav__indicator} ${routeStateMap[currentSection]}`}></div>
+      <Wrap maxWidth="80rem">
+        <div className={styles.MainNav}>
+          <div className={`${styles.MainNav__indicator} ${indicatorStyle}`}></div>
 
-        <ul className={layouts.grid}>
-          {navItems.map(item =>
-            <li className={`${layouts.grid__item}`} key={item.path}>
-              <Link to={item.path} className={styles.MainNav__item}
-                    activeClassName={styles.MainNav__item_active}>{item.label}</Link>
-            </li>
-          )}
-        </ul>
-      </div>
+          <Grid>
+            {navItems.map(item =>
+              <GridItem key={item.path}>
+                <Link to={item.path} className={styles.MainNav__item}
+                  activeClassName={styles.MainNav__item_active}>{item.label}</Link>
+              </GridItem>
+            )}
+          </Grid>
+        </div>
+      </Wrap>
     </div>
   );
 };

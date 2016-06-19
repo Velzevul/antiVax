@@ -1,22 +1,25 @@
 import React from 'react'
 
 import {baseline} from '../../config.js'
-import styles from './Grid.css'
 
 const Grid = ({
   gutter = 0,
-  justifyItems = 'flex-start',
+  alignItems = 'stretch',
+  justifyContent = 'flex-start',
   extraClassNames = '',
   children
 }) => {
   const style = {
-    justifyItems,
+    width: '100%',
+    display: 'flex',
+    alignItems,
+    justifyContent,
     marginLeft: -baseline * gutter / 2,
     marginRight: -baseline * gutter / 2
   }
 
   return (
-    <div style={style} className={`${styles.grid} ${extraClassNames}`}>
+    <div style={style} className={extraClassNames}>
       {children}
     </div>
   )
@@ -25,7 +28,7 @@ const Grid = ({
 const GridItem = ({
   span = 0,
   outOf = 12,
-  gutter = 1,
+  gutter = 0,
   extraClassNames = '',
   children
 }) => {
@@ -43,7 +46,7 @@ const GridItem = ({
   }
 
   return (
-    <div style={style} className={`${style.grid__item} ${extraClassNames}`}>
+    <div style={style} className={extraClassNames}>
       {children}
     </div>
   )

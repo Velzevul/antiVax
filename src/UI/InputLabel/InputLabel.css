@@ -1,0 +1,16 @@
+@import '../../styles/variables.css';
+
+.InputLabel {
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+
+  &__label {
+    color: var(--colorMainLLL);
+  }
+
+  &__error {
+    color: red;
+  }
+}
+  .InputLabel_error {
+  }

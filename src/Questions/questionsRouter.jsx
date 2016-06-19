@@ -5,7 +5,8 @@ import QuestionsPage from './QuestionsPage'
 
 export default (
   <Route>
-    <Route path="questions" component={QuestionsPage} />
-    <Route path="questions/:itemId" component={QuestionsPage} />
+    <Route path="questions" component={QuestionsPage}>
+      <Route path=":itemId" component={QuestionsPage} />
+    </Route>
   </Route>
 )

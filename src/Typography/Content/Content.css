@@ -13,6 +13,10 @@
   & ol {
     margin-bottom: calc(var(--baseline) * 2);
     text-align: justify;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   & a {
