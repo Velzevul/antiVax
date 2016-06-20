@@ -2,8 +2,9 @@ import React from 'react'
 import {Link} from 'react-router'
 import {animateScroll} from 'react-scroll'
 
-// import styles from './StaticItem.css'
-import typography from '../../styles/typography.css'
+import {Block, Flex, ListInline, ListInlineItem} from '../../Layouts'
+import {Article} from '../../Common'
+import styles from './StaticItem.css'
 
 class StaticItem extends React.Component {
   componentDidMount () {
@@ -11,7 +12,7 @@ class StaticItem extends React.Component {
     const isActive = params.itemId === item.id
 
     if (isActive) {
-      animateScroll.scrollTo(this._element.offsetTop, {
+      animateScroll.scrollTo(this._element.offsetTop - 100, {
         duration: 500
       })
     }
@@ -22,7 +23,7 @@ class StaticItem extends React.Component {
     const isActive = params.itemId === item.id
 
     if (isActive) {
-      animateScroll.scrollTo(this._element.offsetTop, {
+      animateScroll.scrollTo(this._element.offsetTop - 100, {
         duration: 500
       })
     }
@@ -30,23 +31,15 @@ class StaticItem extends React.Component {
 
   render () {
     const {item, params} = this.props
-    const {sectionId, pageId, itemId} = params
+    const {sectionId, pageId} = params
 
-    if (itemId === item.id) {
-      return (
-        <div ref={el => (this._element = el)}>
-          <div>{item.title}</div>
-          <Link to={`/${sectionId}/${pageId}`}>&lt;Back</Link>
-          <div className={typography.content} dangerouslySetInnerHTML={{__html: item.content}}></div>
-        </div>
-      )
-    } else {
-      return (
-        <div ref={el => (this._element = el)}>
-          <Link to={`/${sectionId}/${pageId}/${item.id}`}>{item.title}</Link>
-        </div>
-      )
-    }
+    return (
+      <div ref={el => { this._element = el }} className={styles.StaticItem}>
+        <Link to={`/${sectionId}/${pageId}`} className={styles.StaticItem__backlink}>back</Link>
+
+        <Article article={item} />
+      </div>
+    )
   }
 }
 

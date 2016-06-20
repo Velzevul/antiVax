@@ -1,30 +1,40 @@
 import React from 'react'
 
-import StaticItem from '../StaticItem'
-
 import {Article} from '../../Common'
-import {Block} from '../../Layouts'
+import {Block, List, ListItem} from '../../Layouts'
+import {PageLink} from '../../UI'
 
 const StaticPage = ({
   page,
-  params
+  params,
+  children
 }) => {
-  return (
-    <div>
-      <Block n={2}>
-        <Article article={page} />
-      </Block>
+  const {sectionId, pageId, itemId} = params
+  const item = page.items && page.items.find(i => i.id === itemId) || null
+  const itemIndex = page.items && page.items.findIndex(i => i.id === itemId) || null
 
-      {page.items
-        ? <ul>
-          {page.items.map(i =>
-            <StaticItem item={i} params={params} />
-          )}
-        </ul>
-        : null
-      }
-    </div>
-  )
+  if (item) {
+    return React.cloneElement(children, {item})
+  } else {
+    return (
+      <div>
+        <Block n={2}>
+          <Article article={page} />
+        </Block>
+
+        {page.items
+          ? <List>
+            {page.items.map(i =>
+              <ListItem key={i.id}>
+                <PageLink to={`/${sectionId}/${pageId}/${i.id}`}>{i.title}</PageLink>
+              </ListItem>
+            )}
+          </List>
+          : null
+        }
+      </div>
+    )
+  }
 }
 
 export default StaticPage

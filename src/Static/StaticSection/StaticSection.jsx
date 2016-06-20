@@ -3,7 +3,6 @@ import {browserHistory} from 'react-router'
 import { connect } from 'react-redux'
 
 import {Spinner} from '../../UI'
-import StaticPage from '../StaticPage'
 import {fetchSection} from '../../store/sectionsActions'
 import {Wrap, Grid, GridItem} from '../../Layouts'
 import {SideBar, SideNav, Body} from '../../Common'
@@ -30,7 +29,7 @@ class StaticSection extends React.Component {
   }
 
   render () {
-    const {isFetching, title, params} = this.props
+    const {isFetching, title, params, children} = this.props
     const {sectionId, pageId} = params
     const pages = this.props.pages.map(p => {
       return Object.assign({}, p, {
@@ -57,7 +56,7 @@ class StaticSection extends React.Component {
 
             <GridItem>
               <Body>
-                <StaticPage page={page} params={params} />
+                {React.cloneElement(children, {page})}
               </Body>
             </GridItem>
           </Grid>
