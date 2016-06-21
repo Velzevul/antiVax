@@ -1,0 +1,33 @@
+@import '../../styles/variables.css';
+
+
+.Schedule {
+  border-bottom: 1px solid var(--colorMainLLL);
+}
+
+.ScheduleItem {
+  width: 100%;
+  padding: calc(var(--baseline) * 1.5) 0;
+
+  border-top: 1px solid var(--colorMainLLL);
+
+  &__age {
+    width: calc(var(--baseline) * 12);
+    text-align: center;
+  }
+
+  &__vaccines {
+
+  }
+}
+  .ScheduleItem_header {
+    border-top: none;
+
+    & .ScheduleItem__age {
+      font-weight: 600;
+    }
+
+    & .ScheduleItem__vaccines {
+      font-weight: 600;
+    }
+  }

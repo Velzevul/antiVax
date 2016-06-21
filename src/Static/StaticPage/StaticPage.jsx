@@ -11,7 +11,6 @@ const StaticPage = ({
 }) => {
   const {sectionId, pageId, itemId} = params
   const item = page.items && page.items.find(i => i.id === itemId) || null
-  const itemIndex = page.items && page.items.findIndex(i => i.id === itemId) || null
 
   if (item) {
     return React.cloneElement(children, {item})

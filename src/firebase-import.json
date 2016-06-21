@@ -271,6 +271,21 @@
       }
     ]
   },
+  "vaccination-schedule": {
+    "title": "Vaccination Schedule",
+    "id": "vaccination-schedule",
+    "pages": [
+      {
+        "id": "manitoba-health-schedule",
+        "title": "Manitoba Health schedule"
+      },
+      {
+        "id": "alternative-schedules",
+        "title": "Alternative Schedules",
+        "content": "<h2>Making Vaccination Decisions</h2><p>Although most parents (over 90%) choose to vaccinate their children according to the recommended schedule, we understand that the decision about whether or not to vaccinate on time can be very difficult for some parents. There is a ton of information out there, and we realize you may be getting conflicting information from your pediatrician, other websites, books and even your friends and families.</p><p>From our perspective as parents, clinicians and researchers, we believe that vaccinating according to the recommended schedule is ultimately the best decision for both the health of your baby and the community as a whole. It provides the most protection as soon as possible, to reduce the chances that your child will get sick. However, our role isn’t to tell you what to do. Rather, we want to provide you with the best, most accurate information we can find.</p><h2>How Alternative Schedules differ from the Recommended Schedule</h2><p>Let’s first talk about what is meant by an “alternative vaccination schedule”. Basically, it is a childhood vaccination schedule that differs from the currently recommended provincial schedule, which follows the recommendations of the National Advisory Committee on Immunization (NACI). We provide information on the recommended schedule which lists all of the vaccines that your child is expected to get during the first 5-6 years of life.</p><p>As you can see, children are expected to receive 11 vaccines by 2 years of age, and up to 3 vaccines at one time. This can be quite concerning to some parents, who feel that getting so many vaccines at once may overwhelm their child’s immune system. The common phrase that we hear from parents is that their babies are getting “too many, too soon”. These concerns, in turn, are leading some parents to choose alternative schedules that either reduces the number of shots their child receives in a single doctor visit or spread the shots across many visits. In some instances, parents simply wait until their child is older before they start getting vaccines.</p><h2>Dr. Bob Sears and Alternative Schedules</h2><p>A well-known supporter of alternative schedules is Dr. Bob Sears, who wrote the popular book: “The Vaccine Book: Making the Right Decision for Your Child”. “In a nut shell, Dr. Sears proposes schedules that reduce the number live vaccines (MMR, Varicella) that a child receives in a single visit. He also recommends spreading vaccines apart to minimize the child’s exposure to aluminum (link).” As you may be aware, Dr. Sears’ proposed schedules are surrounded by a lot of controversy. For example, the medical community feels that Dr. Sears’ schedules are risky because they are not based on science and increase the chances that children will get a vaccine preventable disease. The medical community also has strong evidence to believe that the recommended schedule is safe.</p><h2>Choosing the Best Option for Your Family</h2><p>We realize this topic of alternative vaccination schedules is quite complicated, and you may have many more questions. &nbsp;We encourage you to speak with your child’s primary healthcare provider about the best plan for your family.</p>"
+      }
+    ]
+  },
   "blogposts": {
     "title": "Blog",
     "id": "blogposts",
@@ -297,5 +312,95 @@
         "createdAt": "May 2, 2016"
       }
     ]
-  }
+  },
+  "schedule": [
+    {
+      "id": 1,
+      "age": "2 months",
+      "vaccines": [
+        {
+          "title": "Diphtheria, Tetanus, Pertussis, Polio, Haemophilus influenzae type b (DTaP-IPV-Hib)",
+          "url": "/about-vaccines/vaccines/dtap-ipv-hib"
+        },
+        {
+          "title": "Pneumococcal Conjugate 13 valent (Pneu-C-13)",
+          "url": "/about-vaccines/vaccines/pcv"
+        },
+        {
+          "title": "Rotavirus",
+          "url": "/about-vaccines/vaccines/rv"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "age": "4 months",
+      "vaccines": [
+        {
+          "title": "Diphtheria, Tetanus, Pertussis, Polio, Haemophilus influenzae type b (DTaP-IPV-Hib)",
+          "url": "/about-vaccines/vaccines/dtap-ipv-hib"
+        },
+        {
+          "title": "Pneumococcal Conjugate 13 valent (Pneu-C-13)",
+          "url": "/about-vaccines/vaccines/pcv"
+        },
+        {
+          "title": "Rotavirus",
+          "url": "/about-vaccines/vaccines/rv"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "age": "6 months",
+      "vaccines": [
+        {
+          "title": "Diphtheria, Tetanus, Pertussis, Polio, Haemophilus influenzae type b (DTaP-IPV-Hib)",
+          "url": "/about-vaccines/vaccines/dtap-ipv-hib"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "age": "12 months",
+      "vaccines": [
+        {
+          "title": "Pneumococcal Conjugate 13 valent (Pneu-C-13)",
+          "url": "/about-vaccines/vaccines/pcv"
+        },
+        {
+          "title": "Measles, Mumps, Rubella, Varicella (MMRV)",
+          "url": "/about-vaccines/vaccines/mmrv"
+        },
+        {
+          "title": "Meningococcal C Conjugate (Men-C-C) Vaccine",
+          "url": "/about-vaccines/vaccines/mcv"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "age": "18 months",
+      "vaccines": [
+        {
+          "title": "Diphtheria, Tetanus, Pertussis, Polio, Haemophilus influenzae type b (DTaP-IPV-Hib)",
+          "url": "/about-vaccines/vaccines/dtap-ipv-hib"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "age": "4-6 years",
+      "vaccines": [
+        {
+          "title": "Diphtheria, Tetanus, Pertussis, Polio, Haemophilus influenzae type b (DTaP-IPV-Hib)",
+          "url": "/about-vaccines/vaccines/dtap-ipv-hib"
+        },
+        {
+          "title": "Tetanus, Diphtheria, Pertussis, Polio (Tdap-IPV)",
+          "url": "/about-vaccines/vaccines/dtap-ipv-hib"
+        }
+      ]
+    }
+  ]
 }

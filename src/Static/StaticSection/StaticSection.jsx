@@ -16,14 +16,22 @@ class StaticSection extends React.Component {
   }
 
   componentWillReceiveProps (nextProps) {
-    const {dispatch, pages} = nextProps
-    const {sectionId, pageId} = nextProps.params
+    const {dispatch, pages, location} = nextProps
+    const {sectionId} = nextProps.params
 
     if (sectionId !== this.props.params.sectionId) {
       dispatch(fetchSection(sectionId))
     }
 
-    if ((pageId === undefined) && (pages.length > 0)) {
+    let path = location.pathname
+
+    if (path.substr(-1) === '/') {
+      path = path.substr(0, path.length - 1)
+    }
+
+    path = path.split('/')
+
+    if ((path[path.length - 1] === sectionId) && (pages.length > 0)) {
       browserHistory.push(`/${sectionId}/${pages[0].id}`)
     }
   }
@@ -56,7 +64,9 @@ class StaticSection extends React.Component {
 
             <GridItem>
               <Body>
-                {React.cloneElement(children, {page})}
+                {children
+                ? React.cloneElement(children, {page})
+                : null}
               </Body>
             </GridItem>
           </Grid>

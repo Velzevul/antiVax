@@ -19,24 +19,24 @@ const navItems = [
   },
   {
     label: 'Vaccination Schedule',
-    path: '/schedule'
+    path: '/vaccination-schedule'
   },
   {
     label: 'Blog',
     path: '/blog'
   }
-];
+]
 
 const MainNav = ({
   location
 }) => {
   const routeStateMap = {
-          'questions': styles.MainNav__indicator_0,
-          'about-vaccines': styles.MainNav__indicator_1,
-          'vaccine-safety': styles.MainNav__indicator_2,
-          'schedule': styles.MainNav__indicator_3,
-          'blog': styles.MainNav__indicator_4
-        }
+    'questions': styles.MainNav__indicator_0,
+    'about-vaccines': styles.MainNav__indicator_1,
+    'vaccine-safety': styles.MainNav__indicator_2,
+    'vaccination-schedule': styles.MainNav__indicator_3,
+    'blog': styles.MainNav__indicator_4
+  }
   const currentSection = location.pathname.split('/')[1]
   const indicatorStyle = routeStateMap[currentSection]
 
@@ -57,7 +57,7 @@ const MainNav = ({
         </div>
       </Wrap>
     </div>
-  );
-};
+  )
+}
 
-export default MainNav;
+export default MainNav

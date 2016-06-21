@@ -2,7 +2,6 @@ import React from 'react'
 import {Link} from 'react-router'
 import {animateScroll} from 'react-scroll'
 
-import {Block, Flex, ListInline, ListInlineItem} from '../../Layouts'
 import {Article} from '../../Common'
 import styles from './StaticItem.css'
 
