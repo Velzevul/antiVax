@@ -4,6 +4,7 @@ import {animateScroll} from 'react-scroll'
 
 import {Article} from '../../Common'
 import styles from './StaticItem.css'
+import {prefix} from '../../config'
 
 class StaticItem extends React.Component {
   componentDidMount () {
@@ -34,7 +35,9 @@ class StaticItem extends React.Component {
 
     return (
       <div ref={el => { this._element = el }} className={styles.StaticItem}>
-        <Link to={`/${sectionId}/${pageId}`} className={styles.StaticItem__backlink}>back</Link>
+        <Link to={`${prefix}/${sectionId}/${pageId}`}
+          style={{backgroundImage: `url('${prefix}/images/close.svg')`}}
+          className={styles.StaticItem__backlink}>back</Link>
 
         <Article article={item} />
       </div>

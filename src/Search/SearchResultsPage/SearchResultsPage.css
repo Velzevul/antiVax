@@ -12,15 +12,6 @@
   align-items: center;
   padding: calc(var(--baseline) * 12);
 
-  &__img {
-    display: block;
-    width: calc(var(--baseline) * 18);
-    height: calc(var(--baseline) * 18);
-
-    background: url('/images/emptySearch.svg') center center no-repeat;
-    background-size: 100% 100%;
-  }
-
   &__text {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;

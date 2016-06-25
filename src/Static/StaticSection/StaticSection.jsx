@@ -6,6 +6,7 @@ import {Spinner} from '../../UI'
 import {fetchSection} from '../../store/sectionsActions'
 import {Wrap, Grid, GridItem} from '../../Layouts'
 import {SideBar, SideNav, Body} from '../../Common'
+import {prefix} from '../../config'
 
 class StaticSection extends React.Component {
   componentWillMount () {
@@ -32,7 +33,7 @@ class StaticSection extends React.Component {
     path = path.split('/')
 
     if ((path[path.length - 1] === sectionId) && (pages.length > 0)) {
-      browserHistory.push(`/${sectionId}/${pages[0].id}`)
+      browserHistory.push(`${prefix}/${sectionId}/${pages[0].id}`)
     }
   }
 
@@ -41,7 +42,7 @@ class StaticSection extends React.Component {
     const {sectionId, pageId} = params
     const pages = this.props.pages.map(p => {
       return Object.assign({}, p, {
-        path: `/${sectionId}/${p.id}`,
+        path: `${prefix}/${sectionId}/${p.id}`,
         label: p.title
       })
     })

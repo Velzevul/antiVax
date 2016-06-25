@@ -1,6 +1,7 @@
 import React from 'react'
 import {browserHistory} from 'react-router'
 
+import {prefix} from '../../config'
 import styles from './SearchBar.css'
 
 const typeDelay = 500
@@ -20,11 +21,11 @@ class SearchBar extends React.Component {
 
       if (query) {
         browserHistory.push({
-          pathname: '/search',
+          pathname: `${prefix}/search`,
           query: {q: query}
         })
       } else {
-        browserHistory.push('/questions')
+        browserHistory.push(`${prefix}/questions`)
       }
     }, typeDelay)
 

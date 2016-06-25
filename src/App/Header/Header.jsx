@@ -4,19 +4,23 @@ import MainNav from '../MainNav'
 import SearchBar from '../SearchBar'
 import styles from './Header.css'
 import {Block, Wrap, Grid, GridItem} from '../../Layouts'
+import {prefix} from '../../config'
 
 const Header = ({
   location
 }) => {
+  const logoPath = `${prefix}/images/logo.svg`
+  const coverImgPath = `url(${prefix}/images/header-bg.jpg)`
+
   return (
     <header>
-      <div className={styles.CoverImg}>
+      <div style={{backgroundImage: coverImgPath}} className={styles.CoverImg}>
         <div className={styles.CoverImg__body}>
           <Wrap maxWidth="80rem">
             <div className={styles.Header}>
               <Grid alignItems="center">
                 <GridItem span={1} outOf={5}>
-                  <img src="/images/logo.svg"
+                  <img src={logoPath}
                     className={styles.Header__logo} />
                 </GridItem>
 

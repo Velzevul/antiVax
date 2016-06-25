@@ -3,6 +3,7 @@ import React from 'react'
 import {Article} from '../../Common'
 import {Block, List, ListItem} from '../../Layouts'
 import {PageLink} from '../../UI'
+import {prefix} from '../../config'
 
 const StaticPage = ({
   page,
@@ -25,7 +26,7 @@ const StaticPage = ({
           ? <List>
             {page.items.map(i =>
               <ListItem key={i.id}>
-                <PageLink to={`/${sectionId}/${pageId}/${i.id}`}>{i.title}</PageLink>
+                <PageLink to={`${prefix}/${sectionId}/${pageId}/${i.id}`}>{i.title}</PageLink>
               </ListItem>
             )}
           </List>

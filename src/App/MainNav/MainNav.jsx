@@ -3,27 +3,28 @@ import {Link} from 'react-router'
 
 import {Wrap, Grid, GridItem} from '../../Layouts'
 import styles from './MainNav.css'
+import {prefix} from '../../config'
 
 const navItems = [
   {
     label: 'Questions & Answers',
-    path: '/questions'
+    path: `${prefix}/questions`
   },
   {
     label: 'About Vaccines',
-    path: '/about-vaccines'
+    path: `${prefix}/about-vaccines`
   },
   {
     label: 'Vaccine Safety',
-    path: '/vaccine-safety'
+    path: `${prefix}/vaccine-safety`
   },
   {
     label: 'Vaccination Schedule',
-    path: '/vaccination-schedule'
+    path: `${prefix}/vaccination-schedule`
   },
   {
     label: 'Blog',
-    path: '/blog'
+    path: `${prefix}/blog`
   }
 ]
 
@@ -37,7 +38,9 @@ const MainNav = ({
     'vaccination-schedule': styles.MainNav__indicator_3,
     'blog': styles.MainNav__indicator_4
   }
-  const currentSection = location.pathname.split('/')[1]
+
+  const pathPartIndex = prefix.length ? 2 : 1
+  const currentSection = location.pathname.split('/')[pathPartIndex]
   const indicatorStyle = routeStateMap[currentSection]
 
   return (

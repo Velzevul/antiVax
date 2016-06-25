@@ -1,27 +1,27 @@
-'use strict';
+'use strict'
 
-const path              = require('path');
-const webpack           = require('webpack');
-const merge             = require('webpack-merge');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const NpmInstallPlugin  = require('npm-install-webpack-plugin');
-const CleanPlugin       = require('clean-webpack-plugin');
+const path = require('path')
+const webpack = require('webpack')
+const merge = require('webpack-merge')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const NpmInstallPlugin = require('npm-install-webpack-plugin')
+const CleanPlugin = require('clean-webpack-plugin')
 
-const cssImport  = require("postcss-import");
-const cssNext    = require("postcss-cssnext");
-const cssFor     = require("postcss-for");
-const cssFont    = require('postcss-font-magician');
+const cssImport = require('postcss-import')
+const cssNext = require('postcss-cssnext')
+const cssFor = require('postcss-for')
+const cssFont = require('postcss-font-magician')
 
-const pkg = require('./package.json');
+const pkg = require('./package.json')
 
-const TARGET = process.env.npm_lifecycle_event;
+const TARGET = process.env.npm_lifecycle_event
 const PATHS = {
   app: path.join(__dirname, 'src'),
   build: path.join(__dirname, 'build')
-};
+}
 
-process.env.BABEL_ENV = TARGET;
+process.env.BABEL_ENV = TARGET
 
 const common = {
   entry: {
@@ -50,6 +50,9 @@ const common = {
       title: 'AntiVax',
       appMountId: 'app',
       inject: false
+    }),
+    new webpack.DefinePlugin({
+      TARGET: JSON.stringify(TARGET)
     })
   ],
   postcss: () => {
@@ -58,9 +61,9 @@ const common = {
       cssFor(),
       cssNext(),
       cssFont()
-    ];
+    ]
   }
-};
+}
 
 const development = {
   devServer: {
@@ -95,7 +98,7 @@ const development = {
   ],
 
   devtool: 'eval-source-map'
-};
+}
 
 const production = {
   entry: {
@@ -122,7 +125,7 @@ const production = {
   plugins: [
     new CleanPlugin([PATHS.build]),
     new webpack.DefinePlugin({
-      // 'process.env.NODE_ENV': '"production"'
+      'process.env.NODE_ENV': JSON.stringify('production')
     }),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
@@ -136,16 +139,16 @@ const production = {
       allChunks: true
     })
   ]
-};
+}
 
-let config = merge({}, common);
+let config = merge({}, common)
 
 if (TARGET === 'start' || !TARGET) {
-  config = merge(config, development);
+  config = merge(config, development)
 }
 
 if (TARGET === 'build') {
-  config = merge(config, production);
+  config = merge(config, production)
 }
 
-module.exports = config;
+module.exports = config

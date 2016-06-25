@@ -7,6 +7,7 @@ import {PageLink, Spinner} from '../../UI'
 import {Heading1, Content} from '../../Typography'
 import {Block, List, ListItem, Media, MediaFigure, MediaBody} from '../../Layouts'
 import styles from './VaccinationSchedule.css'
+import {prefix} from '../../config'
 
 class VaccinationSchedule extends React.Component {
   componentWillMount () {
@@ -17,7 +18,7 @@ class VaccinationSchedule extends React.Component {
 
   render () {
     const {items, isFetching} = this.props
-    const text = "<p>The seasonal <a href='/about-vaccines/vaccines/qiv-qlaiv'>Influenza</a> program may vary each year. <a href=''>Click here</a> for current information on the seasonal influenza vaccination.</p>"
+    const text = `<p>The seasonal <a href='${prefix}/about-vaccines/vaccines/qiv-qlaiv'>Influenza</a> program may vary each year. <a href=''>Click here</a> for current information on the seasonal influenza vaccination.</p>`
 
     if (isFetching) {
       return (

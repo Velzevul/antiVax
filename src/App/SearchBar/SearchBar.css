@@ -15,7 +15,8 @@
     height: calc(var(--baseline) * 4);
     width:  calc(var(--baseline) * 4);
 
-    background: url('/images/search.svg') center center no-repeat;
+
+    background: url('/antivax/images/search.svg') center center no-repeat;
     background-size: 60% 60%;
   }
 

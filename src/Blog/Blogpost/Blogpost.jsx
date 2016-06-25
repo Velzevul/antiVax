@@ -7,6 +7,7 @@ import {Wrap, Block, Flex} from '../../Layouts'
 import {Button} from '../../UI'
 
 import styles from './Blogpost.css'
+import {prefix} from '../../config'
 
 class Blogpost extends React.Component {
   componentDidMount () {
@@ -36,7 +37,7 @@ class Blogpost extends React.Component {
           </Block>
 
           <Flex justifyContent="center">
-            <Button linkTo="/blog">back to all posts</Button>
+            <Button linkTo={`${prefix}/blog`}>back to all posts</Button>
           </Flex>
         </div>
       </Wrap>
