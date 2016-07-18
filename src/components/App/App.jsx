@@ -13,12 +13,17 @@ import {fetchSchedule} from '../../store/scheduleActions'
 
 class App extends React.Component {
   componentWillMount () {
-    this.props.fetchArticles()
-    this.props.fetchSchedule()
     const token = localStorage.getItem('antiVax_auth_token')
 
     if (token) {
       this.props.attemptToken(token)
+    }
+  }
+
+  componentWillReceiveProps (newProps) {
+    if (!this.props.user && newProps.user) {
+      this.props.fetchArticles()
+      this.props.fetchSchedule()
     }
   }
 

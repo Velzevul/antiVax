@@ -13,11 +13,11 @@ export default {
     errors: {}
   },
   articles: {
-    isFetching: true,
+    isFetching: false,
     items: []
   },
   schedule: {
-    isFetching: true,
+    isFetching: false,
     items: [],
     postScheduleContent: null
   },
