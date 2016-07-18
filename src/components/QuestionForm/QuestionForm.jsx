@@ -1,7 +1,7 @@
 import React from 'react'
 
-import {Block, Flex} from '../../Layouts'
-import {Button, TextInput, TextArea} from '../../UI'
+import {Block} from '../Layouts'
+import {Button, TextInput, TextArea} from '../UI'
 
 class QuestionForm extends React.Component {
   constructor (props) {

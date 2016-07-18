@@ -1,10 +1,10 @@
 import React from 'react'
 
 import styles from './AskQuestionSide.css'
-import {Media, MediaBody, MediaFigure, Block} from '../../Layouts'
-import {Button} from '../../UI'
+import {Media, MediaBody, MediaFigure, Block} from '../Layouts'
+import {Button} from '../UI'
 
-import img from '../jen.jpg'
+import img from './jen.jpg'
 
 const AskQuestionSide = () => {
   return (
@@ -20,7 +20,7 @@ const AskQuestionSide = () => {
             <div className={styles.AskQuestionSide__text}>Our vaccine specialist will be glad to assist you</div>
           </Block>
 
-          <Button linkTo={`${PUBLIC_PATH}/questions`}>Ask a Question</Button>
+          <Button to={`${PUBLIC_PATH}/questions`}>Ask a Question</Button>
         </MediaBody>
       </Media>
     </aside>

@@ -18,9 +18,9 @@ const Button = ({
   extraClassNames
 }) => {
   let style = {
-    padding: `${baseline * 0.6}rem ${baseline * 1.5}rem`,
-    lineHeight: `${1.5 * baseline}rem`,
-    fontSize: `${1.083 * baseline}rem`
+    padding: `${baseline * 0.75}rem ${baseline * 1.5}rem`,
+    lineHeight: `${1.7 * baseline}rem`,
+    fontSize: `${1.167 * baseline}rem`
   }
 
   if (small) {
@@ -28,14 +28,6 @@ const Button = ({
       padding: `${baseline * 0.3}rem ${baseline * 1}rem`,
       lineHeight: `${1.5 * baseline}rem`,
       fontSize: `${0.917 * baseline}rem`
-    }
-  }
-
-  if (large) {
-    style = {
-      padding: `${baseline * 1}rem ${baseline * 1.5}rem`,
-      lineHeight: `${1.5 * baseline}rem`,
-      fontSize: `${1.083 * baseline}rem`
     }
   }
 

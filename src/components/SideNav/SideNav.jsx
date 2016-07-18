@@ -8,7 +8,7 @@ import styles from './SideNav.css'
 
 const SideNav = ({
   title,
-  articles
+  navItems
 }) => {
   return (
     <aside className={styles.SideNav}>
@@ -18,10 +18,10 @@ const SideNav = ({
         </div>
       </Block>
 
-      {articles.map(i =>
+      {navItems.map(i =>
         <Link
-          to={`${PUBLIC_PATH}/${i.type.id}/${i.url}`}
-          key={i._id}
+          to={i.url}
+          key={i.url}
           activeClassName={styles.SideNav__item_active}
           className={styles.SideNav__item}>
           {i.title}

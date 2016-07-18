@@ -19,7 +19,7 @@ class Section extends React.Component {
   }
 
   componentWillMount () {
-    const {params: {sectionId, articleId}, location, articles} = this.props
+    const {params: {sectionId, articleId}, articles} = this.props
 
     if (isSection(sectionId)) {
       if (!articleId) {
@@ -37,7 +37,7 @@ class Section extends React.Component {
   }
 
   componentWillReceiveProps (newProps) {
-    const {params: {sectionId, articleId}, location, articles} = newProps
+    const {params: {sectionId, articleId}, articles} = newProps
 
     if (isSection(sectionId)) {
       if (!articleId) {
@@ -63,12 +63,19 @@ class Section extends React.Component {
       const {params: {sectionId}, children, articles} = this.props
       const currentSection = getCurrentSection(sectionId)
 
+      const navItems = articles.map(a => {
+        return {
+          url: `${PUBLIC_PATH}/${a.type.id}/${a.url}`,
+          title: a.title
+        }
+      })
+
       return (
         <Wrap>
           <Grid>
             <GridItem span={1} outOf={4}>
               <SideBar>
-                <SideNav title={currentSection.label} articles={articles} />
+                <SideNav title={currentSection.label} navItems={navItems} />
               </SideBar>
             </GridItem>
 

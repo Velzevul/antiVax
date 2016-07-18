@@ -40,7 +40,6 @@ const Blog = ({
 
                 <div className={styles.entry__footer}>
                   <Button
-                    large
                     to={`${PUBLIC_PATH}/blog/${p.url}`}>Read full post</Button>
                 </div>
               </div>

@@ -6,7 +6,7 @@ import styles from './MainNav.css'
 
 const navItems = [
   {
-    label: 'Questions & Answers',
+    label: 'Ask a Question',
     path: `${PUBLIC_PATH}/questions`
   },
   {
