@@ -1,6 +1,6 @@
 export const blogposts = {
-  id: 'blogposts',
-  label: 'Blogposts'
+  id: 'blog',
+  label: 'Blog'
 }
 
 export const sections = [

@@ -3,8 +3,9 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router'
 import {animateScroll} from 'react-scroll'
 
-import Article from '../Article'
 import styles from './SectionCategoryItem.css'
+import Article from '../Article'
+import NotFound from '../NotFound'
 
 class SectionCategoryItem extends React.Component {
   componentDidMount () {
@@ -22,15 +23,21 @@ class SectionCategoryItem extends React.Component {
   render () {
     const {item, params: {sectionId, articleId}} = this.props
 
-    return (
-      <div ref={el => { this._element = el }} className={styles.SectionCategoryItem}>
-        <Link
-          to={`${PUBLIC_PATH}/${sectionId}/${articleId}`}
-          className={styles.SectionCategoryItem__backlink}>back</Link>
+    if (item) {
+      return (
+        <div ref={el => { this._element = el }} className={styles.SectionCategoryItem}>
+          <Link
+            to={`${PUBLIC_PATH}/${sectionId}/${articleId}`}
+            className={styles.SectionCategoryItem__backlink}>back</Link>
 
-        <Article article={item} />
-      </div>
-    )
+          <Article article={item} />
+        </div>
+      )
+    } else {
+      return (
+        <NotFound />
+      )
+    }
   }
 }
 

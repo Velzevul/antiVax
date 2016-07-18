@@ -9,6 +9,7 @@ const Button = ({
   onClick,
   fullWidth = false,
   small = false,
+  large = false,
   disabled = false,
   to = null,
   href = null,
@@ -27,6 +28,14 @@ const Button = ({
       padding: `${baseline * 0.3}rem ${baseline * 1}rem`,
       lineHeight: `${1.5 * baseline}rem`,
       fontSize: `${0.917 * baseline}rem`
+    }
+  }
+
+  if (large) {
+    style = {
+      padding: `${baseline * 1}rem ${baseline * 1.5}rem`,
+      lineHeight: `${1.5 * baseline}rem`,
+      fontSize: `${1.083 * baseline}rem`
     }
   }
 

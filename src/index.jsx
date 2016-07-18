@@ -12,6 +12,8 @@ import App from './components/App'
 import Section from './components/Section'
 import SectionArticle from './components/SectionArticle'
 import SectionCategoryItem from './components/SectionCategoryItem'
+import Blog from './components/Blog'
+import Blogpost from './components/Blogpost'
 
 const store = configureStore()
 
@@ -19,7 +21,9 @@ ReactDOM.render((
   <Provider store={store}>
     <Router history={hashHistory}>
       <Route path={`${PUBLIC_PATH}`} component={App}>
-
+        <Route path="blog" component={Blog}>
+          <Route path=":blogpostId" component={Blogpost}/>
+        </Route>
 
         <Route path=":sectionId" component={Section}>
           <Route path=":articleId" component={SectionArticle}>

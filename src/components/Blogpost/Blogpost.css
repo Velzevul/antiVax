@@ -1,0 +1,11 @@
+@import '../../styles/variables.css';
+
+
+.blogpost {
+  padding: calc(var(--baseline) * 6) 0;
+
+  &__date {
+    font-size: 0.875rem;
+    color: var(--colorMainLLL);
+  }
+}
