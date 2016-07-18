@@ -1,0 +1,19 @@
+@import '../../../styles/variables.css';
+
+
+.Heading3 {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.125rem;
+  font-weight: 400;
+  line-height: calc(var(--baseline) * 2.5);
+
+  color: var(--colorMain);
+}
+  .Heading3Link {
+    text-decoration: none;
+    color: var(--colorMain);
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }

@@ -1,10 +1,8 @@
 import {REQUEST_SEARCH_RESULTS, RECEIVE_SEARCH_RESULTS} from './searchActions'
+import initialState from './initialState'
 
 const search = (
-  state = {
-    isFetching: false,
-    pages: []
-  },
+  state = initialState.search,
   action
 ) => {
   switch (action.type) {
@@ -15,7 +13,7 @@ const search = (
     case RECEIVE_SEARCH_RESULTS:
       return Object.assign({}, state, {
         isFetching: false,
-        pages: action.pages
+        items: action.items
       })
     default:
       return state

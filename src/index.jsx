@@ -4,29 +4,28 @@ import './styles/global.css'
 
 import React from 'react'
 import ReactDOM from 'react-dom'
-import { Provider } from 'react-redux'
-import {Router, Route, IndexRedirect, browserHistory} from 'react-router'
+import {Provider} from 'react-redux'
+import {Router, Route, IndexRedirect, hashHistory} from 'react-router'
 
 import configureStore from './store'
-import App from './App'
-import questionsRouter from './Questions'
-import staticRouter from './Static'
-import blogRouter from './Blog'
-import searchRouter from './Search'
-import {prefix} from './config'
+import App from './components/App'
+import Section from './components/Section'
+import SectionArticle from './components/SectionArticle'
+import SectionCategoryItem from './components/SectionCategoryItem'
 
 const store = configureStore()
 
 ReactDOM.render((
   <Provider store={store}>
-    <Router history={browserHistory}>
-      <Route path={`${prefix}/`} component={App}>
-        <IndexRedirect to={`${prefix}/questions`} />
+    <Router history={hashHistory}>
+      <Route path={`${PUBLIC_PATH}`} component={App}>
 
-        {questionsRouter}
-        {blogRouter}
-        {searchRouter}
-        {staticRouter}
+
+        <Route path=":sectionId" component={Section}>
+          <Route path=":articleId" component={SectionArticle}>
+            <Route path=":itemId" component={SectionCategoryItem} />
+          </Route>
+        </Route>
       </Route>
     </Router>
   </Provider>

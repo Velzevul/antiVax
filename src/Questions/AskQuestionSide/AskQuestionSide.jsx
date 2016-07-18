@@ -3,14 +3,15 @@ import React from 'react'
 import styles from './AskQuestionSide.css'
 import {Media, MediaBody, MediaFigure, Block} from '../../Layouts'
 import {Button} from '../../UI'
-import {prefix} from '../../config'
+
+import img from '../jen.jpg'
 
 const AskQuestionSide = () => {
   return (
     <aside className={styles.AskQuestionSide}>
       <Media alignItems="center">
         <MediaFigure n={2}>
-          <img src={`${prefix}/images/jen.jpg`} className={styles.AskQuestionSide__image} />
+          <img src={img} className={styles.AskQuestionSide__image} />
         </MediaFigure>
 
         <MediaBody>
@@ -19,7 +20,7 @@ const AskQuestionSide = () => {
             <div className={styles.AskQuestionSide__text}>Our vaccine specialist will be glad to assist you</div>
           </Block>
 
-          <Button linkTo={`${prefix}/questions`}>Ask a Question</Button>
+          <Button linkTo={`${PUBLIC_PATH}/questions`}>Ask a Question</Button>
         </MediaBody>
       </Media>
     </aside>

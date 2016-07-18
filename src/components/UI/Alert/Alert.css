@@ -1,0 +1,50 @@
+@import '../../../styles/variables.css';
+
+.Alert {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: flex;
+  justify-content: center;
+
+  opacity: 0.9;
+  transition: opacity 0.2s;
+
+  cursor: pointer;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &__message {
+    color: white;
+
+    border-radius: 3px;
+  }
+    &__message_default {
+      background: var(--colorMain);
+    }
+    &__message_error {
+      background: var(--colorError);
+    }
+}
+
+.alert-enter {
+  opacity: 0.01;
+}
+
+.alert-enter.alert-enter-active {
+  opacity: 0.75;
+  transition: opacity 0.2s;
+}
+
+.alert-leave {
+  opacity: 0.75;
+}
+
+.alert-leave.alert-leave-active {
+  opacity: 0.01;
+  transition: opacity 0.2s;
+}

@@ -4,7 +4,6 @@ import {Breadcrumbs} from '../../UI'
 import {Block} from '../../Layouts'
 import {Content, Heading3} from '../../Typography'
 import styles from './SearchResultsItem.css'
-import {prefix} from '../../config'
 
 const SearchResultsItem = ({
   item
@@ -14,11 +13,11 @@ const SearchResultsItem = ({
     : `/${item.section}/${item.id}`
 
   const breadcrumbs = item.parent
-    ? [{label: item.section, path: `${prefix}/${item.section}`},
-       {label: item.parent, path: `${prefix}/${item.section}/${item.parent}`},
-       {label: item.id, path: `${prefix}/${item.section}/${item.parent}/${item.id}`}]
-    : [{label: item.section, path: `${prefix}/${item.section}`},
-       {label: item.id, path: `${prefix}/${item.section}/${item.id}`}]
+    ? [{label: item.section, path: `${PUBLIC_PATH}/${item.section}`},
+       {label: item.parent, path: `${PUBLIC_PATH}/${item.section}/${item.parent}`},
+       {label: item.id, path: `${PUBLIC_PATH}/${item.section}/${item.parent}/${item.id}`}]
+    : [{label: item.section, path: `${PUBLIC_PATH}/${item.section}`},
+       {label: item.id, path: `${PUBLIC_PATH}/${item.section}/${item.id}`}]
 
   item.parent
     ? [item.section, item.parent, item.id]

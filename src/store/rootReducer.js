@@ -1,12 +1,18 @@
 import { combineReducers } from 'redux'
-import sections from './sectionsReducer'
-import search from './searchReducer'
+import auth from './authReducer'
+import flash from './flashReducer'
+import question from './questionsReducer'
+import articles from './articleReducer'
 import schedule from './scheduleReducer'
+import search from './searchReducer'
 
 const rootReducer = combineReducers({
-  sections,
-  search,
-  schedule
+  auth,
+  flash,
+  question,
+  articles,
+  schedule,
+  search
 })
 
 export default rootReducer

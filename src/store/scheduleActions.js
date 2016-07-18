@@ -1,7 +1,10 @@
-import {firebaseDb} from './firebaseRef'
+import 'whatwg-fetch'
 
 export const REQUEST_SCHEDULE = 'REQUEST_SCHEDULE'
 export const RECEIVE_SCHEDULE = 'RECEIVE_SCHEDULE'
+
+import {flashMessage} from './flashActions'
+import {logOut} from './authActions'
 
 const requestSchedule = () => {
   return {
@@ -10,21 +13,44 @@ const requestSchedule = () => {
 }
 
 const receiveSchedule = (
-  items
+  items,
+  postScheduleContent
 ) => {
   return {
     type: RECEIVE_SCHEDULE,
-    items
+    items,
+    postScheduleContent
   }
 }
 
 export const fetchSchedule = () => {
-  return dispatch => {
+  return (dispatch, getState) => {
     dispatch(requestSchedule())
 
-    return firebaseDb.ref('/schedule').once('value')
-      .then(snapshot => {
-        dispatch(receiveSchedule(snapshot.val()))
+    fetch(`${SERVER_URL}/schedule`, {
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json',
+        'x-access-token': localStorage.getItem('antiVax_auth_token')
+      }
+    })
+      .then(response => {
+        if (response.status === 401) {
+          dispatch(logOut())
+          dispatch(flashMessage('Authorization failed. Please, log in again', 'error'))
+          throw new Error('Unauthorized action')
+        } else {
+          return response
+        }
+      })
+      .then(response => response.json())
+      .then(json => {
+        if (json.success) {
+          dispatch(receiveSchedule(json.data.schedule.items, json.data.schedule.postScheduleContent))
+        } else {
+          console.error(json.data)
+          dispatch(flashMessage('Oops, something went wrong :()', 'error'))
+        }
       })
   }
 }

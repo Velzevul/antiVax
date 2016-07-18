@@ -4,7 +4,8 @@ import QuestionForm from '../QuestionForm'
 import {Block, Media, MediaFigure, MediaBody} from '../../Layouts'
 import {Heading1} from '../../Typography'
 import styles from './QuestionsIntro.css'
-import {prefix} from '../../config'
+
+import img from '../jen.jpg'
 
 const QuestionsIntro = () => {
   return (
@@ -12,7 +13,7 @@ const QuestionsIntro = () => {
       <Block n={3}>
         <Media alignItems="center">
           <MediaFigure n={3}>
-            <img src={`${prefix}/images/jen.jpg`} className={styles.QuestionsIntro__image} />
+            <img src={img} className={styles.QuestionsIntro__image} />
           </MediaFigure>
 
           <MediaBody>

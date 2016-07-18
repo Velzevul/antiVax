@@ -1,4 +1,4 @@
-import index from '../store/algoliaSearch'
+import index from './algoliaSearch'
 
 export const REQUEST_SEARCH_RESULTS = 'REQUEST_SEARCH_RESULTS'
 export const RECEIVE_SEARCH_RESULTS = 'RECEIVE_SEARCH_RESULTS'
@@ -10,11 +10,11 @@ const requestSearchResults = () => {
 }
 
 const receiveSearchResults = (
-  pages
+  items
 ) => {
   return {
     type: RECEIVE_SEARCH_RESULTS,
-    pages
+    items
   }
 }
 

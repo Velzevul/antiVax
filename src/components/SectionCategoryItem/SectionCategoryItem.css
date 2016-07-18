@@ -1,0 +1,33 @@
+@import '../../styles/variables.css';
+
+.SectionCategoryItem {
+  position: relative;
+  padding: calc(var(--baseline) * 3);
+
+  border-radius: 3px;
+  border: 1px solid color(var(--colorMainLLL) alpha(-50%));
+  box-shadow: 0 0 1px var(--colorMainLLL);
+
+  &__backlink {
+    position: absolute;
+    top: calc(var(--baseline) * 1);
+    right: calc(var(--baseline) * 1);
+    display: block;
+    width: calc(var(--baseline) * 2);
+    height: calc(var(--baseline) * 2);
+
+    text-indent: -10000rem;
+
+    background-image: url('./close.svg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 75% 75%;
+
+    opacity: 0.5;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

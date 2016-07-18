@@ -8,7 +8,6 @@ import {Spinner, Button} from '../../UI'
 import Blogpost from '../Blogpost'
 import {fetchSection} from '../../store/sectionsActions'
 
-import {prefix} from '../../config'
 import styles from './Blog.css'
 
 class Blog extends React.Component {
@@ -46,7 +45,7 @@ class Blog extends React.Component {
                   </Block>
 
                   <Block n={1.5}>
-                    <Heading1 linkTo={`${prefix}/blog/${p.id}`}>{p.title}</Heading1>
+                    <Heading1 linkTo={`${PUBLIC_PATH}/blog/${p.id}`}>{p.title}</Heading1>
                   </Block>
 
                   <Block n={2}>
@@ -56,7 +55,7 @@ class Blog extends React.Component {
                   </Block>
 
                   <div className={styles.entry__footer}>
-                    <Button linkTo={`${prefix}/blog/${p.id}`}>Read full post</Button>
+                    <Button linkTo={`${PUBLIC_PATH}/blog/${p.id}`}>Read full post</Button>
                   </div>
                 </div>
               </Block>

@@ -1,10 +1,8 @@
 import {REQUEST_SCHEDULE, RECEIVE_SCHEDULE} from './scheduleActions'
+import initialState from './initialState'
 
 const schedule = (
-  state = {
-    isFetching: false,
-    items: []
-  },
+  state = initialState.schedule,
   action
 ) => {
   switch (action.type) {
@@ -15,7 +13,8 @@ const schedule = (
     case RECEIVE_SCHEDULE:
       return Object.assign({}, state, {
         isFetching: false,
-        items: action.items
+        items: action.items,
+        postScheduleContent: action.postScheduleContent
       })
     default:
       return state

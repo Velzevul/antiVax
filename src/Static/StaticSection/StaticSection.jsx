@@ -1,12 +1,11 @@
 import React from 'react'
-import {browserHistory} from 'react-router'
+import {hashHistory} from 'react-router'
 import { connect } from 'react-redux'
 
 import {Spinner} from '../../UI'
 import {fetchSection} from '../../store/sectionsActions'
 import {Wrap, Grid, GridItem} from '../../Layouts'
 import {SideBar, SideNav, Body} from '../../Common'
-import {prefix} from '../../config'
 
 class StaticSection extends React.Component {
   componentWillMount () {
@@ -33,7 +32,7 @@ class StaticSection extends React.Component {
     path = path.split('/')
 
     if ((path[path.length - 1] === sectionId) && (pages.length > 0)) {
-      browserHistory.push(`${prefix}/${sectionId}/${pages[0].id}`)
+      hashHistory.push(`${PUBLIC_PATH}/${sectionId}/${pages[0].id}`)
     }
   }
 
@@ -42,7 +41,7 @@ class StaticSection extends React.Component {
     const {sectionId, pageId} = params
     const pages = this.props.pages.map(p => {
       return Object.assign({}, p, {
-        path: `${prefix}/${sectionId}/${p.id}`,
+        path: `${PUBLIC_PATH}/${sectionId}/${p.id}`,
         label: p.title
       })
     })

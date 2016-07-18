@@ -1,0 +1,11 @@
+@import '../../../styles/variables.css';
+
+
+.pageLink {
+  color: var(--colorAccent);
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

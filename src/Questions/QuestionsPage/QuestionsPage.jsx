@@ -7,7 +7,6 @@ import {Spinner} from '../../UI'
 import {SideNav, SideBar, Body, Article} from '../../Common'
 import QuestionsIntro from '../QuestionsIntro'
 import AskQuestionSide from '../AskQuestionSide'
-import {prefix} from '../../config'
 
 class QuestionsPage extends React.Component {
   componentWillMount () {
@@ -24,7 +23,7 @@ class QuestionsPage extends React.Component {
     } else {
       const navItems = pages.map(p => {
         return {
-          path: `${prefix}/questions/${p.id}`,
+          path: `${PUBLIC_PATH}/questions/${p.id}`,
           label: p.title
         }
       })
