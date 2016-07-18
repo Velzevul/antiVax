@@ -10,7 +10,6 @@ export default {
   },
   newQuestion: {
     isUpdating: false,
-    data: {},
     errors: {}
   },
   articles: {

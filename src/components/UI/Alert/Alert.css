@@ -24,7 +24,7 @@
     border-radius: 3px;
   }
     &__message_default {
-      background: var(--colorMain);
+      background: var(--colorMainL);
     }
     &__message_error {
       background: var(--colorError);

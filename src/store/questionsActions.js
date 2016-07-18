@@ -70,7 +70,7 @@ export const createQuestion = (
           }
 
           dispatch(rejectCreate(payload))
-          dispatch(flashMessage('Could not post questions due to errors', 'error'))
+          dispatch(flashMessage('Could not create questions due to errors', 'error'))
         } else {
           console.error(json.data)
           dispatch(flashMessage('Oops, something went wrong :()', 'error'))
