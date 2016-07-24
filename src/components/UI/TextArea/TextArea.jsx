@@ -1,7 +1,13 @@
 import React from 'react'
+import {anchorme} from 'anchorme.js'
+import striptags from 'striptags'
+import Textarea from 'react-textarea-autosize'
 
 import InputLabel from '../InputLabel'
 import styles from './TextArea.css'
+
+const plainToHtml = (text) => `<p>${anchorme.js(text.replace(/\n/g, '<br />'))}</p>`
+const htmlToPlain = (html) => striptags(html.replace(/<br \/>/g, '\n'))
 
 class TextArea extends React.Component {
   constructor (props) {
@@ -11,7 +17,7 @@ class TextArea extends React.Component {
   }
 
   onChange () {
-    const value = this._element.value
+    const value = plainToHtml(this._element.value)
     const {changeCallback} = this.props
 
     changeCallback(value)
@@ -22,19 +28,16 @@ class TextArea extends React.Component {
 
     return (
       <label className={styles.TextArea}>
-        {label
-          ? <InputLabel label={label} error={error} />
-          : null
-        }
+        <InputLabel label={label} error={error} />
 
-        <textarea ref={el => { this._element = el }}
-          value={value}
+        <Textarea ref={el => { this._element = el }}
+          value={htmlToPlain(value)}
           className={`${styles.TextArea__input} ${error ? styles.TextArea__input_error : null}`}
           disabled={disabled}
-          rows={5}
+          minRows={5}
           type="text"
           onChange={this.onChange}
-          placeholder={placeholder}></textarea>
+          placeholder={placeholder} />
       </label>
     )
   }

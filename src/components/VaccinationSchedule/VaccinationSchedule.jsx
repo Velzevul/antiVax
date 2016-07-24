@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-import {PageLink} from '../UI'
+import {Link} from '../UI'
 import {List, ListItem, Media, MediaFigure, MediaBody} from '../Layouts'
 import styles from './VaccinationSchedule.css'
 
@@ -45,7 +45,7 @@ const VaccinationSchedule = ({
                     <List n={0.5}>
                       {i.vaccines.map((v, j) =>
                         <ListItem key={j} n={0.5}>
-                          <PageLink to={`${PUBLIC_PATH}/${vaccineArticle.type.id}/${vaccineArticle.url}/${v.url}`}>{v.title}</PageLink>
+                          <Link to={`${PUBLIC_PATH}/${vaccineArticle.type.id}/${vaccineArticle.url}/${v.url}`}>{v.title}</Link>
                         </ListItem>
                       )}
                     </List>

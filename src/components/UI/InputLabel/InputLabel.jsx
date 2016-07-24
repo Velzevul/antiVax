@@ -10,9 +10,12 @@ const InputLabel = ({
   return (
     <div className={`${styles.InputLabel} ${error ? styles.InputLabel_error : ''}`}>
       <ListInline>
-        <ListInlineItem>
+        {label
+        ? <ListInlineItem>
           <div className={styles.InputLabel__label}>{label}</div>
         </ListInlineItem>
+        : null
+        }
 
         {error
         ? <ListInlineItem>

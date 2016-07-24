@@ -1,0 +1,15 @@
+@import '../../styles/variables.css';
+
+.Comment {
+  padding: calc(var(--baseline) * 3) 0;
+  border-top: 1px solid var(--colorMainLLL);
+
+  &__info {
+    font-size: 0.875rem;
+    color: var(--colorMainLLL);
+  }
+
+  &__replies {
+    padding-left: calc(var(--baseline) * 6);
+  }
+}

@@ -1,0 +1,23 @@
+@import '../../../styles/variables.css';
+
+.Link {
+  font-family: var(--fontFamily);
+  line-height: var(--lineHeight);
+
+  text-decoration: underline;
+
+  cursor: pointer;
+
+  border: none;
+  background: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+  .Link_accent {
+    color: var(--colorAccent);
+  }
+  .Link_error {
+    color: var(--colorError);
+  }

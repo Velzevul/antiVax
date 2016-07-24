@@ -16,6 +16,10 @@ export default {
     isFetching: false,
     items: []
   },
+  newComment: {
+    isUpdating: false,
+    errors: {}
+  },
   schedule: {
     isFetching: false,
     items: [],

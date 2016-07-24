@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-import {PageLink} from '../UI'
+import {Link} from '../UI'
 import {List, ListItem} from '../Layouts'
 
 const CategoryDirectory = ({
@@ -13,7 +13,7 @@ const CategoryDirectory = ({
     <List>
       {items.map(i =>
         <ListItem key={i._id}>
-          <PageLink to={`${PUBLIC_PATH}/${sectionId}/${articleId}/${i.url}`}>{i.title}</PageLink>
+          <Link to={`${PUBLIC_PATH}/${sectionId}/${articleId}/${i.url}`}>{i.title}</Link>
         </ListItem>
       )}
     </List>

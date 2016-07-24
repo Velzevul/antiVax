@@ -51,15 +51,27 @@ const Button = ({
 
   if (to) {
     return (
-      <Link style={style} disabled={disabled} className={`${className.join(' ')} ${extraClassNames}`} to={to}>{children}</Link>
+      <Link
+        style={style}
+        disabled={disabled}
+        className={`${className.join(' ')} ${extraClassNames}`}
+        to={to}>{children}</Link>
     )
   } else if (href) {
     return (
-      <a style={style} disabled={disabled} className={`${className.join(' ')} ${extraClassNames}`} href={href}>{children}</a>
+      <a
+        style={style}
+        disabled={disabled}
+        className={`${className.join(' ')} ${extraClassNames}`}
+        href={href}>{children}</a>
     )
   } else {
     return (
-      <button style={style} disabled={disabled} className={`${className.join(' ')} ${extraClassNames}`} onClick={onClick}>{children}</button>
+      <button
+        style={style}
+        disabled={disabled}
+        className={`${className.join(' ')} ${extraClassNames}`}
+        onClick={onClick}>{children}</button>
     )
   }
 }

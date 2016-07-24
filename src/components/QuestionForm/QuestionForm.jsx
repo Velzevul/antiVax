@@ -23,14 +23,14 @@ class QuestionForm extends React.Component {
   }
 
   componentWillReceiveProps (newProps) {
-    const {errors, isUpdating} = newProps.question
+    const {errors, data, isUpdating} = newProps.question
 
     if (!isUpdating) {
       if (Object.keys(errors).length === 0 && errors.constructor === Object) {
         this.setState({
           data: {
-            posterName: this.props.user.name,
-            posterEmail: this.props.user.email,
+            posterName: data.user.name,
+            posterEmail: data.user.email,
             question: ''
           }
         })
