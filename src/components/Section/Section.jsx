@@ -63,12 +63,16 @@ class Section extends React.Component {
       const {params: {sectionId}, children, articles} = this.props
       const currentSection = getCurrentSection(sectionId)
 
-      const navItems = articles.map(a => {
-        return {
-          url: `${PUBLIC_PATH}/${a.type.id}/${a.url}`,
-          title: a.title
-        }
-      })
+      const navItems = articles
+        .sort((a, b) => {
+          return a.order - b.order
+        })
+        .map(a => {
+          return {
+            url: `${PUBLIC_PATH}/${a.type.id}/${a.url}`,
+            title: a.title
+          }
+        })
 
       return (
         <Wrap>
