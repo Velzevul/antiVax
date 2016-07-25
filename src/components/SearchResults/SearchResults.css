@@ -1,11 +1,11 @@
 @import '../../styles/variables.css';
 
 
-.SearchResultsPage {
+.SearchResults {
   padding: calc(var(--baseline) * 6) 0;
 }
 
-.EmptySearchResultsPage {
+.EmptySearchResults {
   display: flex;
   flex-direction: column;
   justify-content: center;

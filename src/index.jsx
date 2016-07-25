@@ -17,6 +17,7 @@ import Blogpost from './components/Blogpost'
 import Questions from './components/Questions'
 import Faq from './components/Faq'
 import ChangePassword from './components/ChangePassword'
+import SearchResults from './components/SearchResults'
 
 const store = configureStore()
 
@@ -25,6 +26,8 @@ ReactDOM.render((
     <Router history={hashHistory}>
       <Route path={`${PUBLIC_PATH}`} component={App}>
         <IndexRedirect to="questions" />
+
+        <Route path="search" component={SearchResults} />
 
         <Route path="change-password" component={ChangePassword} />
 
