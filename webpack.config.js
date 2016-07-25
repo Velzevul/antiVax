@@ -17,7 +17,7 @@ const PATHS = {
   app: path.join(__dirname, 'app')
 }
 
-const PUBLIC_PATH = process.env.NODE_ENV === 'production' ? '/antivax' : '/app'
+const PUBLIC_PATH = process.env.NODE_ENV === 'production' ? '/app' : '/app'
 
 const getPlugins = () => {
   let plugins = []
@@ -93,7 +93,7 @@ const config = {
     ]
   },
   plugins: getPlugins(),
-  devtool: NODE_ENV === 'production' ? 'source-map' : 'cheap-inline-module-source-map',
+  devtool: NODE_ENV === 'production' ? null : 'cheap-inline-module-source-map',
   watch: NODE_ENV === 'development',
   postcss: () => {
     return [
