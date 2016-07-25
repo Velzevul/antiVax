@@ -5,6 +5,7 @@ import question from './questionsReducer'
 import articles from './articleReducer'
 import schedule from './scheduleReducer'
 import search from './searchReducer'
+import user from './usersReducer'
 
 const rootReducer = combineReducers({
   auth,
@@ -12,7 +13,8 @@ const rootReducer = combineReducers({
   question,
   articles,
   schedule,
-  search
+  search,
+  user
 })
 
 export default rootReducer

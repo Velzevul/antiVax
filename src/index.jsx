@@ -16,6 +16,7 @@ import Blog from './components/Blog'
 import Blogpost from './components/Blogpost'
 import Questions from './components/Questions'
 import Faq from './components/Faq'
+import ChangePassword from './components/ChangePassword'
 
 const store = configureStore()
 
@@ -24,6 +25,8 @@ ReactDOM.render((
     <Router history={hashHistory}>
       <Route path={`${PUBLIC_PATH}`} component={App}>
         <IndexRedirect to="questions" />
+
+        <Route path="change-password" component={ChangePassword} />
 
         <Route path="questions" component={Questions}>
           <Route path=":faqId" component={Faq} />

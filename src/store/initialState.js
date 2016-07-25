@@ -28,5 +28,9 @@ export default {
   search: {
     isFetching: false,
     items: []
+  },
+  user: {
+    isUpdating: false,
+    errors: {}
   }
 }
