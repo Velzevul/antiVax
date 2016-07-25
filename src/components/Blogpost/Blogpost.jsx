@@ -58,7 +58,7 @@ class Blogpost extends React.Component {
 
             <Flex justifyContent="center">
               <Button
-                to={`${PUBLIC_PATH}/blog`}>back to all posts</Button>
+                to={`${PUBLIC_PATH}/blogposts`}>back to all posts</Button>
             </Flex>
           </div>
         </Wrap>

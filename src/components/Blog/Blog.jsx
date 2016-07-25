@@ -29,7 +29,7 @@ const Blog = ({
                 </Block>
 
                 <Block n={1.5}>
-                  <Heading1 linkTo={`${PUBLIC_PATH}/blog/${p.url}`}>{p.title}</Heading1>
+                  <Heading1 linkTo={`${PUBLIC_PATH}/blogposts/${p.url}`}>{p.title}</Heading1>
                 </Block>
 
                 <Block n={2}>
@@ -40,7 +40,7 @@ const Blog = ({
 
                 <div className={styles.entry__footer}>
                   <Button
-                    to={`${PUBLIC_PATH}/blog/${p.url}`}>Read full post</Button>
+                    to={`${PUBLIC_PATH}/blogposts/${p.url}`}>Read full post</Button>
                 </div>
               </div>
             </Block>

@@ -27,7 +27,8 @@ export default {
   },
   search: {
     isFetching: false,
-    items: []
+    items: [],
+    query: ''
   },
   user: {
     isUpdating: false,

@@ -1,4 +1,5 @@
-import {REQUEST_SEARCH_RESULTS, RECEIVE_SEARCH_RESULTS} from './searchActions'
+import {REQUEST_SEARCH_RESULTS, RECEIVE_SEARCH_RESULTS,
+  SET_SEARCH_QUERY} from './searchActions'
 import initialState from './initialState'
 
 const search = (
@@ -14,6 +15,10 @@ const search = (
       return Object.assign({}, state, {
         isFetching: false,
         items: action.items
+      })
+    case SET_SEARCH_QUERY:
+      return Object.assign({}, state, {
+        query: action.query
       })
     default:
       return state

@@ -35,7 +35,7 @@ ReactDOM.render((
           <Route path=":faqId" component={Faq} />
         </Route>
 
-        <Route path="blog" component={Blog}>
+        <Route path="blogposts" component={Blog}>
           <Route path=":blogpostId" component={Blogpost}/>
         </Route>
 

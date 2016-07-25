@@ -23,7 +23,7 @@ const navItems = [
   },
   {
     label: 'Blog',
-    path: `${PUBLIC_PATH}/blog`
+    path: `${PUBLIC_PATH}/blogposts`
   }
 ]
 
@@ -35,7 +35,7 @@ const MainNav = ({
     'about-vaccines': {left: '20%', opacity: 1},
     'vaccine-safety': {left: '40%', opacity: 1},
     'vaccination-schedule': {left: '60%', opacity: 1},
-    'blog': {left: '80%', opacity: 1}
+    'blogposts': {left: '80%', opacity: 1}
   }
 
   const currentSection = location.pathname.split('/')[2]

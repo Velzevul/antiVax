@@ -3,6 +3,9 @@ import {REQUEST_COMMENT_CREATE, CONFIRM_COMMENT_CREATE, REJECT_COMMENT_CREATE} f
 import {REQUEST_REPLY_CREATE, CONFIRM_REPLY_CREATE, REJECT_REPLY_CREATE} from './repliesActions'
 import initialState from './initialState'
 
+const INIT_ARTICLE = 'INIT_ARTICLE'
+const INIT_COMMENT = 'INIT_COMMENT'
+
 const newComment = (
   state,
   action
@@ -12,13 +15,13 @@ const newComment = (
       return Object.assign({}, state, {
         isUpdating: true
       })
-    case CONFIRM_COMMENT_CREATE:
-      return Object.assign({}, initialState.newComment)
     case REJECT_COMMENT_CREATE:
       return Object.assign({}, state, {
         isUpdating: false,
         errors: action.errors
       })
+    case CONFIRM_COMMENT_CREATE:
+      return Object.assign({}, initialState.newComment)
     default:
       return state
   }
@@ -29,8 +32,6 @@ const newReply = (
   action
 ) => {
   switch (action.type) {
-    case CONFIRM_REPLY_CREATE:
-      return Object.assign({}, initialState.newComment)
     case REQUEST_REPLY_CREATE:
       return Object.assign({}, state, {
         isUpdating: true
@@ -40,6 +41,8 @@ const newReply = (
         isUpdating: false,
         errors: action.errors
       })
+    case CONFIRM_REPLY_CREATE:
+      return Object.assign({}, initialState.newComment)
     default:
       return state
   }
@@ -50,18 +53,30 @@ const comment = (
   action
 ) => {
   switch (action.type) {
-    case RECEIVE_ARTICLES:
-      return Object.assign({}, state, {
-        newReply: Object.assign({}, initialState.newComment)
+    case INIT_COMMENT:
+      return Object.assign({}, action.comment, {
+        newReply: newReply(Object.assign({}, initialState.newComment), action)
       })
+    case CONFIRM_COMMENT_CREATE:
+      if (state._id === action.commentId) {
+        return Object.assign({}, action.comment, {
+          newReply: newReply(Object.assign({}, initialState.newComment), action)
+        })
+      } else {
+        return state
+      }
     case CONFIRM_REPLY_CREATE:
-      return Object.assign({}, state, {
-        newReply: newReply(state.newReply, action),
-        replies: [
-          ...state.replies,
-          action.reply
-        ]
-      })
+      if (state._id === action.commentId) {
+        return Object.assign({}, state, {
+          newReply: newReply(state.newReply, action),
+          replies: [
+            ...state.replies,
+            action.reply
+          ]
+        })
+      } else {
+        return state
+      }
     case REQUEST_REPLY_CREATE:
     case REJECT_REPLY_CREATE:
       if (state._id === action.commentId) {
@@ -81,10 +96,13 @@ const article = (
   action
 ) => {
   switch (action.type) {
-    case RECEIVE_ARTICLES:
-      return Object.assign({}, state, {
-        newComment: Object.assign({}, initialState.newComment),
-        comments: state.comments.map(c => comment(c, action))
+    case INIT_ARTICLE:
+      return Object.assign({}, action.article, {
+        comments: action.article.comments.map(c => comment(undefined, {
+          type: INIT_COMMENT,
+          comment: c
+        })),
+        newComment: newComment(Object.assign({}, initialState.newComment), action)
       })
     case CONFIRM_COMMENT_CREATE:
       if (state._id === action.articleId) {
@@ -92,7 +110,10 @@ const article = (
           newComment: newComment(state.newComment, action),
           comments: [
             ...state.comments,
-            comment(action.comment, action)
+            comment(undefined, {
+              type: INIT_COMMENT,
+              comment: action.comment
+            })
           ]
         })
       } else {
@@ -134,7 +155,10 @@ const articles = (
     case RECEIVE_ARTICLES:
       return Object.assign({}, state, {
         isFetching: false,
-        items: action.items.map(i => article(i, action))
+        items: action.items.map(i => article(undefined, {
+          type: INIT_ARTICLE,
+          article: i
+        }))
       })
     case REQUEST_COMMENT_CREATE:
     case REJECT_COMMENT_CREATE:

@@ -1,5 +1,5 @@
 export const blogposts = {
-  id: 'blog',
+  id: 'blogposts',
   label: 'Blog'
 }
 

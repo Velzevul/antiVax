@@ -1,7 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
+import {withRouter} from 'react-router'
 
-import {fetchSearchResults} from '../../store/searchActions'
+import {setSearchQuery} from '../../store/searchActions'
 import SearchResultsItem from '../SearchResultsItem'
 import {Spinner} from '../UI'
 import styles from './SearchResults.css'
@@ -9,20 +10,12 @@ import {Wrap, List, ListItem, Block} from '../Layouts'
 import {Heading1} from '../Typography'
 
 class SearchResults extends React.Component {
-  componentWillMount () {
-    const {dispatch} = this.props
-    const {query} = this.props.location
+  componentDidMount () {
+    const {setSearchQuery} = this.props
 
-    dispatch(fetchSearchResults(query.q))
-  }
-
-  componentWillReceiveProps (nextProps) {
-    const {dispatch} = nextProps
-    const {query} = nextProps.location
-
-    if (query.q !== this.props.location.query.q) {
-      dispatch(fetchSearchResults(query.q))
-    }
+    this.props.router.setRouteLeaveHook(this.props.route, () => {
+      setSearchQuery('')
+    })
   }
 
   render () {
@@ -64,11 +57,21 @@ class SearchResults extends React.Component {
   }
 }
 
+const SearchResultsWithRouter = withRouter(SearchResults)
+
 export default connect(
   state => {
     return {
       isFetching: state.search.isFetching,
-      items: state.search.items
+      items: state.search.items,
+      query: state.search.query
+    }
+  },
+  dispatch => {
+    return {
+      setSearchQuery: (q) => {
+        dispatch(setSearchQuery(q))
+      }
     }
   }
-)(SearchResults)
+)(SearchResultsWithRouter)
