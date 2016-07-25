@@ -11,11 +11,16 @@ const CategoryDirectory = ({
 }) => {
   return (
     <List>
-      {items.map(i =>
-        <ListItem key={i._id}>
-          <Link to={`${PUBLIC_PATH}/${sectionId}/${articleId}/${i.url}`}>{i.title}</Link>
-        </ListItem>
-      )}
+      {items
+        .sort((a, b) => {
+          return a.order - b.order
+        })
+        .map(i =>
+          <ListItem key={i._id}>
+            <Link to={`${PUBLIC_PATH}/${sectionId}/${articleId}/${i.url}`}>{i.title}</Link>
+          </ListItem>
+        )
+      }
     </List>
   )
 }

@@ -57,7 +57,11 @@ class Section extends React.Component {
   render () {
     if (this.state.notFound) {
       return (
-        <NotFound />
+        <Wrap>
+          <Body>
+            <NotFound />
+          </Body>
+        </Wrap>
       )
     } else {
       const {params: {sectionId}, children, articles} = this.props

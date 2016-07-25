@@ -5,6 +5,7 @@ import {connect} from 'react-redux'
 
 import {Heading1, Content} from '../Typography'
 import {Wrap, Block, Flex} from '../Layouts'
+import Body from '../Body'
 import {Button} from '../UI'
 import NotFound from '../NotFound'
 import Comments from '../Comments'
@@ -64,7 +65,11 @@ class Blogpost extends React.Component {
       )
     } else {
       return (
-        <NotFound />
+        <Wrap>
+          <Body>
+            <NotFound />
+          </Body>
+        </Wrap>
       )
     }
   }

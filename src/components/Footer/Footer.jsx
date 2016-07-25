@@ -22,19 +22,27 @@ const Footer = ({
   aboutProjectArticles,
   additionalInformationArticles
 }) => {
-  const aboutNav = aboutProjectArticles.map(a => {
-    return {
-      label: a.title,
-      path: `${PUBLIC_PATH}/${a.type.id}/${a.url}`
-    }
-  })
+  const aboutNav = aboutProjectArticles
+    .sort((a, b) => {
+      return a.order - b.order
+    })
+    .map(a => {
+      return {
+        label: a.title,
+        path: `${PUBLIC_PATH}/${a.type.id}/${a.url}`
+      }
+    })
 
-  const infoNav = additionalInformationArticles.map(a => {
-    return {
-      label: a.title,
-      path: `${PUBLIC_PATH}/${a.type.id}/${a.url}`
-    }
-  })
+  const infoNav = additionalInformationArticles
+    .sort((a, b) => {
+      return a.order - b.order
+    })
+    .map(a => {
+      return {
+        label: a.title,
+        path: `${PUBLIC_PATH}/${a.type.id}/${a.url}`
+      }
+    })
 
   return (
     <div className={styles.Bg}>

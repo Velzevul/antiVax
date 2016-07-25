@@ -18,12 +18,16 @@ const Questions = ({
   children,
   params
 }) => {
-  const navItems = faqs.map(f => {
-    return {
-      url: `${PUBLIC_PATH}/questions/${f.url}`,
-      title: f.title
-    }
-  })
+  const navItems = faqs
+    .sort((a, b) => {
+      return a.order - b.order
+    })
+    .map(f => {
+      return {
+        url: `${PUBLIC_PATH}/questions/${f.url}`,
+        title: f.title
+      }
+    })
 
   let content = ''
   if (params.faqId) {
