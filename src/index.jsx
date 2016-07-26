@@ -24,7 +24,7 @@ const store = configureStore()
 ReactDOM.render((
   <Provider store={store}>
     <Router history={browserHistory}>
-      <Route path={`${PUBLIC_PATH}`} component={App}>
+      <Route path={`${PUBLIC_PATH}/`} component={App}>
         <IndexRedirect to="questions" />
 
         <Route path="search" component={SearchResults} />
