@@ -27,7 +27,7 @@ const Header = ({
                 <div>
                   <Block n={2}>
                     <Block>
-                      <h1 className={styles.Header__title}>Vaccination Information Center</h1>
+                      <h1 className={styles.Header__title}>Vaccine Answers</h1>
                     </Block>
 
                     <h2 className={styles.Header__subtitle}>All the information you need to know about vaccines and vaccination in Manitoba</h2>

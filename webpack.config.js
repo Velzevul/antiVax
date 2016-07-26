@@ -17,7 +17,7 @@ const PATHS = {
   app: path.join(__dirname, 'app')
 }
 
-const PUBLIC_PATH = process.env.NODE_ENV === 'production' ? '/app' : '/app'
+const PUBLIC_PATH = process.env.NODE_ENV === 'production' ? '' : '/app'
 
 const getPlugins = () => {
   let plugins = []

@@ -1,5 +1,5 @@
 import React from 'react'
-import {hashHistory} from 'react-router'
+import {browserHistory} from 'react-router'
 import { connect } from 'react-redux'
 
 import {Wrap, Grid, GridItem} from '../Layouts'
@@ -26,7 +26,7 @@ class Section extends React.Component {
         this.setState({
           notFound: false
         }, () => {
-          hashHistory.push(`${PUBLIC_PATH}/${sectionId}/${articles[0].url}`)
+          browserHistory.push(`${PUBLIC_PATH}/${sectionId}/${articles[0].url}`)
         })
       }
     } else {
@@ -44,7 +44,7 @@ class Section extends React.Component {
         this.setState({
           notFound: false
         }, () => {
-          hashHistory.push(`${PUBLIC_PATH}/${sectionId}/${articles[0].url}`)
+          browserHistory.push(`${PUBLIC_PATH}/${sectionId}/${articles[0].url}`)
         })
       }
     } else {

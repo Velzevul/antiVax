@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {hashHistory} from 'react-router'
+import {browserHistory} from 'react-router'
 
 import styles from './SearchBar.css'
 import {fetchSearchResults, setSearchQuery} from '../../store/searchActions'
@@ -38,7 +38,7 @@ class SearchBar extends React.Component {
       if (query) {
         this.props.fetchSearchResults(query)
 
-        hashHistory.push({
+        browserHistory.push({
           pathname: `${PUBLIC_PATH}/search`,
           query: {q: query}
         })
