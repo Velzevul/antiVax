@@ -40,8 +40,8 @@ export const categories = [
     label: 'Vaccines'
   },
   {
-    id: 'ingridients',
-    label: 'Ingridients'
+    id: 'ingredients',
+    label: 'Ingredients'
   }
 ]
 

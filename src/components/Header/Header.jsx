@@ -24,17 +24,17 @@ const Header = ({
                   <img src={img} className={styles.Header__logo} />
                 </GridItem>
 
-                <div>
+                <GridItem span={3} outOf={5}>
                   <Block n={2}>
                     <Block>
                       <h1 className={styles.Header__title}>Vaccine Answers</h1>
                     </Block>
 
-                    <h2 className={styles.Header__subtitle}>All the information you need to know about vaccines and vaccination in Manitoba</h2>
+                    <h2 className={styles.Header__subtitle}>A reliable vaccine information site for parents</h2>
                   </Block>
 
                   <SearchBar location={location} />
-                </div>
+                </GridItem>
               </Grid>
             </div>
           </Wrap>

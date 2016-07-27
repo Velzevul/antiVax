@@ -20,7 +20,7 @@ const SectionArticle = ({
       switch (article.attachment) {
         case 'vaccines':
         case 'diseases':
-        case 'ingridients':
+        case 'ingredients':
           attachment = (
             <CategoryDirectory
               sectionId={params.sectionId}

@@ -62,8 +62,25 @@ const VaccinationSchedule = ({
 
 export default connect(
   state => {
+    const vaccines = state.articles.items.filter(i => i.isPublished && i.type.id === 'vaccines')
+
     return {
-      items: state.schedule.items,
+      items: state.schedule.items.map(i => {
+        var res = Object.assign({}, i, {
+          vaccines: i.vaccines.map(id => {
+            const vaccine = vaccines.filter(v => v._id === id)[0]
+
+            return {
+              url: vaccine && vaccine.url || '',
+              title: vaccine && vaccine.title || ''
+            }
+          })
+        })
+
+        console.log(res)
+
+        return res
+      }),
       vaccineArticle: state.articles.items.filter(i => i.isPublished && i.attachment === 'vaccines')[0]
     }
   }
