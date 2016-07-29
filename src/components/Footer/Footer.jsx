@@ -11,10 +11,10 @@ const contactNav = [
     emph: true
   },
   {
-    label: '(204) 140-3849'
+    label: '(204) 632-3203'
   },
   {
-    label: 'jpotter@umanitoba.ca'
+    label: 'jpotter@sogh.mb.ca'
   }
 ]
 
