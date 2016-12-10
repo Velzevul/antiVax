@@ -1,9 +1,8 @@
 import React from 'react'
 
-import MainNav from '../MainNav'
 import SearchBar from '../SearchBar'
 import styles from './Header.css'
-import {Block, Wrap, Grid, GridItem} from '../Layouts'
+import {Block, Wrap, Media, MediaFigure, MediaBody, Sup} from '../Layouts'
 import CurrentUser from '../CurrentUser'
 
 import img from './logo.svg'
@@ -13,35 +12,39 @@ const Header = ({
 }) => {
   return (
     <header>
-      <div className={styles.CoverImg}>
-        <CurrentUser />
+      <Wrap>
+        <div className={styles.Header}>
+          <div className={styles.Header__sitename}>
+            <div className={styles.Sitename}>
+              <Media>
+                <MediaFigure>
+                  <img src={img} className={styles.Sitename__logo} />
+                </MediaFigure>
 
-        <div className={styles.CoverImg__body}>
-          <Wrap maxWidth="80rem">
-            <div className={styles.Header}>
-              <Grid alignItems="center">
-                <GridItem span={1} outOf={5}>
-                  <img src={img} className={styles.Header__logo} />
-                </GridItem>
+                <MediaBody>
+                  <Block>
+                    <div className={styles.Sitename__title}>Vaccine Answers</div>
 
-                <GridItem span={3} outOf={5}>
-                  <Block n={2}>
-                    <Block>
-                      <h1 className={styles.Header__title}>Vaccine Answers</h1>
-                    </Block>
-
-                    <h2 className={styles.Header__subtitle}>A reliable vaccine information site for parents</h2>
+                    <Sup>
+                      <div className={styles.Sitename__supplement}>Manitoba</div>
+                    </Sup>
                   </Block>
 
-                  <SearchBar location={location} />
-                </GridItem>
-              </Grid>
+                  <div className={styles.Sitename__subtitle}>A reliable source of information about vaccines and vaccination in Canada</div>
+                </MediaBody>
+              </Media>
             </div>
-          </Wrap>
+          </div>
 
-          <MainNav location={location} />
+          <div className={styles.Header__actions}>
+            <Block>
+              <SearchBar location={location} />
+            </Block>
+
+            <CurrentUser />
+          </div>
         </div>
-      </div>
+      </Wrap>
     </header>
   )
 }

@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Wrap = ({
-  width = '90%',
+  width = '95%',
   maxWidth = '80rem', // 1280px provided 1em === 16px
   extraClassNames = '',
   children
