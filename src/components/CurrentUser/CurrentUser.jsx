@@ -18,7 +18,7 @@ const CurrentUser = ({
         </ListInlineItem>
 
         <ListInlineItem>
-          <Button onClick={logOut}>Log out</Button>
+          <button onClick={logOut}>Log out</button>
         </ListInlineItem>
       </ListInline>
     </div>

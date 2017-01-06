@@ -1,123 +1,62 @@
 @import '../../../styles/variables.css';
 
 
-.InverseButton {
-  display: inline-block;
-
-  font-weight: 600;
-
-  text-decoration: none;
-
-  border: 1px solid transparent;
-  border-radius: 3px;
-  border-radius: 0.188rem;
-  background: white;
-
-  transition-property: color, background, border-color;
-  transition-duration: 0.2s, 0.2s, 0.2s;
-
-  cursor: pointer;
-}
-  .InverseButton_accent {
-    color: var(--colorAccent);
-    border-color: var(--colorAccent);
-
-    &:hover {
-      background: var(--colorAccent);
-      border-color: transparent;
-      color: white;
-    }
-
-    &:active {
-      background: color(var(--colorAccent) lightness(+25%));
-      color: var(--colorMain);
-    }
-
-    &:disabled {
-      color: color(var(--colorAccent) lightness(+25%));
-      background: white;
-      border-color: color(var(--colorAccent) lightness(+25%));
-    }
-  }
-  .InverseButton_error {
-    color: var(--colorError);
-    border-color: var(--colorError);
-
-    &:hover {
-      background: var(--colorError);
-      border-color: transparent;
-      color: white;
-    }
-
-    &:active {
-      background: color(var(--colorError) lightness(+25%));
-      color: var(--colorError);
-    }
-
-    &:disabled {
-      color: color(var(--colorError) lightness(+25%));
-      background: white;
-      border-color: color(var(--colorError) lightness(+25%));
-    }
-  }
-
 .Button {
+  padding: 0 calc(var(--baseline) * 1.5);
+  height: calc(var(--baseline) * 3);
   display: inline-block;
 
-  font-weight: 600;
+  font-size: 0.875rem;
+  font-weight: 500;
+  /*line-height: calc(var(--baseline) * 3);*/
 
   text-decoration: none;
 
-  border: 1px solid transparent;
   border-radius: 3px;
-  border-radius: 0.188rem;
+  border: none;
 
-  transition-property: color, background, border-color;
-  transition-duration: 0.2s, 0.2s, 0.2s, 0.2s;
+  transition-property: color, background;
+  transition-duration: 0.2s, 0.2s;
 
   cursor: pointer;
 }
-  .Button_accent {
+  .Button_accent1 {
     color: white;
-    background: var(--colorAccent);
+    background: var(--color-accent-blue);
 
     &:hover {
-      background: white;
-      border-color: var(--colorAccent);
-      color: var(--colorAccent);
+      background: color(var(--color-accent-blue) lightness(+10%));
     }
 
     &:active {
-      background: color(var(--colorAccent) lightness(+25%));
-      border-color: transparent;
-      color: var(--colorMain);
+      background: color(var(--color-accent-blue) lightness(-10%));
     }
 
     &:disabled {
-      color: white;
-      background: color(var(--colorAccent) lightness(+25%));
-      border-color: transparent;
+      background: color(var(--color-accent-blue) lightness(+25%));
     }
   }
-  .Button_error {
+  .Button_accent2 {
     color: white;
-    background: var(--colorError);
+    background: var(--color-accent-red);
 
     &:hover {
-      background: white;
-      border-color: var(--colorError);
-      color: var(--colorError);
+      background: color(var(--color-accent-red) lightness(+10%));
     }
 
     &:active {
-      background: color(var(--colorError) lightness(+25%));
-      border-color: transparent;
-      color: var(--colorError);
+      background: color(var(--color-accent-red) lightness(-10%));
     }
 
     &:disabled {
-      color: white;
-      background: color(var(--colorError) lightness(+25%));
-      border-color: transparent;
+      background: color(var(--color-accent-red) lightness(+25%));
     }
+  }
+  .Button_hasPrefix {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+  .Buttom_hasSuffix {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
   }

@@ -27,7 +27,7 @@ class SectionCategoryItem extends React.Component {
       return (
         <div ref={el => { this._element = el }} className={styles.SectionCategoryItem}>
           <Link
-            to={`${PUBLIC_PATH}/${sectionId}/${articleId}`}
+            to={`/${sectionId}/${articleId}`}
             className={styles.SectionCategoryItem__backlink}>back</Link>
 
           <Article article={item} />

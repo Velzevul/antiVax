@@ -17,7 +17,7 @@ const CategoryDirectory = ({
         })
         .map(i =>
           <ListItem key={i._id}>
-            <Link to={`${PUBLIC_PATH}/${sectionId}/${articleId}/${i.url}`}>{i.title}</Link>
+            <Link to={`/${sectionId}/${articleId}/${i.url}`}>{i.title}</Link>
           </ListItem>
         )
       }

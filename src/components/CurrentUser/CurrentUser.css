@@ -1,11 +1,6 @@
 @import '../../styles/variables.css';
 
 .CurrentUser {
-  position: absolute;
-  z-index: 1;
-  top: 0; right: 0;
-  padding: calc(var(--baseline) * 1);
-
   &__name {
     font-size: 0.750rem;
     color: color(white alpha(-25%));

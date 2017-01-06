@@ -24,7 +24,7 @@ const Questions = ({
     })
     .map(f => {
       return {
-        url: `${PUBLIC_PATH}/questions/${f.url}`,
+        url: `/questions/${f.url}`,
         title: f.title
       }
     })

@@ -1,0 +1,20 @@
+@import '../../../styles/variables.css';
+
+
+.InputDecorator {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+
+  &__prefix {
+
+  }
+
+  &__input {
+    flex: 1;
+  }
+
+  &__suffix {
+
+  }
+}

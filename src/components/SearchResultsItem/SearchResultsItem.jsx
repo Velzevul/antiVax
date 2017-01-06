@@ -12,7 +12,7 @@ const SearchResultsItem = ({
     <div className={styles.SearchResultsItem}>
       <Link
         className={styles.SearchResultsItem__title}
-        to={`${PUBLIC_PATH}/${item.url}`}>{item.title}</Link>
+        to={`/${item.url}`}>{item.title}</Link>
 
       <Block n={0.5}>
         <div className={styles.SearchResultsItem__url}>{item.url}</div>

@@ -20,7 +20,7 @@ const AskQuestionSide = () => {
             <div className={styles.AskQuestionSide__text}>Our vaccine specialist will be glad to assist you</div>
           </Block>
 
-          <Button to={`${PUBLIC_PATH}/questions`}>Ask a Question</Button>
+          <Button to={'/questions'}>Ask a Question</Button>
         </MediaBody>
       </Media>
     </aside>

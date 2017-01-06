@@ -10,9 +10,7 @@ const cssImport = require('postcss-import')
 const cssNext = require('postcss-cssnext')
 
 const NODE_ENV = process.env.NODE_ENV || 'development'
-const PUBLIC_PATH = process.env.NODE_ENV === 'production' ? '' : '/app'
 console.log(NODE_ENV)
-console.log(PUBLIC_PATH)
 console.log(__dirname)
 
 const PATHS = {
@@ -36,10 +34,9 @@ const getPlugins = () => {
 
   plugins.push(new webpack.DefinePlugin({
     'process.env': {
-      NODE_ENV: JSON.stringify(NODE_ENV),
+      NODE_ENV: JSON.stringify(NODE_ENV)
     },
-    SERVER_URL: JSON.stringify('https://vdziubak.com/antiVaxServer'),
-    PUBLIC_PATH: JSON.stringify(PUBLIC_PATH)
+    SERVER_URL: NODE_ENV === 'production' ? JSON.stringify('https://vdziubak.com/antiVaxServer') : JSON.stringify('https://localhost.com')
   }))
 
   plugins.push(new webpack.optimize.CommonsChunkPlugin({
@@ -69,7 +66,7 @@ const config = {
   output: {
     path: PATHS.app,
     filename: '[name].js',
-    publicPath: `${PUBLIC_PATH}/`
+    publicPath: '/'
   },
   resolve: {
     extensions: ['', '.js', '.jsx']

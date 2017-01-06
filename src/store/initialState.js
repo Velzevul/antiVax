@@ -13,17 +13,12 @@ export default {
     errors: {}
   },
   articles: {
-    isFetching: false,
+    isFetching: true,
     items: []
   },
   newComment: {
     isUpdating: false,
     errors: {}
-  },
-  schedule: {
-    isFetching: false,
-    items: [],
-    postScheduleContent: null
   },
   search: {
     isFetching: false,
@@ -33,5 +28,14 @@ export default {
   user: {
     isUpdating: false,
     errors: {}
+  },
+  sections: {
+    isFetching: true,
+    items: []
+  },
+  ui: {
+    windowWidth: 0,
+    widthThreshold: 960,
+    mainMenuIsOpen: true
   }
 }

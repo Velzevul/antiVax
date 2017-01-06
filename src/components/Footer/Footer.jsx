@@ -29,7 +29,7 @@ const Footer = ({
     .map(a => {
       return {
         label: a.title,
-        path: `${PUBLIC_PATH}/${a.type.id}/${a.url}`
+        path: `/${a.type.id}/${a.url}`
       }
     })
 
@@ -40,7 +40,7 @@ const Footer = ({
     .map(a => {
       return {
         label: a.title,
-        path: `${PUBLIC_PATH}/${a.type.id}/${a.url}`
+        path: `/${a.type.id}/${a.url}`
       }
     })
 

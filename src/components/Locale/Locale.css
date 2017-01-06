@@ -1,0 +1,12 @@
+@import '../../styles/variables.css';
+
+
+.Locale {
+  position: relative;
+  top: -calc(var(--baseline) * 2);
+
+  font-size: calc(var(--baseline) * 3/2);
+  font-style: italic;
+
+  color: var(--color-accent-red);
+}

@@ -1,6 +1,5 @@
 import React from 'react'
 
-import InputLabel from '../InputLabel'
 import styles from './TextInput.css'
 
 class TextInput extends React.Component {
@@ -19,29 +18,28 @@ class TextInput extends React.Component {
 
   render () {
     const {
-      label,
       error,
       value,
       placeholder,
+      hasPrefix = false,
+      hasSuffix = false,
       disabled = false,
+      inverse = false,
       type = 'text'
     } = this.props
 
     return (
-      <label className={styles.TextInput}>
-        {label
-          ? <InputLabel label={label} error={error} />
-          : null
-        }
-
-        <input ref={el => { this._element = el }}
-          value={value}
-          className={`${styles.TextInput__input} ${error ? styles.TextInput__input_error : null}`}
-          disabled={disabled}
-          type={type}
-          onChange={this.onChange}
-          placeholder={placeholder} />
-      </label>
+      <input ref={el => { this._element = el }}
+        value={value}
+        className={`${styles.TextInput}
+          ${error ? styles.TextInput_error : null}
+          ${inverse ? styles.TextInput_inverse : null}
+          ${hasPrefix ? styles.TextInput_withPrefix : null}
+          ${hasSuffix ? styles.TextInput_withSuffix : null}`}
+        disabled={disabled}
+        type={type}
+        onChange={this.onChange}
+        placeholder={placeholder} />
     )
   }
 }

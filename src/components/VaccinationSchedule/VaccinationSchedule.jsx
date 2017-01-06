@@ -45,7 +45,7 @@ const VaccinationSchedule = ({
                     <List n={0.5}>
                       {i.vaccines.map((v, j) =>
                         <ListItem key={j} n={0.5}>
-                          <Link to={`${PUBLIC_PATH}/${vaccineArticle.type.id}/${vaccineArticle.url}/${v.url}`}>{v.title}</Link>
+                          <Link to={`/${vaccineArticle.type.id}/${vaccineArticle.url}/${v.url}`}>{v.title}</Link>
                         </ListItem>
                       )}
                     </List>

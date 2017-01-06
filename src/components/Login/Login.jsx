@@ -1,8 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-import {Flex, List, ListItem} from '../Layouts'
+import {Flex, List, ListItem, Page, PageContent} from '../Layouts'
 import {ModalWindow, ModalWindowBody, ModalWindowHeader, ModalWindowFooter, TextInput, Button} from '../UI'
+import FlashMessage from '../FlashMessage'
 import {loginWithCredentials} from '../../store/authActions'
 
 class Login extends React.Component {
@@ -64,42 +65,48 @@ class Login extends React.Component {
     const {isFetching} = this.props
 
     return (
-      <ModalWindow>
-        <form onSubmit={this.submitForm}>
-          <ModalWindowHeader>
-            <Flex justifyContent="center">Login</Flex>
-          </ModalWindowHeader>
+      <Page>
+        <PageContent>
+          <ModalWindow>
+            <form onSubmit={this.submitForm}>
+              <ModalWindowHeader>
+                <Flex justifyContent="center">Login</Flex>
+              </ModalWindowHeader>
 
-          <ModalWindowBody>
-            <List n={1.5}>
-              <ListItem n={1.5}>
-                <TextInput
-                  value={this.state.email}
-                  label="Email:"
-                  placeholder="e.g. casey@gmail.com"
-                  error={this.state.emailError}
-                  changeCallback={this.changeEmail} />
-              </ListItem>
+              <ModalWindowBody>
+                <List n={1.5}>
+                  <ListItem n={1.5}>
+                    <TextInput
+                      value={this.state.email}
+                      label="Email:"
+                      placeholder="e.g. casey@gmail.com"
+                      error={this.state.emailError}
+                      changeCallback={this.changeEmail} />
+                  </ListItem>
 
-              <ListItem n={1.5}>
-                <TextInput
-                  value={this.state.password}
-                  label="Password:"
-                  placeholder="e.g. BigSecret"
-                  error={this.state.passwordError}
-                  changeCallback={this.changePassword}
-                  type="password" />
-              </ListItem>
-            </List>
-          </ModalWindowBody>
+                  <ListItem n={1.5}>
+                    <TextInput
+                      value={this.state.password}
+                      label="Password:"
+                      placeholder="e.g. BigSecret"
+                      error={this.state.passwordError}
+                      changeCallback={this.changePassword}
+                      type="password" />
+                  </ListItem>
+                </List>
+              </ModalWindowBody>
 
-          <ModalWindowFooter>
-            <Button
-              disabled={isFetching}
-              label="Login">Login</Button>
-          </ModalWindowFooter>
-        </form>
-      </ModalWindow>
+              <ModalWindowFooter>
+                <Button
+                  disabled={isFetching}
+                  label="Login">Login</Button>
+              </ModalWindowFooter>
+            </form>
+          </ModalWindow>
+        </PageContent>
+
+        <FlashMessage />
+      </Page>
     )
   }
 }

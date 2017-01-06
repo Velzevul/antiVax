@@ -2,77 +2,68 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {browserHistory} from 'react-router'
 
-import styles from './SearchBar.css'
-import {fetchSearchResults, setSearchQuery} from '../../store/searchActions'
+import {setSearchQuery} from '../../store/searchActions'
+import {TextInput, Button} from '../UI'
+import {LabeledInput, InputDecorator} from '../Layouts'
 
-const typeDelay = 500
+import styles from './SearchBar.css'
 
 class SearchBar extends React.Component {
   constructor (props) {
     super(props)
 
-    this.handleType = this.handleType.bind(this)
-
     this.state = {
-      timeoutId: null,
-      query: ''
+      query: this.props.query
     }
+
+    this.search = this.search.bind(this)
   }
 
   componentWillMount () {
-    const {fetchSearchResults, setSearchQuery, location: {query}} = this.props
+    const {setSearchQuery, location: {query}} = this.props
 
     if (query && query.q) {
       this.setState({
         query: query.q
       })
       setSearchQuery(query.q)
-      fetchSearchResults(query)
     }
   }
 
-  componentWillReceiveProps (nextProps) {
-    const {query} = nextProps
-
-    if (query !== this.props.query) {
-      if (query) {
-        this.props.fetchSearchResults(query)
-
-        browserHistory.push({
-          pathname: `${PUBLIC_PATH}/search`,
-          query: {q: query}
-        })
-      } else {
-        this.setState({query})
-      }
-    }
-  }
-
-  handleType () {
+  search () {
     const {setSearchQuery} = this.props
 
-    this.setState({
-      query: this._input.value
-    }, () => {
-      clearTimeout(this.state.timeoutId)
-      this.setState({
-        timeoutId: setTimeout(() => {
-          setSearchQuery(this.state.query)
-        }, typeDelay)
-      })
+    setSearchQuery(this.state.query)
+    browserHistory.push({
+      pathname: '/search',
+      query: {q: this.state.query}
     })
   }
 
   render () {
+    const {label = true} = this.props
+
     return (
-      <div className={styles.SearchBar}>
-        <input type="text"
-          className={styles.SearchBar__input}
-          value={this.state.query}
-          ref={el => { this._input = el }}
-          onChange={this.handleType}
-          placeholder="search for keywords, e.g. 'polio vaccine'" />
-      </div>
+      <form onSubmit={this.search}
+        className={styles.SearchBar}>
+        <LabeledInput
+          inverse
+          input={
+            <InputDecorator
+              input={
+                <TextInput value={this.state.query}
+                  disabled={this.props.isFetching}
+                  hasSuffix
+                  inverse
+                  changeCallback={(v) => this.setState({query: v})}
+                  placeholder="Search the website" />
+              }
+              suffix={
+                <Button disabled={this.props.isFetching}
+                  hasPrefix>Search</Button>
+              } />
+            } />
+      </form>
     )
   }
 }
@@ -80,16 +71,14 @@ class SearchBar extends React.Component {
 export default connect(
   state => {
     return {
-      query: state.search.query
+      query: state.search.query,
+      isFetching: state.search.isFetching
     }
   },
   dispatch => {
     return {
       setSearchQuery: (q) => {
         dispatch(setSearchQuery(q))
-      },
-      fetchSearchResults: () => {
-        dispatch(fetchSearchResults())
       }
     }
   }

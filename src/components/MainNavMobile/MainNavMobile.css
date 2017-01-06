@@ -1,0 +1,123 @@
+@import '../../styles/variables.css';
+
+.Panel {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: fixed;
+  z-index: 100;
+  top: 0; bottom: 0;
+  left: -20rem;
+  width: 20rem;
+  height: 100vh;
+
+  background: var(--color-bg-darkBlue);
+
+  transition-property: left;
+  transition-duration: 0.5s;
+
+  &__header {
+    padding: calc(var(--baseline) * 1) calc(var(--baseline) * 1.5);
+    border-bottom: 1px solid var(--color-text-grey);
+  }
+
+  &__title {
+    font-weight: 1.5rem;
+    font-weight: 700;
+
+    color: white;
+  }
+
+  &__body {
+    flex: 1;
+    padding: calc(var(--baseline) * 2) calc(var(--baseline) * 1.5);
+    overflow: auto;
+  }
+
+  &__closeBtn {
+    display: block;
+    width: calc(var(--baseline) * 3);
+    height: calc(var(--baseline) * 3);
+
+    color: white;
+    text-align: center;
+
+    opacity: 0.8;
+    border: none;
+    background: url('./close.svg');
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    transition-property: opacity;
+    transition-duration: 0.2s;
+
+    cursor: pointer;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
+  .Panel_open {
+    left: 0;
+  }
+
+.Navigation {
+
+  &__item {
+    display: block;
+    color: white;
+    text-decoration: none;
+
+    font-weight: 500;
+
+    opacity: 0.65;
+
+    transition-property: opacity;
+    transition-duration: 0.2s;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+    &__item_active {
+      text-decoration: underline;
+      opacity: 1;
+    }
+}
+
+.Subnavigation {
+  padding-left: calc(var(--baseline) * 2);
+
+  &__item {
+    display: block;
+    color: white;
+    text-decoration: none;
+
+    font-weight: 500;
+    font-style: italic;
+
+    opacity: 0.65;
+
+    transition-property: opacity;
+    transition-duration: 0.2s;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+    &__item_active {
+      text-decoration: underline;
+      opacity: 1;
+    }
+}
+
+.Overlay {
+  position: fixed;
+  z-index: 99;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+
+  background: white;
+  opacity: 0.7;
+}
