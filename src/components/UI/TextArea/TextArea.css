@@ -2,22 +2,18 @@
 
 
 .TextArea {
+  display: block;
   width: 100%;
+  padding: calc(var(--baseline)) calc(var(--baseline) * 1);
 
-  &__input {
-    display: block;
-    width: 100%;
-    padding: calc(var(--baseline)) calc(var(--baseline) * 2);
+  font: inherit;
 
-    font: inherit;
+  background: none;
+  border: 1px solid var(--color-bg-dirtyBlue);
+  border-radius: 0.125rem;
 
-    background: none;
-    border: 1px solid var(--colorMainLLL);
-    border-radius: 3px;
-
-    resize: none;
-  }
-    &__input_error {
-      border-color: red;
-    }
+  resize: none;
 }
+  .TextArea_error {
+    border-color: var(--color-accent-red);
+  }

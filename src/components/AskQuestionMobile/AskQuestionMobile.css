@@ -1,0 +1,25 @@
+@import '../../styles/variables.css';
+
+.AskQuestion {
+  border-top: 1px solid var(--color-bg-dirtyBlue);
+  padding: calc(var(--baseline) * 3) 0;
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  &__text {
+    text-align: justify;
+    color: var(--color-text-black);
+  }
+
+  &__signature {
+    font-weight: 600;
+    color: var(--color-text-black);
+  }
+
+  &__form {
+    display: block;
+  }
+}

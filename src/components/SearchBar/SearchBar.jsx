@@ -41,8 +41,6 @@ class SearchBar extends React.Component {
   }
 
   render () {
-    const {label = true} = this.props
-
     return (
       <form onSubmit={this.search}
         className={styles.SearchBar}>

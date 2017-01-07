@@ -1,0 +1,51 @@
+@import '../../../styles/variables.css';
+
+
+.LinkButton {
+  display: block;
+  padding: 0;
+
+  font-size: 0.875rem;
+  font-weight: 600;
+
+  text-decoration: underline;
+
+  transition-property: color;
+  transition-duration: 0.2s;
+
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+  .LinkButton_accent1 {
+    color: var(--color-accent-blue);
+
+    &:hover {
+      color: color(var(--color-accent-blue) lightness(+10%));
+    }
+
+    &:active {
+      color: color(var(--color-accent-blue) lightness(-10%));
+    }
+
+    &:disabled {
+      color: color(var(--color-accent-blue) lightness(+25%));
+    }
+  }
+  .LinkButton_accent2 {
+    color: var(--color-accent-red);
+
+    &:hover {
+      color: color(var(--color-accent-red) lightness(+10%));
+    }
+
+    &:active {
+      color: color(var(--color-accent-red) lightness(-10%));
+    }
+
+    &:disabled {
+      color: color(var(--color-accent-red) lightness(+25%));
+    }
+  }

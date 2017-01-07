@@ -14,24 +14,6 @@ const HeaderMobile = ({
 }) => {
   return (
     <header className={styles.Header}>
-      <div className={styles.Header__navigationBar}>
-        <Wrapper>
-          <Flex
-            justifyContent="space-between"
-            alignItems="center">
-            <button
-              className={styles.Header__menuBtn}
-              onClick={toggleMainMenu} />
-
-            <div className={styles.Header__search}>
-              <SearchBar
-                location={location}
-                label={false} />
-            </div>
-          </Flex>
-        </Wrapper>
-      </div>
-
       <div className={styles.Header__body}>
         <Wrapper>
           <Media alignItems="flex-end">
@@ -50,6 +32,24 @@ const HeaderMobile = ({
               <div className={styles.Header__subtitle}>A reliable source of information about vaccines in Canada</div>
             </MediaBody>
           </Media>
+        </Wrapper>
+      </div>
+
+      <div className={styles.Header__navigationBar}>
+        <Wrapper>
+          <Flex
+            justifyContent="space-between"
+            alignItems="center">
+            <button
+              className={styles.Header__menuBtn}
+              onClick={toggleMainMenu} />
+
+            <div className={styles.Header__search}>
+              <SearchBar
+                location={location}
+                label={false} />
+            </div>
+          </Flex>
         </Wrapper>
       </div>
     </header>

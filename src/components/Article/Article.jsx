@@ -1,33 +1,33 @@
 import React from 'react'
+import Time from 'react-time'
+
+import Content from '../Content'
+import {Block} from '../Layouts'
+
+import styles from './Article.css'
 
 const Article = ({
-  params
+  article
 }) => {
   return (
-    <div>
-      Article:
-      <div>{params.articleUrl}</div>
+    <div className={styles.Article}>
+      {article.articleType === 'blogpost'
+        ? (
+          <Block n={0.5}>
+            <div className={styles.Article__timestamp}>
+              Posted on <Time value={new Date(article.createdAt)} format="MMM Do, h:mA" />
+            </div>
+          </Block>
+        )
+        : ''
+      }
+      <Block>
+        <div className={styles.Article__title}>{article.title}</div>
+      </Block>
+
+      <Content text={article.content} />
     </div>
   )
 }
 
 export default Article
-
-// import {Block} from '../Layouts'
-// import {Heading1, Content} from '../Typography'
-//
-// const Article = ({
-//   article
-// }) => {
-//   return (
-//     <div>
-//       <Block n={3}>
-//         <Heading1>{article.title}</Heading1>
-//       </Block>
-//
-//       <Content text={article.content} />
-//     </div>
-//   )
-// }
-//
-// export default Article

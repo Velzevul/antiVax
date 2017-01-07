@@ -1,11 +1,23 @@
 import React from 'react'
+import {connect} from 'react-redux'
 
-const ArticleContainer = () => {
+import Article from '../Article'
+
+const ArticleContainer = ({
+  article
+}) => {
   return (
-    <div>
-      I am ArticleContainer component!
-    </div>
+    <Article article={article} />
   )
 }
 
-export default ArticleContainer
+export default connect(
+  (state, ownProps) => {
+    const {params} = ownProps
+    const article = state.articles.items.find(a => a.url === params.articleUrl)
+
+    return {
+      article
+    }
+  }
+)(ArticleContainer)

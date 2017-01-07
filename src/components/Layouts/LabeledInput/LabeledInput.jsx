@@ -2,9 +2,12 @@ import React from 'react'
 
 import styles from './LabeledInput.css'
 
+import Flex from '../Flex'
+
 const LabeledInput = ({
-  label,
   input,
+  label,
+  error = false,
   inverse = false
 }) => {
   let classes = [styles.LabeledInput]
@@ -14,7 +17,16 @@ const LabeledInput = ({
 
   return (
     <label className={`${classes.join(' ')}`}>
-      <div className={styles.LabeledInput__label}>{label}</div>
+      <Flex
+        justifyContent="space-between"
+        alignItems="center">
+        <div className={styles.LabeledInput__label}>{label}</div>
+
+        {error
+          ? <div className={styles.LabeledInput__error}>{error}</div>
+          : ''
+        }
+      </Flex>
 
       {input}
     </label>

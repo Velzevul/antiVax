@@ -2,7 +2,7 @@ import {REQUEST_QUESTION_CREATE, CONFIRM_QUESTION_CREATE, REJECT_QUESTION_CREATE
 import initialState from './initialState'
 
 const question = (
-  state = initialState.newQuestion,
+  state = initialState.question,
   action
 ) => {
   switch (action.type) {
@@ -11,7 +11,7 @@ const question = (
         isUpdating: true
       })
     case CONFIRM_QUESTION_CREATE:
-      return Object.assign({}, initialState.newQuestion)
+      return Object.assign({}, initialState.question)
     case REJECT_QUESTION_CREATE:
       return Object.assign({}, state, {
         isUpdating: false,

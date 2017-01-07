@@ -16,7 +16,7 @@
   border-radius: 3px;
 }
   .TextInput_error {
-    border-color: red;
+    border-color: var(--color-accent-red);
   }
   .TextInput_inverse {
     border-color: transparent;

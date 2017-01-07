@@ -5,7 +5,6 @@ import styles from './Media.css'
 
 const Media = ({
   alignItems = 'flex-start',
-  extraClassNames = '',
   children
 }) => {
   const style = {
@@ -13,18 +12,17 @@ const Media = ({
   }
 
   return (
-    <div style={style} className={`${styles.media} ${extraClassNames}`}>
+    <div style={style} className={styles.media}>
       {children}
     </div>
   )
 }
 
 const MediaBody = ({
-  extraClassNames = '',
   children
 }) => {
   return (
-    <div className={`${styles.media__body} ${extraClassNames}`}>
+    <div className={styles.media__body}>
       {children}
     </div>
   )
@@ -33,7 +31,6 @@ const MediaBody = ({
 const MediaFigure = ({
   n = 1,
   nl = 0,
-  extraClassNames = '',
   children
 }) => {
   const style = {
@@ -42,7 +39,7 @@ const MediaFigure = ({
   }
 
   return (
-    <div style={style} className={`${styles.media__figure} ${extraClassNames}`}>
+    <div style={style} className={styles.media__figure}>
       {children}
     </div>
   )

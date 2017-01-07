@@ -6,7 +6,6 @@ const Grid = ({
   gutter = 0,
   alignItems = 'stretch',
   justifyContent = 'flex-start',
-  extraClassNames = '',
   children
 }) => {
   const style = {
@@ -14,13 +13,11 @@ const Grid = ({
     width: '100%',
     display: 'flex',
     alignItems,
-    justifyContent,
-    marginLeft: `-${baseline * gutter / 2}rem`,
-    marginRight: `-${baseline * gutter / 2}rem`
+    justifyContent
   }
 
   return (
-    <div style={style} className={extraClassNames}>
+    <div style={style}>
       {children}
     </div>
   )
@@ -30,12 +27,10 @@ const GridItem = ({
   span = 0,
   outOf = 12,
   gutter = 0,
-  extraClassNames = '',
   children
 }) => {
   let style = {
-    paddingLeft: `${baseline * gutter / 2}rem`,
-    paddingRight: `${baseline * gutter / 2}rem`,
+    marginRight: `${baseline * gutter}rem`,
     flex: '1'
   }
 
@@ -47,7 +42,7 @@ const GridItem = ({
   }
 
   return (
-    <div style={style} className={extraClassNames}>
+    <div style={style}>
       {children}
     </div>
   )

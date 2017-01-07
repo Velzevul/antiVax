@@ -7,9 +7,14 @@
 
   &__label {
     font-size: 0.875rem;
-    font-weight: 500;
+    font-weight: 600;
     line-height: 1.5rem;
     color: var(--color-text-black);
+  }
+
+  &__error {
+    font-size: 0.875rem;
+    color: var(--color-accent-red);
   }
 }
   .LabeledInput_inverse {

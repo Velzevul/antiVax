@@ -8,7 +8,7 @@ export default {
     type: null,
     timeoutId: null
   },
-  newQuestion: {
+  question: {
     isUpdating: false,
     errors: {}
   },
@@ -35,7 +35,7 @@ export default {
   },
   ui: {
     windowWidth: 0,
-    widthThreshold: 960,
+    widthThreshold: 1024,
     mainMenuIsOpen: true
   }
 }

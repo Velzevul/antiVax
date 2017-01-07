@@ -1,11 +1,13 @@
 import React from 'react'
 
 const Wrapper = ({
-  children
+  children,
+  maxWidth = 90,
+  width = 100
 }) => {
   const style = {
-    width: '95%',
-    maxWidth: '90rem',
+    width: `${width}%`,
+    maxWidth: `${maxWidth}rem`,
     marginRight: 'auto',
     marginLeft: 'auto'
   }

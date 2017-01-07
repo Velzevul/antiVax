@@ -28,10 +28,10 @@ class MainNavContainer extends React.Component {
 export default connect(
   (state, ownProps) => {
     const metaSection = state.sections.items.find(s => s.sectionType === 'meta' && s.url === 'main-nav')
-    const rootSections = state.sections.items.filter(s => metaSection.children.indexOf(s._id) !== -1)
+    const rootSections = metaSection.children.map(c => state.sections.items.find(s => s._id === c))
     const currentSection = rootSections.find(s => s.url === ownProps.params.sectionUrl)
     const currentSubsections = currentSection.sectionType === 'parent'
-      ? state.sections.items.filter(s => currentSection.children.indexOf(s._id) !== -1)
+      ? currentSection.children.map(c => state.sections.items.find(s => s._id === c))
       : null
 
     return {

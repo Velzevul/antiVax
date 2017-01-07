@@ -24,21 +24,16 @@ class TextArea extends React.Component {
   }
 
   render () {
-    const {label, error, value, placeholder, disabled = false} = this.props
+    const {error, value, placeholder, disabled = false} = this.props
 
     return (
-      <label className={styles.TextArea}>
-        <InputLabel label={label} error={error} />
-
-        <Textarea ref={el => { this._element = el }}
-          value={htmlToPlain(value)}
-          className={`${styles.TextArea__input} ${error ? styles.TextArea__input_error : null}`}
-          disabled={disabled}
-          minRows={5}
-          type="text"
-          onChange={this.onChange}
-          placeholder={placeholder} />
-      </label>
+      <Textarea ref={el => { this._element = el }}
+        value={htmlToPlain(value)}
+        className={`${styles.TextArea} ${error ? styles.TextArea_error : null}`}
+        disabled={disabled}
+        minRows={5}
+        onChange={this.onChange}
+        placeholder={placeholder} />
     )
   }
 }
