@@ -1,24 +1,20 @@
 import React from 'react'
 import {Link} from 'react-router'
 
-import {Block} from '../Layouts'
-import {Content} from '../Typography'
-import styles from './SearchResultsItem.css'
+import Block from '../Layouts/Block'
+import Content from '../Typography/Content'
+import Heading2 from '../Typography/Heading2'
+import Info from '../Typography/Info'
+import LinkButton from '../UI/LinkButton'
 
 const SearchResultsItem = ({
   item
 }) => {
   return (
-    <div className={styles.SearchResultsItem}>
-      <Link
-        className={styles.SearchResultsItem__title}
-        to={`/${item.url}`}>{item.title}</Link>
-
-      <Block n={0.5}>
-        <div className={styles.SearchResultsItem__url}>{item.url}</div>
-      </Block>
-
-      <Content text={item._snippetResult.content.value} extraClassNames={styles.SearchResultsItem__body} />
+    <div>
+      <Heading2>{item.title}</Heading2>
+      <Content text={item._snippetResult.content.value} />
+      <LinkButton to={`/${item.url}`}>{item.url}</LinkButton>
     </div>
   )
 }

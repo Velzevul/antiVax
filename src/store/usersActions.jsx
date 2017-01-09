@@ -1,4 +1,5 @@
 import 'whatwg-fetch'
+import {hashHistory} from 'react-router'
 
 export const REQUEST_UPDATE_USER = 'REQUEST_UPDATE_USER'
 export const CONFIRM_UPDATE_USER = 'CONFIRM_UPDATE_USER'
@@ -41,7 +42,7 @@ const rejectUpdate = (
 export const updateUser = (
   id,
   data,
-  successMessage
+  backlink
 ) => {
   return (dispatch, getState) => {
     dispatch(requestUpdate(id))
@@ -70,8 +71,9 @@ export const updateUser = (
       .then(json => {
         if (json.success) {
           dispatch(confirmUpdate(id, json.data.user))
-          if (successMessage) {
-            dispatch(flashMessage(successMessage, 'log'))
+          dispatch(flashMessage('Your account information has been updated', 'log'))
+          if (backlink) {
+            hashHistory.push(backlink)
           }
         } else if (json.data.name === 'ValidationError') {
           let payload = {}

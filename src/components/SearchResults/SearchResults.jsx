@@ -2,12 +2,15 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {withRouter} from 'react-router'
 
-import {setSearchQuery} from '../../store/searchActions'
+import {setSearchQuery, fetchSearchResults} from '../../store/searchActions'
 import SearchResultsItem from '../SearchResultsItem'
 import {Spinner} from '../UI'
 import styles from './SearchResults.css'
-import {Wrap, List, ListItem, Block} from '../Layouts'
-import {Heading1} from '../Typography'
+import {List, ListItem} from '../Layouts/List'
+import Block from '../Layouts/Block'
+import Wrapper from '../Layouts/Wrapper'
+import Box from '../Layouts/Box'
+import Heading1 from '../Typography/Heading1'
 
 class SearchResults extends React.Component {
   componentDidMount () {
@@ -18,8 +21,40 @@ class SearchResults extends React.Component {
     })
   }
 
+  componentWillMount () {
+    const {fetchSearchResults, setSearchQuery, query, location} = this.props
+
+    if (!query && location.query.q) {
+      setSearchQuery(location.query.q)
+    }
+
+    fetchSearchResults()
+  }
+
+  componentWillReceiveProps (newProps) {
+    const {fetchSearchResults, query} = newProps
+
+    if (query !== this.props.query) {
+      fetchSearchResults()
+    }
+  }
+
   render () {
-    const {items, location, isFetching} = this.props
+    const {items, query, location, isFetching, layout} = this.props
+
+    let boxSize = 0
+    switch (layout) {
+      case 's':
+      case 'm':
+        boxSize = 4
+        break
+      case 'l':
+      case 'xl':
+        boxSize = 8
+        break
+      default:
+        console.error(`unexpected layout type ${layout}`)
+    }
 
     if (isFetching) {
       return (
@@ -28,10 +63,10 @@ class SearchResults extends React.Component {
     } else {
       if (items.length) {
         return (
-          <Wrap maxWidth="50rem">
-            <div className={styles.SearchResults}>
+          <Wrapper maxWidth="50">
+            <Box n={boxSize}>
               <Block n={3}>
-                <Heading1>{items.length} pages mention '{location.query.q}'</Heading1>
+                <Heading1 underline>{items.length} pages mention '{query}'</Heading1>
               </Block>
 
               <List n={3}>
@@ -41,8 +76,8 @@ class SearchResults extends React.Component {
                   </ListItem>
                 )}
               </List>
-            </div>
-          </Wrap>
+            </Box>
+          </Wrapper>
         )
       } else {
         return (
@@ -64,13 +99,17 @@ export default connect(
     return {
       isFetching: state.search.isFetching,
       items: state.search.items,
-      query: state.search.query
+      query: state.search.query,
+      layout: state.ui.layout
     }
   },
   dispatch => {
     return {
       setSearchQuery: (q) => {
         dispatch(setSearchQuery(q))
+      },
+      fetchSearchResults: () => {
+        dispatch(fetchSearchResults())
       }
     }
   }

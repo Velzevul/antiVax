@@ -1,10 +1,9 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {browserHistory} from 'react-router'
 
 import {setSearchQuery} from '../../store/searchActions'
 import {TextInput, Button} from '../UI'
-import {LabeledInput, InputDecorator} from '../Layouts'
+import InputDecorator from '../Layouts/InputDecorator'
 
 import styles from './SearchBar.css'
 
@@ -16,51 +15,40 @@ class SearchBar extends React.Component {
       query: this.props.query
     }
 
-    this.search = this.search.bind(this)
+    this.setQuery = this.setQuery.bind(this)
   }
 
-  componentWillMount () {
-    const {setSearchQuery, location: {query}} = this.props
+  componentWillReceiveProps (newProps) {
+    const {query} = newProps
 
-    if (query && query.q) {
-      this.setState({
-        query: query.q
-      })
-      setSearchQuery(query.q)
-    }
+    this.setState({
+      query
+    })
   }
 
-  search () {
+  setQuery (v) {
     const {setSearchQuery} = this.props
 
-    setSearchQuery(this.state.query)
-    browserHistory.push({
-      pathname: '/search',
-      query: {q: this.state.query}
-    })
+    setSearchQuery(v)
   }
 
   render () {
     return (
       <form onSubmit={this.search}
         className={styles.SearchBar}>
-        <LabeledInput
-          inverse
+
+        <InputDecorator
           input={
-            <InputDecorator
-              input={
-                <TextInput value={this.state.query}
-                  disabled={this.props.isFetching}
-                  hasSuffix
-                  inverse
-                  changeCallback={(v) => this.setState({query: v})}
-                  placeholder="Search the website" />
-              }
-              suffix={
-                <Button disabled={this.props.isFetching}
-                  hasPrefix>Search</Button>
-              } />
-            } />
+            <TextInput
+              value={this.state.query}
+              hasSuffix
+              inverse
+              changeCallback={this.setQuery}
+              placeholder="Search the website" />
+          }
+          suffix={
+            <Button hasPrefix to={`/search?q=${this.state.query}`}>Search</Button>
+          } />
       </form>
     )
   }
@@ -69,8 +57,7 @@ class SearchBar extends React.Component {
 export default connect(
   state => {
     return {
-      query: state.search.query,
-      isFetching: state.search.isFetching
+      query: state.search.query
     }
   },
   dispatch => {

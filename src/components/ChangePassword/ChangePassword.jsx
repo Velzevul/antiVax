@@ -3,11 +3,11 @@ import {connect} from 'react-redux'
 
 import {updateUser} from '../../store/usersActions'
 import Block from '../Layouts/Block'
-import Wrap from '../Layouts/Wrap'
+import Wrapper from '../Layouts/Wrapper'
+import Box from '../Layouts/Box'
 import TextInput from '../UI/TextInput'
 import Button from '../UI/Button'
-import Heading1 from '../Typography/Heading1'
-import Body from '../Body'
+import Heading2 from '../Typography/Heading2'
 
 class ChangePassword extends React.Component {
   constructor (props) {
@@ -58,32 +58,35 @@ class ChangePassword extends React.Component {
   submit () {
     const {updatePassword, currentUser} = this.props
 
-    updatePassword(currentUser.id, this.state.data, 'Your password has been successfully updated')
+    updatePassword(currentUser.id, this.state.data)
   }
 
   render () {
     const {isUpdating} = this.props.user
 
     return (
-      <Wrap maxWidth="30rem">
-        <Body>
-          <Block n={3}>
-            <Heading1>Change password</Heading1>
-          </Block>
-
+      <Wrapper maxWidth="25">
+        <Box n={8}>
           <Block>
-            <TextInput label="New password:"
-              value={this.state.data.password}
-              error={this.state.errors.password}
-              disabled={isUpdating}
-              changeCallback={(v) => this.change('password', v)} />
+            <Heading2>Change password</Heading2>
           </Block>
 
-          <Button
-            onClick={this.submit}
-            disabled={isUpdating}>Update password</Button>
-        </Body>
-      </Wrap>
+          <form>
+            <Block>
+              <TextInput label="New password:"
+                value={this.state.data.password}
+                error={this.state.errors.password}
+                disabled={isUpdating}
+                type="password"
+                changeCallback={(v) => this.change('password', v)} />
+            </Block>
+
+            <Button
+              onClick={this.submit}
+              disabled={isUpdating}>Update password</Button>
+          </form>
+        </Box>
+      </Wrapper>
     )
   }
 }
@@ -96,9 +99,11 @@ export default connect(
     }
   },
   dispatch => {
+    const backlink = '/'
+
     return {
       updatePassword: (id, payload) => {
-        dispatch(updateUser(id, payload))
+        dispatch(updateUser(id, payload, backlink))
       }
     }
   }

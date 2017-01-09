@@ -5,16 +5,16 @@ import styles from './Heading2.css'
 
 const Heading2 = ({
   children,
-  linkTo = null,
+  to = null,
   underline = false
 }) => {
-  if (linkTo) {
+  if (to) {
     return (
       <Link
         className={`${styles.Heading2}
           ${styles.Heading2_link}
           ${underline ? styles.Heading2_underline : ''}`}
-        to={linkTo}>{children}</Link>
+        to={to}>{children}</Link>
     )
   } else {
     return (

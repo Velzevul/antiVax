@@ -3,8 +3,8 @@ import {connect} from 'react-redux'
 
 import styles from './CurrentUser.css'
 import {logOut} from '../../store/authActions'
-import {Button} from '../UI'
-import {ListInline, ListInlineItem} from '../Layouts'
+import LinkButton from '../UI/LinkButton'
+import {ListInline, ListInlineItem} from '../Layouts/ListInline'
 
 const CurrentUser = ({
   user,
@@ -18,7 +18,7 @@ const CurrentUser = ({
         </ListInlineItem>
 
         <ListInlineItem>
-          <button onClick={logOut}>Log out</button>
+          <LinkButton theme="accent2" onClick={logOut}>Log out</LinkButton>
         </ListInlineItem>
       </ListInline>
     </div>

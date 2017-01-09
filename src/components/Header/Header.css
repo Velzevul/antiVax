@@ -1,6 +1,7 @@
 @import '../../styles/variables.css';
 
 .Header {
+  position: relative;
   padding: calc(var(--baseline) * 2) 0;
   background: var(--color-bg-darkBlue);
   border-bottom: 1px solid var(--color-text-grey);

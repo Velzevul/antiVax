@@ -7,6 +7,7 @@ import {Flex, Media, MediaFigure, MediaBody} from '../Layouts'
 import Locale from '../Locale'
 import Wrapper from '../Layouts/Wrapper'
 import {Grid, GridItem} from '../Layouts/Grid'
+import CurrentUser from '../CurrentUser'
 
 import img from './logo.svg'
 
@@ -46,6 +47,8 @@ const Header = ({
             outOf={gridSize}
             gutter={0}
             gutterBottom={2}>
+            <CurrentUser />
+
             <Media alignItems="flex-end">
               <MediaFigure n="1.5">
                 <img
