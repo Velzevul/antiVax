@@ -1,5 +1,5 @@
 import 'whatwg-fetch'
-import {hashHistory} from 'react-router'
+import {browserHistory} from 'react-router'
 
 export const REQUEST_UPDATE_USER = 'REQUEST_UPDATE_USER'
 export const CONFIRM_UPDATE_USER = 'CONFIRM_UPDATE_USER'
@@ -73,7 +73,7 @@ export const updateUser = (
           dispatch(confirmUpdate(id, json.data.user))
           dispatch(flashMessage('Your account information has been updated', 'log'))
           if (backlink) {
-            hashHistory.push(backlink)
+            browserHistory.push(backlink)
           }
         } else if (json.data.name === 'ValidationError') {
           let payload = {}

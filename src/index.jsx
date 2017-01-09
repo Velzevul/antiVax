@@ -5,7 +5,7 @@ import './styles/global.css'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import {Provider} from 'react-redux'
-import {Router, Route, IndexRedirect, hashHistory} from 'react-router'
+import {Router, Route, IndexRedirect, browserHistory} from 'react-router'
 
 import configureStore from './store'
 import AppContainer from './components/AppContainer'
@@ -19,7 +19,7 @@ const store = configureStore()
 
 ReactDOM.render((
   <Provider store={store}>
-    <Router history={hashHistory}>
+    <Router history={browserHistory}>
       <Route path="/" component={AppContainer}>
         <IndexRedirect to="home" />
 

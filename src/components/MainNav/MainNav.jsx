@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link, hashHistory} from 'react-router'
+import {Link, browserHistory} from 'react-router'
 import {connect} from 'react-redux'
 
 import Select from '../UI/Select'
@@ -17,7 +17,7 @@ class MainNav extends React.Component {
   }
 
   navigate (url) {
-    hashHistory.push(url)
+    browserHistory.push(url)
   }
 
   render () {

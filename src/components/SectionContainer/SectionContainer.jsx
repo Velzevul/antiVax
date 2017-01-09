@@ -1,5 +1,5 @@
 import React from 'react'
-import {hashHistory} from 'react-router'
+import {browserHistory} from 'react-router'
 import {connect} from 'react-redux'
 
 import ArticlesPage from '../ArticlesPage'
@@ -12,7 +12,7 @@ class SectionContainer extends React.Component {
     const {params, currentSection, firstSubsection} = this.props
 
     if (firstSubsection && !params.subsectionUrl) {
-      hashHistory.push(`/${currentSection.url}/${firstSubsection.url}`)
+      browserHistory.push(`/${currentSection.url}/${firstSubsection.url}`)
     }
   }
 
@@ -20,7 +20,7 @@ class SectionContainer extends React.Component {
     const {params, currentSection, firstSubsection} = newProps
 
     if (firstSubsection && !params.subsectionUrl) {
-      hashHistory.push(`/${currentSection.url}/${firstSubsection.url}`)
+      browserHistory.push(`/${currentSection.url}/${firstSubsection.url}`)
     }
   }
 
