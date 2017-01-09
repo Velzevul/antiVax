@@ -1,38 +1,39 @@
 import React from 'react'
 
-import Block from '../Layouts/Block'
+import {Block} from '../Layouts'
 import Comment from '../Comment'
 import CommentForm from '../CommentForm'
-import Heading2 from '../Typography/Heading2'
+
+import styles from './Comments.css'
 
 const Comments = ({
-  comments,
-  blogpost
+  article
 }) => {
-  let body = ''
-  if (comments.length > 0) {
-    body = (
-      <div>
-        <Block n={1.5}>
-          <Heading2>Comments</Heading2>
-        </Block>
-
-        <Block n={6}>
-          {comments.map((c, index) =>
-            <Comment key={index} blogpost={blogpost} comment={c} />
-          )}
-        </Block>
-      </div>
-    )
-  }
-
   return (
     <div>
       <Block n={6}>
-        <CommentForm blogpost={blogpost} />
+        <CommentForm article={article} />
       </Block>
 
-      {body}
+      {article.comments.length > 0
+        ? (
+          <div className={styles.Comments}>
+            <Block n={1.5}>
+              <div className={styles.Comments__title}>Comments</div>
+            </Block>
+
+            <Block n={1.5}>
+              {article.comments.map((c, index) =>
+                <Comment
+                  key={index}
+                  article={article}
+                  comment={c} />
+              )}
+            </Block>
+          </div>
+        )
+        : ''
+      }
     </div>
   )
 }

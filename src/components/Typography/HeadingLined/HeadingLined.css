@@ -1,0 +1,33 @@
+@import '../../../styles/variables.css';
+
+.HeadingLined {
+  display: flex;
+  justify-content: center;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0; right: 0;
+    z-index: 1;
+    height: 50%;
+    border-bottom: 1px solid var(--color-bg-dirtyBlue);
+  }
+
+  &__title {
+    display: block;
+    position: relative;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 calc(var(--baseline) * 2);
+
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: calc(var(--baseline) * 3);
+
+    color: var(--color-text-black);
+    background: white;
+  }
+}

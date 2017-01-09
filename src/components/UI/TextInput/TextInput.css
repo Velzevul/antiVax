@@ -8,12 +8,12 @@
   padding: 0 var(--baseline);
 
   font-family: var(--fontFamily);
-  font-size: 1rem;
+  font-size: 0.875rem;
   line-height: calc(var(--baseline) * 3);
 
   background: white;
   border: 1px solid var(--color-bg-dirtyBlue);
-  border-radius: 3px;
+  border-radius: 0.125rem;
 }
   .TextInput_error {
     border-color: var(--color-accent-red);

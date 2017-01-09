@@ -1,0 +1,10 @@
+@import '../../../styles/variables.css';
+
+.Text {
+  font-size: 0.938rem;
+  font-weight: 400;
+  line-height: calc(var(--baseline) * 2.25);
+
+  color: var(--color-text-black);
+  text-align: justify;
+}

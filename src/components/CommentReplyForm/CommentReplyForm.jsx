@@ -1,11 +1,11 @@
 import React from 'react'
 import {connect} from 'react-redux'
 
-import {ListInline, ListInlineItem} from '../Layouts/ListInline'
-import Block from '../Layouts/Block'
+import {Block, ListInline, ListInlineItem} from '../Layouts'
 import TextArea from '../UI/TextArea'
-import Link from '../UI/Link'
+import LinkButton from '../UI/LinkButton'
 import Button from '../UI/Button'
+import LabeledInput from '../Layouts/LabeledInput'
 
 import {createReply} from '../../store/repliesActions'
 
@@ -68,12 +68,16 @@ class CommentReplyForm extends React.Component {
     return (
       <div>
         <Block n={1.5}>
-          <TextArea
+          <LabeledInput
             label="Your reply"
-            value={this.state.data.content}
             error={this.state.errors.content}
-            disabled={isUpdating}
-            changeCallback={(v) => this.change('content', v)} />
+            input={(
+              <TextArea
+                value={this.state.data.content}
+                error={this.state.errors.content}
+                disabled={isUpdating}
+                changeCallback={(v) => this.change('content', v)} />
+            )} />
         </Block>
 
         <ListInline n={2}>
@@ -84,8 +88,8 @@ class CommentReplyForm extends React.Component {
           </ListInlineItem>
 
           <ListInlineItem n={2}>
-            <Link
-              onClick={cancelCallback}>Cancel</Link>
+            <LinkButton
+              onClick={cancelCallback}>Cancel</LinkButton>
           </ListInlineItem>
         </ListInline>
       </div>
@@ -96,11 +100,11 @@ class CommentReplyForm extends React.Component {
 export default connect(
   null,
   (dispatch, ownProps) => {
-    const {blogpostId, comment} = ownProps
+    const {articleId, comment} = ownProps
 
     return {
       createReply: data => {
-        dispatch(createReply(data, blogpostId, comment._id))
+        dispatch(createReply(data, articleId, comment._id))
       }
     }
   }

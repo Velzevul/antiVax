@@ -5,18 +5,21 @@ import styles from './Heading1.css'
 
 const Heading1 = ({
   children,
-  extraClassNames = '',
-  linkTo = null
+  linkTo = null,
+  underline
 }) => {
   if (linkTo) {
     return (
-      <Link to={linkTo} className={styles.Heading1Link}>
-        <h1 className={`${styles.Heading1} ${extraClassNames}`}>{children}</h1>
-      </Link>
+      <Link
+        to={linkTo}
+        className={`${styles.Heading1}
+          ${styles.Heading1_link}
+          ${underline ? styles.Heading1_underline : ''}`}>{children}</Link>
     )
   } else {
     return (
-      <h1 className={`${styles.Heading1} ${extraClassNames}`}>{children}</h1>
+      <h1 className={`${styles.Heading1}
+        ${underline ? styles.Heading1_underline : ''}`}>{children}</h1>
     )
   }
 }

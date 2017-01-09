@@ -1,13 +1,12 @@
 import React from 'react'
 import Time from 'react-time'
 
-import Block from '../Layouts/Block'
-import {List, ListItem} from '../Layouts/List'
+import {Block, List, ListItem} from '../Layouts'
 import Content from '../Typography/Content'
 import styles from './Comment.css'
 import CommentReply from '../CommentReply'
 import CommentReplyForm from '../CommentReplyForm'
-import Link from '../UI/Link'
+import {LinkButton} from '../UI'
 
 class Comment extends React.Component {
   constructor (props) {
@@ -27,7 +26,7 @@ class Comment extends React.Component {
   }
 
   render () {
-    const {comment, blogpost} = this.props
+    const {comment, article} = this.props
     const sortedReplies = comment.replies.sort((a, b) => {
       if (a.createdAt > b.createdAt) {
         return -1
@@ -41,11 +40,11 @@ class Comment extends React.Component {
     let form = ''
     if (this.state.showReplyForm) {
       form = (
-        <Block n={comment.replies.length > 0 ? 3 : 0}>
+        <Block n={comment.replies.length ? 4 : 0}>
           <CommentReplyForm
             cancelCallback={() => this.toggleForm()}
             comment={comment}
-            blogpostId={blogpost._id} />
+            articleId={article._id} />
         </Block>
       )
     }
@@ -53,9 +52,9 @@ class Comment extends React.Component {
     let replies = ''
     if (comment.replies.length > 0) {
       replies = (
-        <List n={1.5}>
+        <List n={2}>
           {sortedReplies.map((r, index) =>
-            <ListItem n={1.5} key={index}>
+            <ListItem n={2} key={index}>
               <CommentReply reply={r} />
             </ListItem>
           )}
@@ -66,15 +65,15 @@ class Comment extends React.Component {
     return (
       <div className={styles.Comment}>
         <Block n={this.state.showReplyForm || comment.replies.length > 0 ? 3 : 0}>
-          <Block n={1}>
-            <div className={styles.Comment__info}>by {comment.lastModifiedBy} on <Time value={comment.lastModifiedAt} format="MMM Do, h:mA" /></div>
+          <Block n={0.5}>
+            <div className={styles.Comment__info}>by {comment.createdBy} on <Time value={comment.createdAt} format="MMM Do, h:mA" /></div>
           </Block>
 
           <Block n={1}>
             <Content text={comment.content} />
           </Block>
 
-          <Link small onClick={this.toggleForm}>Reply to this comment</Link>
+          <LinkButton onClick={this.toggleForm}>Reply to this comment</LinkButton>
         </Block>
 
         <div className={styles.Comment__replies}>

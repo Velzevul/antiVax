@@ -5,6 +5,6 @@
 
   &__info {
     font-size: 0.875rem;
-    color: var(--colorMainLLL);
+    color: var(--color-text-grey);
   }
 }

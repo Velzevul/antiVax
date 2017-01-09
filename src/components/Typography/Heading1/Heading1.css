@@ -1,20 +1,21 @@
 @import '../../../styles/variables.css';
 
-
 .Heading1 {
-  font-family: 'Nunito', sans-serif;
-  font-size: calc(var(--baseline) * 3);
-  font-weight: 300;
-  line-height: calc(var(--baseline) * 4);
+  display: block;
 
-  color: var(--colorMain);
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: calc(var(--baseline) * 3);
+
+  color: var(--color-text-black);
 }
-
-.Heading1Link {
-  text-decoration: none;
-  color: var(--colorMain);
-
-  &:hover {
+  .Heading1_link {
     text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
-}
+  .Heading1_underline {
+    border-bottom: 1px solid var(--color-bg-dirtyBlue);
+  }

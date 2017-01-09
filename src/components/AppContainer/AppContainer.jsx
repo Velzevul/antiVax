@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import {loginWithToken} from '../../store/authActions'
 import {fetchArticles} from '../../store/articleActions'
 import {fetchSections} from '../../store/sectionsActions'
-import {setWindowWidth} from '../../store/uiActions'
+import {setBreakpoint} from '../../store/uiActions'
 
 import Loading from '../Loading'
 import Login from '../Login'
@@ -18,9 +18,19 @@ class AppContainer extends React.Component {
   }
 
   handleResize () {
-    const {setWindowWidth} = this.props
+    const {setBreakpoint} = this.props
+    const windowWidth = window.outerWidth
 
-    setWindowWidth(window.outerWidth)
+    let layout = 's'
+    if (windowWidth >= 700 && windowWidth < 1000) {
+      layout = 'm'
+    } else if (windowWidth >= 1000 && windowWidth < 1300) {
+      layout = 'l'
+    } else if (windowWidth >= 1300) {
+      layout = 'xl'
+    }
+
+    setBreakpoint(windowWidth, layout)
   }
 
   componentWillMount () {
@@ -83,8 +93,8 @@ export default connect(
   },
   dispatch => {
     return {
-      setWindowWidth: (value) => {
-        dispatch(setWindowWidth(value))
+      setBreakpoint: (width, layout) => {
+        dispatch(setBreakpoint(width, layout))
       },
       attemptToken: (token) => {
         dispatch(loginWithToken(token))

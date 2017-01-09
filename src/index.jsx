@@ -9,9 +9,9 @@ import {Router, Route, IndexRedirect, hashHistory} from 'react-router'
 
 import configureStore from './store'
 import AppContainer from './components/AppContainer'
-import SectionContainer from './components/SectionContainer'
 import SubsectionContainer from './components/SubsectionContainer'
-import ArticleContainer from './components/ArticleContainer'
+import SectionContainer from './components/SectionContainer'
+import ArticlePage from './components/ArticlePage'
 // import SectionArticle from './components/SectionArticle'
 // import SectionCategoryItem from './components/SectionCategoryItem'
 // import Blog from './components/Blog'
@@ -55,11 +55,13 @@ ReactDOM.render((
   <Provider store={store}>
     <Router history={hashHistory}>
       <Route path="/" component={AppContainer}>
+        <IndexRedirect to="home" />
+
         <Route path=":sectionUrl" component={SectionContainer}>
-          <Route path="articles/:articleUrl" component={ArticleContainer} />
+          <Route path="articles/:articleUrl" component={ArticlePage} />
 
           <Route path=":subsectionUrl" component={SubsectionContainer}>
-            <Route path="articles/:articleUrl" component={ArticleContainer} />
+            <Route path="articles/:articleUrl" component={ArticlePage} />
           </Route>
         </Route>
       </Route>

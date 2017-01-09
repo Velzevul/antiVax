@@ -5,16 +5,15 @@ import styles from './Heading3.css'
 
 const Heading3 = ({
   children,
-  extraClassNames = '',
   linkTo = null
 }) => {
   if (linkTo) {
     return (
-      <Link to={linkTo} className={`${styles.Heading3} ${styles.Heading3Link} ${extraClassNames}`}>{children}</Link>
+      <Link to={linkTo} className={`${styles.Heading3} ${styles.Heading3_link}`}>{children}</Link>
     )
   } else {
     return (
-      <h2 className={`${styles.Heading3} ${extraClassNames}`}>{children}</h2>
+      <h2 className={styles.Heading3}>{children}</h2>
     )
   }
 }

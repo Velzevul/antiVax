@@ -21,7 +21,7 @@
   &__message {
     color: white;
 
-    border-radius: 3px;
+    border-radius: 0.125rem;
   }
     &__message_default {
       background: var(--colorMainL);

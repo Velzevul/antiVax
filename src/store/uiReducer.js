@@ -1,4 +1,4 @@
-import {SET_WINDOW_WIDTH, TOGGLE_MAIN_MENU} from './uiActions'
+import {SET_BREAKPOINT, TOGGLE_MAIN_MENU} from './uiActions'
 import initialState from './initialState'
 
 const ui = (
@@ -6,9 +6,10 @@ const ui = (
   action
 ) => {
   switch (action.type) {
-    case SET_WINDOW_WIDTH:
+    case SET_BREAKPOINT:
       return Object.assign({}, state, {
-        windowWidth: action.width
+        windowWidth: action.width,
+        layout: action.layout
       })
     case TOGGLE_MAIN_MENU:
       return Object.assign({}, state, {

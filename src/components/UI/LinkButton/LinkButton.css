@@ -13,6 +13,9 @@
   transition-property: color;
   transition-duration: 0.2s;
 
+  border: none;
+  background: none;
+  
   cursor: pointer;
 
   &:hover {

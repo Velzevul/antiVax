@@ -1,16 +1,14 @@
 @import '../../styles/variables.css';
 
-
-.Bg {
-  background: var(--colorMain);
-}
-
-
 .Footer {
   display: flex;
-  justify-content: space-between;
-  align-items: stretch;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-bg-darkBlue);
 
-  max-width: var(--pageWidthXS);
-  padding: calc( var(--baseline) * 7) 0;
+  &__text {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: white;
+  }
 }

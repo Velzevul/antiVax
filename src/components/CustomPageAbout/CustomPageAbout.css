@@ -1,0 +1,12 @@
+@import '../../styles/variables.css';
+
+@media (min-width: 700px) {  
+  .AboutSection {
+    width: 100%;
+    padding-top: 30%;
+    background-image: url('./team.jpg');
+    background-position: center 25%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

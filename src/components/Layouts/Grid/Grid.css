@@ -1,0 +1,6 @@
+@import '../../../styles/variables.css';
+
+.Grid {
+  display: flex;
+  flex-wrap: wrap;
+}

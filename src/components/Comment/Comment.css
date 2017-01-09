@@ -1,12 +1,12 @@
 @import '../../styles/variables.css';
 
 .Comment {
-  padding: calc(var(--baseline) * 3) 0;
-  border-top: 1px solid var(--colorMainLLL);
+  padding: calc(var(--baseline) * 2) 0;
+  border-top: 1px solid var(--color-bg-dirtyBlue);
 
   &__info {
     font-size: 0.875rem;
-    color: var(--colorMainLLL);
+    color: var(--color-text-grey);
   }
 
   &__replies {

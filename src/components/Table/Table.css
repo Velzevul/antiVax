@@ -1,0 +1,41 @@
+@import '../../styles/variables.css';
+
+.Row {
+  display: flex;
+  width: 100%;
+  align-items: stretch;
+}
+
+.Column {
+  display: flex;
+  align-items: stretch;
+}
+
+.Cell {
+  width: 100%;
+  margin: calc(var(--baseline) / 2) 0;
+  padding: calc(var(--baseline) / 2);
+  font-size: 0.812rem;
+}
+  .Cell_heading {
+    font-weight: 600;
+  }
+  .Cell_filled {
+    background: var(--colorSuccess);
+  }
+
+.bb {
+  border-bottom: 1px solid var(--color-text-grey);
+}
+
+.bt {
+  border-top: 1px solid var(--color-text-grey);
+}
+
+.br {
+  border-right: 1px solid var(--color-text-grey);
+}
+
+.bl {
+  border-left: 1px solid var(--color-text-grey);
+}

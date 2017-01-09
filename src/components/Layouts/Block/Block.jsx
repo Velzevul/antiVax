@@ -4,7 +4,6 @@ const baseline = 0.750
 
 const Block = ({
   n = 1,
-  extraClassNames = '',
   children
 }) => {
   const style = {
@@ -12,7 +11,7 @@ const Block = ({
   }
 
   return (
-    <div style={style} className={extraClassNames}>
+    <div style={style}>
       {children}
     </div>
   )

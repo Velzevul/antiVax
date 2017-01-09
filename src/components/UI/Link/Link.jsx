@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link as NativeLink} from 'react-router'
+import {Link as RouterLink} from 'react-router'
 
 import styles from './Link.css'
 
@@ -37,11 +37,12 @@ const Link = ({
   }
 
   if (to) {
-    return <NativeLink
+    return <RouterLink
       style={style}
       className={`${className.join(' ')}`}
+      activeClassName={styles.Link_active}
       disabled={disabled}
-      to={to}>{children}</NativeLink>
+      to={to}>{children}</RouterLink>
   } else if (onClick) {
     return <button
       style={style}

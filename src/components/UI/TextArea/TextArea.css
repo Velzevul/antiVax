@@ -4,13 +4,16 @@
 .TextArea {
   display: block;
   width: 100%;
-  padding: calc(var(--baseline)) calc(var(--baseline) * 1);
+  padding: calc(var(--baseline) / 2) calc(var(--baseline) * 1);
 
-  font: inherit;
+  font-size: 0.938rem;
+  font-weight: 400;
+
+  color: var(--color-text-black);
 
   background: none;
   border: 1px solid var(--color-bg-dirtyBlue);
-  border-radius: 0.125rem;
+  border-radius: 0.188rem;
 
   resize: none;
 }

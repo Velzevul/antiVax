@@ -1,0 +1,8 @@
+@import '../../styles/variables.css';
+
+.Signature {
+  font-size: 0.938rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--color-text-black);
+}

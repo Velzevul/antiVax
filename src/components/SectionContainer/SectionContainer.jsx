@@ -1,123 +1,58 @@
 import React from 'react'
-import {connect} from 'react-redux'
 import {hashHistory} from 'react-router'
+import {connect} from 'react-redux'
 
-import Wrapper from '../Wrapper'
-import {Block, Media, MediaBody, MediaFigure} from '../Layouts'
-import AskQuestionContainer from '../AskQuestionContainer'
-import BlogpostsList from '../BlogpostsList'
-import ArticlesList from '../ArticlesList'
-import CustomHomepage from '../CustomHomepage'
-import CustomAbout from '../CustomAbout'
-import CustomSchedule from '../CustomSchedule'
+import ArticlesPage from '../ArticlesPage'
+import CustomPageHome from '../CustomPageHome'
+import CustomPageAbout from '../CustomPageAbout'
+import CustomPageSchedule from '../CustomPageSchedule'
 
 class SectionContainer extends React.Component {
   componentWillMount () {
-    const {currentSection, sections, params} = this.props
+    const {params, currentSection, firstSubsection} = this.props
 
-    if (currentSection.sectionType === 'parent' && !params.subsectionUrl) {
-      const targetSubSection = sections.find(s => s._id === currentSection.children[0])
-
-      hashHistory.push(`/${currentSection.url}/${targetSubSection.url}`)
+    if (firstSubsection && !params.subsectionUrl) {
+      hashHistory.push(`/${currentSection.url}/${firstSubsection.url}`)
     }
   }
 
   componentWillReceiveProps (newProps) {
-    const {currentSection, sections, params} = this.props
+    const {params, currentSection, firstSubsection} = newProps
 
-    if (currentSection.sectionType === 'parent' && !params.subsectionUrl) {
-      const targetSubSection = sections.find(s => s._id === currentSection.children[0])
-
-      hashHistory.push(`/${currentSection.url}/${targetSubSection.url}`)
+    if (firstSubsection && !params.subsectionUrl) {
+      hashHistory.push(`/${currentSection.url}/${firstSubsection.url}`)
     }
   }
 
   render () {
-    const {currentSection, parent, params, children, articles, windowWidth, widthThreshold} = this.props
+    const {currentSection, params, children} = this.props
 
-    if (params.subsectionUrl) {
-      return children
-    } else {
-      switch (currentSection.sectionType) {
-        case 'blogposts':
-          const sectionBlogposts = currentSection.articles
-          .map(a => articles.find(art => art._id === a))
-          .filter(a => a.isPublished)
-
-          return (
-            <Wrapper
-              width={90}
-              maxWidth={45}>
-              <BlogpostsList
-                children={children}
-                params={params}
-                parentSection={parent}
-                section={currentSection}
-                blogposts={sectionBlogposts} />
-            </Wrapper>
-          )
-        case 'articles':
-          const sectionArticles = currentSection.articles
-          .map(a => articles.find(art => art._id === a))
-          .filter(a => a.isPublished)
-
-          if (windowWidth >= widthThreshold) {
-            return (
-              <Wrapper
-                width={90}
-                maxWidth={85}>
-                <Media>
-                  <MediaBody>
-                    <ArticlesList
-                      children={children}
-                      params={params}
-                      parentSection={parent}
-                      section={currentSection}
-                      articles={sectionArticles} />
-                  </MediaBody>
-
-                  <MediaFigure
-                    nl={3}
-                    n={0}>
-                    <AskQuestionContainer />
-                  </MediaFigure>
-                </Media>
-              </Wrapper>
-            )
-          } else {
-            return (
-              <div>
-                <Block n={2}>
-                  <Wrapper
-                    width={90}
-                    maxWidth={85}>
-                    <ArticlesList
-                      children={children}
-                      params={params}
-                      parentSection={parent}
-                      section={currentSection}
-                      articles={sectionArticles} />
-                  </Wrapper>
-                </Block>
-
-                <AskQuestionContainer />
-              </div>
-            )
-          }
-        case 'custom':
-          switch (currentSection.customId) {
-            case 'home':
-              return <CustomHomepage section={currentSection} />
-            case 'about':
-              return <CustomAbout section={currentSection} />
-            case 'schedule':
-              return <CustomSchedule section={currentSection} />
-            default:
-              return <div></div>
-          }
-        default:
-          return <div></div>
-      }
+    switch (currentSection.sectionType) {
+      case 'parent':
+        return children
+      case 'blogposts':
+      case 'articles':
+        return (
+          <ArticlesPage
+            currentSection={currentSection}
+            children={children}
+            params={params} />
+        )
+      case 'custom':
+        switch (currentSection.customId) {
+          case 'home':
+            return <CustomPageHome />
+          case 'about':
+            return <CustomPageAbout />
+          case 'schedule':
+            return <CustomPageSchedule />
+          default:
+            console.error(`unexpected custom section ${currentSection.customId}`)
+            return <div></div>
+        }
+      default:
+        console.error(`unexpected section type on 1st level ${currentSection.sectionType}`)
+        return <div></div>
     }
   }
 }
@@ -126,14 +61,17 @@ export default connect(
   (state, ownProps) => {
     const {params} = ownProps
     const currentSection = state.sections.items.find(s => s.url === params.sectionUrl)
+    const firstSubsection = currentSection.sectionType === 'parent' && currentSection.children.length
+      ? state.sections.items.find(s => s._id === currentSection.children[0])
+      : null
+
+      // const sectionBlogposts = currentSection.articles
+      // .map(a => articles.find(art => art._id === a))
+      // .filter(a => a.isPublished)
 
     return {
       currentSection,
-      parent: state.sections.items.find(s => s._id === currentSection.parent),
-      sections: state.sections.items,
-      articles: state.articles.items,
-      windowWidth: state.ui.windowWidth,
-      widthThreshold: state.ui.widthThreshold
+      firstSubsection
     }
   }
 )(SectionContainer)

@@ -1,0 +1,31 @@
+@import '../../styles/variables.css';
+
+.WelcomeSection {
+  border-bottom: 1px solid var(--color-bg-dirtyBlue);
+  background-color: var(--color-bg-lightBlue);
+}
+
+@media (min-width: 62.5rem) {
+  .WelcomeSection {
+    position: relative;
+    background-image: url('./background.jpg');
+    background-position: 0 20%;
+    background-repeat: no-repeat;
+    background-size: 60%;
+
+    &:after {
+      content: '';
+      position: absolute;
+      z-index: 1;
+      top: 0; bottom: 0;
+      left: 48%;
+      width: 52%;
+      background: var(--color-bg-lightBlue);
+    }
+
+    &__body {
+      position: relative;
+      z-index: 2;
+    }
+  }
+}

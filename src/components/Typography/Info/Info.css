@@ -1,0 +1,9 @@
+@import '../../../styles/variables.css';
+
+.Info {
+  font-size: 0.813rem;
+  font-weight: 400;
+  line-height: calc(var(--baseline) * 2);
+
+  color: var(--color-text-grey);
+}

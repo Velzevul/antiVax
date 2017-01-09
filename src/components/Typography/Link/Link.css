@@ -1,0 +1,29 @@
+@import '../../../styles/variables.css';
+
+.Link {
+  color: var(--color-accent-blue);
+  text-decoration: underline;
+
+  font-size: 0.938rem;
+  line-height: calc(var(--baseline) * 2);
+
+  transition-property: color;
+  transition-duration: 0.2s;
+
+  &.Link_active,
+  &:hover {
+    color: color(var(--color-accent-blue) lightness(+10%));
+    text-decoration: none;
+  }
+}
+  .Link_inverse {
+    color: color(white blackness(+20%));
+
+    &:hover,
+    &.Link_active {
+      color: white;
+    }
+  }
+  .Link_small {
+    font-size: 0.875rem;
+  }

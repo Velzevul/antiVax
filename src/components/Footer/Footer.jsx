@@ -2,76 +2,41 @@ import React from 'react'
 import {connect} from 'react-redux'
 
 import styles from './Footer.css'
-import FooterNav from '../FooterNav'
-import {Wrap, Grid, GridItem} from '../Layouts'
-
-const contactNav = [
-  {
-    label: 'Jennifer Potter',
-    emph: true
-  },
-  {
-    label: '(204) 632-3203'
-  },
-  {
-    label: 'jpotter@sogh.mb.ca'
-  }
-]
+import Box from '../Layouts/Box'
+import Wrapper from '../Layouts/Wrapper'
+import Flex from '../Layouts/Flex'
+import ListOfArticles from '../ListOfArticles'
 
 const Footer = ({
-  aboutProjectArticles,
-  additionalInformationArticles
+  articles
 }) => {
-  const aboutNav = aboutProjectArticles
-    .sort((a, b) => {
-      return a.order - b.order
-    })
-    .map(a => {
-      return {
-        label: a.title,
-        path: `/${a.type.id}/${a.url}`
-      }
-    })
-
-  const infoNav = additionalInformationArticles
-    .sort((a, b) => {
-      return a.order - b.order
-    })
-    .map(a => {
-      return {
-        label: a.title,
-        path: `/${a.type.id}/${a.url}`
-      }
-    })
-
   return (
-    <div className={styles.Bg}>
-      <Wrap maxWidth="40rem">
-        <div className={styles.Footer}>
-          <Grid>
-            <GridItem>
-              <FooterNav items={contactNav} title="Contact" />
-            </GridItem>
+    <div className={styles.Footer}>
+      <Wrapper>
+        <Box n={2}>
+          <Flex justifyContent="space-between">
+            <div className={styles.Footer__text}>Vaccine Answers &#169; 2017</div>
 
-            <GridItem>
-              <FooterNav items={aboutNav} title="About Project" />
-            </GridItem>
-
-            <GridItem>
-              <FooterNav items={infoNav} title="Additional" />
-            </GridItem>
-          </Grid>
-        </div>
-      </Wrap>
+            <ListOfArticles
+              n={1.5}
+              inverse
+              small
+              articles={articles}
+              layout="inline" />
+          </Flex>
+        </Box>
+      </Wrapper>
     </div>
   )
 }
 
 export default connect(
   state => {
+    const footerSection = state.sections.items.find(s => s.customId === 'footer-nav')
+    const footerArticles = footerSection.articles.map(a => state.articles.items.find(art => art._id === a))
+
     return {
-      aboutProjectArticles: state.articles.items.filter(i => i.isPublished && i.type.id === 'about-project'),
-      additionalInformationArticles: state.articles.items.filter(i => i.isPublished && i.type.id === 'additional-information')
+      articles: footerArticles
     }
   }
 )(Footer)

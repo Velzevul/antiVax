@@ -1,0 +1,20 @@
+@import '../../styles/variables.css';
+
+.AskQuestion {
+  padding: calc(var(--baseline) * 1)
+           calc(var(--baseline) * 3)
+           calc(var(--baseline) * 3)
+           calc(var(--baseline) * 3);
+
+  border: 1px solid var(--color-bg-dirtyBlue);
+  border-radius: 0.188rem;
+
+  &__header {
+    border-bottom: 1px solid var(--color-bg-dirtyBlue);
+    padding-bottom: calc(var(--baseline) * 1);
+  }
+
+  &__body {
+    padding: calc(var(--baseline) * 1) 0;
+  }
+}

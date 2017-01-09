@@ -1,23 +1,24 @@
 import React from 'react'
 
+import styles from './Grid.css'
 const baseline = 0.750
 
 const Grid = ({
-  gutter = 0,
+  gutterBottom = 3,
   alignItems = 'stretch',
-  justifyContent = 'flex-start',
+  justifyContent = 'space-between',
+  alignContent = 'space-between',
   children
 }) => {
   const style = {
-    height: '100%',
-    width: '100%',
-    display: 'flex',
     alignItems,
-    justifyContent
+    justifyContent,
+    alignContent,
+    marginBottom: `-${gutterBottom * baseline}rem`
   }
 
   return (
-    <div style={style}>
+    <div style={style} className={styles.Grid}>
       {children}
     </div>
   )
@@ -26,23 +27,24 @@ const Grid = ({
 const GridItem = ({
   span = 0,
   outOf = 12,
-  gutter = 0,
+  gutter = 3,
+  gutterBottom = 3,
   children
 }) => {
   let style = {
-    marginRight: `${baseline * gutter}rem`,
-    flex: '1'
+    flex: '1',
+    marginBottom: `${gutterBottom * baseline}rem`
   }
 
   if (span && outOf) {
     style = Object.assign({}, style, {
       flex: '0 0 auto',
-      width: `${100 * span / outOf}%`
+      width: span === outOf ? '100%' : `${100 * span / outOf - gutter}%`
     })
   }
 
   return (
-    <div style={style}>
+    <div style={style} className={styles.GridItem}>
       {children}
     </div>
   )

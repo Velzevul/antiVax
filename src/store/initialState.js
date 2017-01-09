@@ -35,7 +35,8 @@ export default {
   },
   ui: {
     windowWidth: 0,
-    widthThreshold: 1024,
-    mainMenuIsOpen: true
+    layout: 's',
+    widthThreshold: 960,
+    mainMenuIsOpen: false
   }
 }

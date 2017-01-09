@@ -4,6 +4,7 @@ import {connect} from 'react-redux'
 import Block from '../Layouts/Block'
 import TextArea from '../UI/TextArea'
 import Button from '../UI/Button'
+import LabeledInput from '../Layouts/LabeledInput'
 
 import {createComment} from '../../store/commentsActions'
 
@@ -23,7 +24,7 @@ class CommentForm extends React.Component {
   }
 
   componentWillReceiveProps (newProps) {
-    const {errors, isUpdating} = newProps.blogpost.newComment
+    const {errors, isUpdating} = newProps.article.newComment
 
     if (!isUpdating) {
       if (Object.keys(errors).length === 0 && errors.constructor === Object) {
@@ -60,17 +61,21 @@ class CommentForm extends React.Component {
   }
 
   render () {
-    const {blogpost: {newComment: {isUpdating}}} = this.props
+    const {article: {newComment: {isUpdating}}} = this.props
 
     return (
       <div>
         <Block n={1}>
-          <TextArea
+          <LabeledInput
             label="Post a comment"
-            value={this.state.data.content}
             error={this.state.errors.content}
-            disabled={isUpdating}
-            changeCallback={(v) => this.change('content', v)} />
+            input={(
+              <TextArea
+                value={this.state.data.content}
+                error={this.state.errors.content}
+                disabled={isUpdating}
+                changeCallback={(v) => this.change('content', v)} />
+            )} />
         </Block>
 
         <Button
@@ -84,11 +89,11 @@ class CommentForm extends React.Component {
 export default connect(
   null,
   (dispatch, ownProps) => {
-    const {blogpost} = ownProps
+    const {article} = ownProps
 
     return {
       createComment: data => {
-        dispatch(createComment(data, blogpost._id))
+        dispatch(createComment(data, article._id))
       }
     }
   }

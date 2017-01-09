@@ -2,17 +2,18 @@
 
 
 .Button {
+  display: block;
   padding: 0 calc(var(--baseline) * 1.5);
   height: calc(var(--baseline) * 3);
   display: inline-block;
 
   font-size: 0.875rem;
-  font-weight: 500;
-  /*line-height: calc(var(--baseline) * 3);*/
+  font-weight: 600;
+  line-height: calc(var(--baseline) * 3);
 
   text-decoration: none;
 
-  border-radius: 3px;
+  border-radius: 0.125rem;
   border: none;
 
   transition-property: color, background;
