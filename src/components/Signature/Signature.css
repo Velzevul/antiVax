@@ -2,7 +2,23 @@
 
 .Signature {
   font-size: 0.938rem;
+  line-height: 1.5rem;
   font-weight: 400;
   font-style: italic;
+
   color: var(--color-text-black);
+  text-align: right;
+  text-decoration: underline;
+
+  transition-property: color;
+  transition-duration: 0.2s;
+
+  &:hover {
+    color: color(var(--color-text-black) lightness(+15%));
+    text-decoration: none;
+  }
+
+  &:active {
+    color: color(var(--color-text-black) lightness(-15%));
+  }
 }

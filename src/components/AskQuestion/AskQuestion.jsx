@@ -2,7 +2,7 @@ import React from 'react'
 
 import Block from '../Layouts/Block'
 import Heading2 from '../Typography/Heading2'
-import Text from '../Typography/Text'
+import Content from '../Typography/Content'
 import Signature from '../Signature'
 import QuestionForm from '../QuestionForm'
 
@@ -22,7 +22,9 @@ const AskQuestion = ({
       <Block>
         <div className={styles.AskQuestion__body}>
           <Block n={0.5}>
-            <Text>If you would rather ask your question than search the entire website, don’t hesitate to send your question to us!</Text>
+            <Content text={`
+                <p>Not quite finding what you’re looking for? Want something explained further? Have a question about something you found elsewhere? Want a copy of a study we’ve cited? Send in your question and I’ll email you back.</p>
+              `} />
           </Block>
 
           <Signature />

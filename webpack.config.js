@@ -36,7 +36,8 @@ const getPlugins = () => {
     'process.env': {
       NODE_ENV: JSON.stringify(NODE_ENV)
     },
-    SERVER_URL: NODE_ENV === 'production' ? JSON.stringify('https://vdziubak.com/vaccineAnswersServer') : JSON.stringify('https://localhost.com')
+    // SERVER_URL: NODE_ENV === 'production' ? JSON.stringify('https://vdziubak.com/vaccineAnswersServer') : JSON.stringify('https://localhost.com')
+    SERVER_URL: JSON.stringify('https://vdziubak.com/vaccineAnswersServer')
   }))
 
   plugins.push(new webpack.optimize.CommonsChunkPlugin({

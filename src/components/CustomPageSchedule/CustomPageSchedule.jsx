@@ -300,7 +300,7 @@ const CustomPageSchedule = ({
           </Row>
         </Block>
 
-        <Text>Every fall, starting at 6 month, children are additionally scheduled for an Influenza vaccine (QIV, QLAIV)</Text>
+        <Text>Influenza (QIV or QAIV) vaccination is recommended every fall for anyone aged 6 months or older.</Text>
       </Box>
     </Wrapper>
   )

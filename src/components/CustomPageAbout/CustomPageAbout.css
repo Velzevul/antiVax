@@ -1,12 +1,30 @@
 @import '../../styles/variables.css';
 
-@media (min-width: 700px) {  
+.AboutSection {
+  display: none;
+}
+
+@media (min-width: 700px) {
   .AboutSection {
+    display: block;
     width: 100%;
     padding-top: 30%;
     background-image: url('./team.jpg');
     background-position: center 25%;
     background-repeat: no-repeat;
     background-size: cover;
+
+    &__img {
+      visibility: hidden;
+      height: 0;
+    }
+
+    &__caption {
+      padding: calc(var(--baseline));
+      font-size: 0.750rem;
+      color: color(white alpha(-25%));
+      text-align: right;
+      /*background: color(black alpha(-50%));*/
+    }
   }
 }

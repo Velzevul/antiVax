@@ -115,13 +115,10 @@ const ArticlesPage = ({
               <ListItem
                 key={index}
                 n={3}>
-                <Flex justifyContent="space-between">
-                  <Heading2>{a.title}</Heading2>
+                <Info>Posted on <Time value={new Date(a.createdAt)} format="MMM Do, h:mA" /> by {a.lastModifiedBy}</Info>
+                <Heading2>{a.title}</Heading2>
 
-                  <Info>Posted on <Time value={new Date(a.createdAt)} format="MMM Do, h:mA" /></Info>
-                </Flex>
-
-                <Block>
+                <Block n={0.5}>
                   <Content text={a.snippet} />
                 </Block>
 

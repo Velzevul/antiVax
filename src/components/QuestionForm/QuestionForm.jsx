@@ -168,7 +168,7 @@ class QuestionForm extends React.Component {
               <TextArea
                 value={this.state.data.question}
                 error={this.state.errors.question}
-                placeholder="e.g. which vaccines are safe for kids under 5 years?"
+                placeholder="e.g., Are there any dangerous side effects to the chicken pox vaccine?"
                 disabled={isUpdating}
                 changeCallback={(v) => this.change('question', v)} />
             } />

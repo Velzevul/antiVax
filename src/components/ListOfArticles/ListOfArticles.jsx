@@ -6,11 +6,13 @@ import Heading2 from '../Typography/Heading2'
 import {List, ListItem} from '../Layouts/List'
 import {ListInline, ListInlineItem} from '../Layouts/ListInline'
 
+import styles from './ListOfArticles.css'
+
 const ListOfArticles = ({
   articleEntries,
   layout = 'stacked',
   inverse = false,
-  n = 1,
+  n = 1.25,
   small = false
 }) => {
   if (layout === 'stacked') {
@@ -20,7 +22,9 @@ const ListOfArticles = ({
           let entryEl = ''
           if (entry.article.articleType === 'heading') {
             entryEl = (
-              <Heading2>{entry.article.title}</Heading2>
+              <div className={index > 0 ? styles.Heading : ''}>
+                <Heading2>{entry.article.title}</Heading2>
+              </div>
             )
           } else if (entry.article.articleType === 'article') {
             entryEl = (

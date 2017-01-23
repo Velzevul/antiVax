@@ -22,7 +22,7 @@ const ArticlePage = ({
       {article.articleType === 'blogpost'
         ? (
           <Block n={0.5}>
-            <Info>Posted on <Time value={new Date(article.createdAt)} format="MMM Do, h:mA" /></Info>
+            <Info>Posted on <Time value={new Date(article.createdAt)} format="MMM Do, h:mA" /> by {article.lastModifiedBy}</Info>
           </Block>
         )
         : ''

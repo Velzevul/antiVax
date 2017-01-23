@@ -10,7 +10,7 @@ import Block from '../Layouts/Block'
 import Heading1 from '../Typography/Heading1'
 import Heading2 from '../Typography/Heading2'
 import HeadingLined from '../Typography/HeadingLined'
-import Text from '../Typography/Text'
+import Content from '../Typography/Content'
 import ListOfArticles from '../ListOfArticles'
 import Button from '../UI/Button'
 
@@ -42,7 +42,7 @@ const CustomPageHome = ({
     case 'm':
       WelcomeGridSize = 1
       welcomeBox = 4
-      frequentGridSize = 2
+      frequentGridSize = Math.min(frequentSubsecions.length, 2)
       frequentBox = 4
       askQuestionGridSize = 1
       askQuestionBox = 4
@@ -50,15 +50,15 @@ const CustomPageHome = ({
     case 'l':
       WelcomeGridSize = 2
       welcomeBox = 4
-      frequentGridSize = 3
+      frequentGridSize = Math.min(frequentSubsecions.length, 3)
       frequentBox = 8
       askQuestionGridSize = 2
       askQuestionBox = 8
       break
     case 'xl':
       WelcomeGridSize = 2
-      welcomeBox = 8
-      frequentGridSize = 4
+      welcomeBox = 6
+      frequentGridSize = Math.min(frequentSubsecions.length, 4)
       frequentBox = 8
       askQuestionGridSize = 2
       askQuestionBox = 8
@@ -123,8 +123,11 @@ const CustomPageHome = ({
                     <Heading1>What is “Vaccine Answers”</Heading1>
                   </Block>
 
-                  <Block>
-                    <Text>The main purpose of our website is to provide people with valid information about vaccines, such as validity of vaccine myths and rumors, information on vaccine safety, vaccine schedule, etc. If you cannot find information you want, or you would rather just get a quick response to your specific question, please do not hesitate to send your question to me. I try to reply in a timely manner and I also provide list of official sources for your further exploration.</Text>
+                  <Block n={2}>
+                    <Content text={`
+                      <p>We know there’s a lot of info about childhood vaccination out there, and some of it can be confusing or conflicting. Our goal is to provide parents with reliable, evidence-based, up-to- date information about childhood vaccinations, and more importantly, to help you sort through the information you are finding, whether on our site or somewhere else.</p>
+                      <p>Feel free to browse around our site! If you can’t find the information you’re looking for, or you would rather just ask your question directly to me, send it in and I will email you back.</p>
+                    `} />
                   </Block>
 
                   <Signature />
@@ -149,8 +152,11 @@ const CustomPageHome = ({
                   <Heading1>Have a Question?</Heading1>
                 </Block>
 
-                <Block n={1}>
-                  <Text>If you do not want to search through the website or cannot find answer to your question, please do not hesitate to send    your question directly to me. I will reply to you with all the information you should know as soon as I can.</Text>
+                <Block n={2}>
+                  <Content text={`
+                      <p>Not quite finding what you’re looking for? Want something explained further? Have a question about something you found elsewhere? Want a copy of a study we’ve cited? Send in your question and I’ll email you back.</p>
+                      <p>If we receive the same or similar question several times, we may add it to our Frequent Questions page. Nothing that identifies the question-askers will ever be posted.</p>
+                    `} />
                 </Block>
 
                 <Signature />

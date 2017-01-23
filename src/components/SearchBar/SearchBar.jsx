@@ -1,4 +1,5 @@
 import React from 'react'
+import {browserHistory} from 'react-router'
 import {connect} from 'react-redux'
 
 import {setSearchQuery} from '../../store/searchActions'
@@ -16,6 +17,7 @@ class SearchBar extends React.Component {
     }
 
     this.setQuery = this.setQuery.bind(this)
+    this.doSearch = this.doSearch.bind(this)
   }
 
   componentWillReceiveProps (newProps) {
@@ -30,6 +32,10 @@ class SearchBar extends React.Component {
     const {setSearchQuery} = this.props
 
     setSearchQuery(v)
+  }
+
+  doSearch () {
+    browserHistory.push(`/search?q=${this.state.query}`)
   }
 
   render () {
@@ -47,7 +53,9 @@ class SearchBar extends React.Component {
               placeholder="Search the website" />
           }
           suffix={
-            <Button hasPrefix to={`/search?q=${this.state.query}`}>Search</Button>
+            <Button
+              hasPrefix
+              onClick={this.doSearch}>Search</Button>
           } />
       </form>
     )
