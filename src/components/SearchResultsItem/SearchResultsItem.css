@@ -2,43 +2,7 @@
 
 
 .SearchResultsItem {
-  display: block;
-  width: 100%;
-
-  &__title {
-    font-family: 'Nunito', sans-serif;
-    font-size: 1.125rem;
-    font-weight: 300;
-    line-height: calc(var(--baseline) * 2.5);
-
-    color: var(--colorAccent);
-
-    text-decoration: none;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  &__url {
-    font-size: 0.875rem;
-
-    color: var(--colorMainLL);
-  }
-
-  &__body {
-    display: inline-block;
-
-    &:before,
-    &:after {
-      content: '\2026';
-      display: inline-block;
-    }
-
-    & em {
-      font-style: normal;
-      display: inline-block;
-      background: rgba(253, 255, 2, 0.2);
-    }
+  & em {
+    background: #94fffa;
   }
 }

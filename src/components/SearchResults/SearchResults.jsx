@@ -16,6 +16,8 @@ class SearchResults extends React.Component {
   componentDidMount () {
     const {setSearchQuery} = this.props
 
+    this.updateTimeoutId = null
+
     this.props.router.setRouteLeaveHook(this.props.route, () => {
       setSearchQuery('')
     })
@@ -35,7 +37,10 @@ class SearchResults extends React.Component {
     const {fetchSearchResults, query} = newProps
 
     if (query !== this.props.query) {
-      fetchSearchResults()
+      clearTimeout(this.updateTimeoutId)
+      this.updateTimeoutId = setTimeout(() => {
+        fetchSearchResults()
+      }, 500)
     }
   }
 
