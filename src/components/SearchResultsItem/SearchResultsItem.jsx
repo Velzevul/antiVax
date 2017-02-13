@@ -14,7 +14,7 @@ const SearchResultsItem = ({
     <div>
       <Heading2>{item.title}</Heading2>
       <Content text={item._snippetResult.content.value} />
-      <LinkButton to={`/${item.url}`}>{item.url}</LinkButton>
+      <LinkButton to={`${item.url}`}>{item.url}</LinkButton>
     </div>
   )
 }

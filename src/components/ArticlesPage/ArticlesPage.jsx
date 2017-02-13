@@ -60,7 +60,7 @@ const ArticlesPage = ({
       boxSize = parentSection ? 6 : 8
       questionsBoxSize = 6
       formLayout = 'stacked'
-      articlesGridSize = 2
+      articlesGridSize = 1
       break
     default:
       console.error(`unexpected layout type ${layout}`)

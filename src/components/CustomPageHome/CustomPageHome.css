@@ -5,7 +5,7 @@
   background-color: var(--color-bg-lightBlue);
 }
 
-@media (min-width: 62.5rem) {
+@media (min-width: 1024px) {
   .WelcomeSection {
     position: relative;
     background-image: url('./background.jpg');

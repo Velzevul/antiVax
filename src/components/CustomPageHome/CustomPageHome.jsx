@@ -125,7 +125,7 @@ const CustomPageHome = ({
 
                   <Block n={2}>
                     <Content text={`
-                      <p>We know there’s a lot of info about childhood vaccination out there, and some of it can be confusing or conflicting. Our goal is to provide parents with reliable, evidence-based, up-to- date information about childhood vaccinations, and more importantly, to help you sort through the information you are finding, whether on our site or somewhere else.</p>
+                      <p>We know there’s a lot of info about childhood vaccination out there, and some of it can be confusing or conflicting. Our goal is to provide parents with reliable, evidence-based, up-to-date information about childhood vaccinations, and more importantly, to help you sort through the information you are finding, whether on our site or somewhere else.</p>
                       <p>Feel free to browse around our site! If you can’t find the information you’re looking for, or you would rather just ask your question directly to me, send it in and I will email you back.</p>
                     `} />
                   </Block>

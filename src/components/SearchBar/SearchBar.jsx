@@ -34,13 +34,14 @@ class SearchBar extends React.Component {
     setSearchQuery(v)
   }
 
-  doSearch () {
+  doSearch (e) {
+    e.preventDefault()
     browserHistory.push(`/search?q=${this.state.query}`)
   }
 
   render () {
     return (
-      <form onSubmit={this.search}
+      <form onSubmit={this.doSearch}
         className={styles.SearchBar}>
 
         <InputDecorator
@@ -54,8 +55,7 @@ class SearchBar extends React.Component {
           }
           suffix={
             <Button
-              hasPrefix
-              onClick={this.doSearch}>Search</Button>
+              hasPrefix>Search</Button>
           } />
       </form>
     )

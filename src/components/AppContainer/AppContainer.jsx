@@ -22,9 +22,9 @@ class AppContainer extends React.Component {
     const windowWidth = window.outerWidth
 
     let layout = 's'
-    if (windowWidth >= 700 && windowWidth < 1000) {
+    if (windowWidth >= 700 && windowWidth < 1024) {
       layout = 'm'
-    } else if (windowWidth >= 1000 && windowWidth < 1300) {
+    } else if (windowWidth >= 1024 && windowWidth < 1300) {
       layout = 'l'
     } else if (windowWidth >= 1300) {
       layout = 'xl'
