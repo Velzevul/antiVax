@@ -120,7 +120,7 @@ const CustomPageHome = ({
                 <Box
                   n={welcomeBox}>
                   <Block n={2}>
-                    <Heading1>What is “Vaccine Answers”</Heading1>
+                    <Heading1>What is Vaccine Answers</Heading1>
                   </Block>
 
                   <Block n={2}>
