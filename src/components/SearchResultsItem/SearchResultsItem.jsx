@@ -13,8 +13,9 @@ const SearchResultsItem = ({
 }) => {
   return (
     <div className={styles.SearchResultsItem}>
-      <Heading2>{item.title}</Heading2>
-      <Info>{item.url}</Info>
+      <Heading2
+        to={item.url}>{item.title}</Heading2>
+      <Info>https://vaccineanswers.ca{item.url}</Info>
       <Block n={0.5}>
         <Content text={item._snippetResult.content.value} />
       </Block>

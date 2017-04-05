@@ -116,7 +116,8 @@ const ArticlesPage = ({
                 key={index}
                 n={3}>
                 <Info>Posted on <Time value={new Date(a.createdAt)} format="MMM Do, h:mA" /> by {a.lastModifiedBy}</Info>
-                <Heading2>{a.title}</Heading2>
+                <Heading2
+                  to={link}>{a.title}</Heading2>
 
                 <Block n={0.5}>
                   <Content text={a.snippet} />

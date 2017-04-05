@@ -36,7 +36,7 @@
     font-size: 0.938rem;
     font-weight: 600;
 
-    color: var(--color-bg-dirtyBlue);
+    color: color(var(--color-bg-darkBlue) alpha(-20%));
     text-decoration: none;
 
     border-top: 3px solid transparent;

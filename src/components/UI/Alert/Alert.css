@@ -24,7 +24,7 @@
     border-radius: 0.125rem;
   }
     &__message_default {
-      background: var(--colorMainL);
+      background: var(--colorSuccess);
     }
     &__message_error {
       background: var(--colorError);
